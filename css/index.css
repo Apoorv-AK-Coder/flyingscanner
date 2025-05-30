@@ -209,61 +209,51 @@ form {
         }
 
         input {
-            padding: 15px;
+            padding: 10px 15px;
             border: 1px solid #cacaca;
             border-radius: 5px;
         }
     }
 
-    .right {
-        background-color: var(--primary-color);
-        padding: 20px;
-        box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.1);
-        border-radius: 10px;
-        max-width: 35%;
-
-        h2 {
-            color: var(--fourth-color) !important;
-            padding: 5px;
-            border-bottom: 1px solid #cacaca;
-        }
-
-        h3 {
-            background-color: var(--fourth-color);
-            border-radius: 50px;
-            margin: auto 0;
-            z-index: 1;
-            color: var(--primary-color) !important;
-        }
-
-        p {
-            background-color: var(--primary-color);
-            color: var(--fourth-color);
-            padding: 0 20px;
-            border-radius: 0 30px 30px 0;
-            margin-left: -10px !important;
-            border: 1px solid #fff;
-        }
-
-        .flex {
-            margin-top: 10px;
-        }
-
-        a,
-        a:hover {
-            color: var(--fourth-color);
-        }
+    .leftcol {
+        grid-column: span 2;
     }
 
-    h3,
-    p {
-        margin: auto 0 !important;
+    .right {
+        box-shadow: 0 0 3px 3px rgba(20, 20, 20, 0.2);
+        border-radius: 10px;
+        margin-bottom: auto;
+
+        h2 {
+            background-color: var(--primary-color);
+            color: var(--fourth-color) !important;
+            padding: 5px 15px;
+            border-radius: 10px 10px 0 0;
+        }
+
+        .column1 {
+            padding: 15px;
+        }
+
+        i {
+            background-color: var(--third-color);
+            color: var(--fourth-color);
+            padding: 10px;
+            border-radius: 50%;
+            margin-bottom: auto;
+        }
+
+        i:hover {
+            background-color: var(--primary-color);
+        }
+
+        hr {
+            margin-block: 10px;
+        }
     }
 }
 
 .cta {
-    background-color: var(--secondary-color);
-    padding: 15px;
     position: fixed;
     right: 0;
     left: 0;
@@ -271,31 +261,28 @@ form {
     z-index: 1;
     display: none;
     margin: 10px;
-    border-radius: 10px;
+    width: fit-content;
+    padding: 5px 15px 5px 5px;
+    border-radius: 50px;
+    background-color: var(--primary-color);
 
-    ion-icon {
+    i {
         background-color: var(--third-color);
         color: var(--fourth-color);
-        padding: 10px;
+        padding: 15px;
         border-radius: 100%;
+        z-index: 9;
+        position: relative;
     }
 
     div {
         margin: auto 0;
     }
 
-    h3,
     p {
-        margin: auto 0 !important;
+        margin-block: auto !important;
         color: var(--fourth-color) !important;
-        padding: 0 !important;
-        line-height: 1.5;
-    }
-
-    h4 {
-        color: var(--fourth-color) !important;
-        margin: 0 !important;
-        padding: 0 !important;
+        padding-left: 10px !important;
         line-height: 1.5;
     }
 }

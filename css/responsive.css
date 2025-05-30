@@ -146,9 +146,12 @@
     }
 
     .contact {
-        .right {
-            max-width: 100%;
-            margin-bottom: 20px;
+        .leftcol {
+            grid-column: span 1;
+        }
+
+        .gap3 {
+            gap: 10px;
         }
     }
 

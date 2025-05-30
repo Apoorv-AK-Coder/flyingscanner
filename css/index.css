@@ -383,7 +383,7 @@ form {
 }
 
 .gmmdestinations {
-    background-color: #f7f7f7;
+    background-color: #f1f1f1;
 
     .imgcol {
         height: 200px;
@@ -449,10 +449,17 @@ form {
     button {
         padding-block: 0;
     }
+
+    .column div {
+        min-width: 100%;
+        max-width: 100%;
+        overflow-x: auto;
+        overflow-y: auto;
+    }
 }
 
 .faqs {
-    background-color: #f7f7f7;
+    background-color: #f1f1f1;
 
     ul {
         list-style-type: disc;

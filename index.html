@@ -1,0 +1,653 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="./images/favicon.ico">
+    <title>Go More Miles &nbsp;| &nbsp;Home</title>
+    <link href="./css/style.css" rel="stylesheet">
+    <link href="./css/index.css" rel="stylesheet">
+    <link href="./css/homepax.css" rel="stylesheet">
+    <link href="./css/main.css" rel="stylesheet">
+    <link href="./css/responsive.css" rel="stylesheet">
+    <script defer src="./css/slider.js"></script>
+    <link href="./fontawesome/css/all.css" rel="stylesheet">
+    <link href="./fontawesome/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+
+<body>
+    <div class="newheader" id="newheader">
+        <div class="newhead">
+            <div class="grid grid4">
+                <div class="column left">
+                    <a href="/">
+                        <img src="./images/logo.png" alt="">
+                    </a>
+                </div>
+
+                <div class="column navigate" id="view">
+                    <div id="off">
+                        <ion-icon name="close-outline" style="margin-bottom: 30px !important;"></ion-icon>
+                    </div>
+                    <nav>
+                        <ul>
+                            <li><a href="/">Airlines</a></li>
+                            <li><a href="/deals.html">Deals</a></li>
+                            <li><a href="/flights.html">Flights</a></li>
+                            <li><a href="/blog.html">Blog</a></li>
+                        </ul>
+                    </nav>
+                </div>
+
+                <div class="right">
+                    <a href="tel:+18009183039"><button class="button"><i class="fa-solid fa-phone"></i> Call Us!</button></a>
+                </div>
+
+                <div class="column icon" id="on">
+                    <ion-icon name="menu-outline"></ion-icon>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container1 bg1">
+        <div class="row1 grid grid1">
+            <div class="column">
+                <h1>Home - GMM</h1>
+                <form action="/home/_searchenginehome" method="post" id="onflight">
+                    <div class="column radio flex">
+                        <div>
+                            <input name="return" type="radio" value="Return" id="return" checked="checked"
+                                class="slct_btn rndtrp trpact" style="margin-top: 5px !important;" />
+                            <label for="return"><span><span></span></span>Round Trip</label>
+                        </div>
+                        <div>
+                            <input name="return" type="radio" value="OneWay" class="slct_btn onwtrp" id="oneway"
+                                style="margin-top: 5px !important;" />
+                            <label for="oneway"><span><span></span></span>One Way</label>
+                        </div>
+                    </div>
+
+                    <div class="col3">
+                        <div class="column d-flex">
+                            <div class="labelcol">
+                                <div class="labelhead"><label for="">Flying From</label></div>
+                                <input name="flying_from" type="text" placeholder="🛫 From" id="flying_from"
+                                onchange="checkdata();" onclick="this.select();" class="location" />
+                            </div>
+                            <div class="labelcol">
+                                <div class="labelhead"><label for="">Flying To</label></div>
+                                <input name="flying_to" type="text" placeholder="🛬 To" id="flying_to"
+                                onchange="checkdata1();" onclick="this.select();" class="location1" />
+                            </div>
+                        </div>
+                        <div class="column flex">
+                            <div class="labelcol">
+                                <div class="labelhead"><label for="">Departure Date</label></div>
+                                <input autocomplete="off" class="cal calendar mid-dspc-lt" data-val="true"
+                                data-val-required="Please Select Depart Date" id="from" name="from"
+                                onclick="this.focus(); this.setSelectionRange(0, 9999);" placeholder="📅 Depart"
+                                readonly style="cursor:pointer" type="text" value="" />
+                            </div>
+                            <div class="labelcol">
+                                <div class="labelhead"><label for="">Return Date</label></div>
+                                <input autocomplete="off" class="pad-left calendar1 return" data-val="true"
+                                data-val-required="Please Select Return Date" id="to" name="to"
+                                onclick="this.focus(); this.setSelectionRange(0, 9999);" placeholder="📅 Return"
+                                readonly style="cursor:pointer" type="text" value="" />
+                            </div>
+                        </div>
+                        
+                        <div class="column d-flex">
+                            <div class="labelcol">
+                                <div class="labelhead"><label for="">Passenger details</label></div>
+                                <div class="dropdown-container">
+                                    <div class="form_full">
+                                        <div class="form-group">
+                                            <div id="divPaxInfo" data-toggle="collapse" data-target="#divPaxInfo_Fight1"
+                                                class="form-control f-traveller collapsed" aria-expanded="false">
+                                                <span id="spanTotalPax_Flight" class="user">👤 1 Traveller,
+                                                    Economy</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div id="divPaxInfo_Fight1" class="adult-class-dropdown flight-pax collapse"
+                                        style="position: absolute; height: 0px;" aria-expanded="false">
+                                        <div class="dropdown-content" id="divFlightRoom1">
+                                            <div class="form-group">
+                                                <label>Cabin Class:</label>
+                                                <select id="CabinClass" name="CabinClass" class="form-control"
+                                                    onclick="getPassenger()" style="color: #141414;">
+                                                    <option value="Y">Economy</option>
+                                                    <option value="W">Premium Eco</option>
+                                                    <option value="C">Business</option>
+                                                    <option value="F">First Class</option>
+                                                </select>
+                                            </div>
+                                            <div class="adult-panel">
+                                                <div class="min-max-outer">
+                                                    <span class="age-text">Adult(s)</span>
+                                                    <div class="min-max">
+                                                        <input class="input-btn1 qtyminus" value="-" id="mins_adt"
+                                                            type="button" field='quantity'>
+                                                        <input Value="1" class="input-text" data-val="true"
+                                                            data-val-number="The field Adult must be a number."
+                                                            data-val-required="The Adult field is required."
+                                                            field="quantity" id="Adult" name="Adult" readonly
+                                                            type="text" value="" style="padding: 5px;margin: 0;" />
+                                                        <input class="input-btn2 qtyplus" value="+" id="plus_adt"
+                                                            type="button" field='quantity'>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="adult-panel">
+                                                <div class="min-max-outer">
+                                                    <span class="age-text">Child(ren)</span>
+                                                    <div class="min-max">
+                                                        <input class="input-btn1 qtyminus" data-field="Children"
+                                                            value="-" id="mins_chd" type="button" field='quantity'>
+                                                        <input Value="0" class="input-text" data-val="true"
+                                                            data-val-number="The field Children must be a number."
+                                                            data-val-required="The Children field is required."
+                                                            field="quantity" id="Children" name="Children" readonly
+                                                            type="text" value="" style="padding: 5px;margin: 0;" />
+                                                        <input class="input-btn2 qtyplus" data-field="Children"
+                                                            value="+" id="plus_chd" type="button" field='quantity'>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="adult-panel">
+                                                <div class="min-max-outer">
+                                                    <span class="age-text">Infant(s)</span>
+                                                    <div class="min-max">
+                                                        <input class="input-btn1 qtyminus" value="-" id="mins_inf"
+                                                            type="button" field='quantity'>
+                                                        <input Value="0" class="input-text" data-val="true"
+                                                            data-val-number="The field Infant must be a number."
+                                                            data-val-required="The Infant field is required."
+                                                            field="quantity" id="Infant" name="Infant" readonly
+                                                            type="text" value="" style="padding: 5px;margin: 0;" />
+                                                        <input class="input-btn2 qtyplus" value="+" id="plus_inf"
+                                                            type="button" field='quantity'>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="done-btn-full">
+                                                <a href="javascript:void(0);" class="done-btn" id="prsn_done">Done</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <button class="button" type="submit" id="flight_submit" name="flight_submit"
+                                onclick="return CheckValidation();">Search</button>
+                        </div>
+                    </div>
+                    <div class="form-group col-md-3 col-sm-4 col-xs-12 search-col-padding has-feedback"
+                        style="display:none!important">
+                        <label>Airline</label>
+                        <div class="inputGroupContainer no_padding">
+                            <div class="input-group" id="datetimePickerReturn_date">
+                                <span id="return_dateSpan" class="input-group-addon"><i
+                                        class="fa fa-paper-plane fa-fw"></i></span>
+                                <select id="airline" name="airline" class="form-control">
+                                    <option selected="selected" value="">Any</option>
+                                    <option value="JP">Adria Airways</option>
+                                    <option value="EI">Aerlingus</option>
+                                    <option value="SU">Aeroflot</option>
+                                    <option value="AR">Aerolineas Argen </option>
+                                    <option value="AM">Aeromexico</option>
+                                    <option value="5L">Aerosur </option>
+                                    <option value="VV">Aerosvit</option>
+                                    <option value="8U">Afriqiyah Airline</option>
+                                    <option value="AH">Air Algerie</option>
+                                    <option value="KC">Air Astana</option>
+                                    <option value="BT">Air Baltic</option>
+                                    <option value="AB">Air Berlin</option>
+                                    <option value="2J">Air Burkina </option>
+                                    <option value="AC">Air Canada</option>
+                                    <option value="CA">Air China </option>
+                                    <option value="A7">Air Comet </option>
+                                    <option value="UX">Air Europa </option>
+                                    <option value="AF">Air France </option>
+                                    <option value="AI">Air India </option>
+                                    <option value="JM">Air Jamaica</option>
+                                    <option value="KM">Air Malta </option>
+                                    <option value="MK">Air Mauritius </option>
+                                    <option value="9U">Air Maldova</option>
+                                    <option value="SW">Air Namibia </option>
+                                    <option value="NZ">Air New Zealand </option>
+                                    <option value="HM">Air Seychelles </option>
+                                    <option value="VT">Air Tahiti </option>
+                                    <option value="TN">Air Tahiti Nui </option>
+                                    <option value="TS">Air Transat</option>
+                                    <option value="UM">Air Zimbabwe</option>
+                                    <option value="AS">Alaska Air</option>
+                                    <option value="LV">Albanian Air</option>
+                                    <option value="AZ">Alitalia </option>
+                                    <option value="NH">All Nippon </option>
+                                    <option value="AA">American Air</option>
+                                    <option value="OZ">Asiana Airlines</option>
+                                    <option value="GR">Aurigny</option>
+                                    <option value="OS">Austrian Airline </option>
+                                    <option value="AV">Avianca </option>
+                                    <option value="J2">Azerbaijan</option>
+                                    <option value="UP">Bahamasair</option>
+                                    <option value="PG">Bangkok Airways </option>
+                                    <option value="BG">Biman Bangla</option>
+                                    <option value="BD">Bmi British </option>
+                                    <option value="BA">British Airways</option>
+                                    <option value="SN">Brussels Airline </option>
+                                    <option value="FB">Bulgaria Air</option>
+                                    <option value="BW">Caribbean Air</option>
+                                    <option value="CX">Cathay Pacific </option>
+                                    <option value="CI">China Airlines </option>
+                                    <option value="MU">China Eastern </option>
+                                    <option value="CZ">China Southern </option>
+                                    <option value="QI">Cimber Sterli</option>
+                                    <option value="CF">City Airline</option>
+                                    <option value="DE">Condor </option>
+                                    <option value="CO">Continental </option>
+                                    <option value="OU">Croatia Air </option>
+                                    <option value="CU">Cubana Airlines </option>
+                                    <option value="CY">Cyprus Airways </option>
+                                    <option value="OK">Czech Airlines </option>
+                                    <option value="D3">Daallo</option>
+                                    <option value="DL">Delta </option>
+                                    <option value="T3">Eastern airways</option>
+                                    <option value="MS">Egyptair </option>
+                                    <option value="EK">Emirates Air </option>
+                                    <option value="OV">Estonian Air</option>
+                                    <option value="ET">Ethiopian Air </option>
+                                    <option value="EY">Etihad Airways </option>
+                                    <option value="BR">EVA Airways </option>
+                                    <option value="AY">Finnair </option>
+                                    <option value="BE">Flybe </option>
+                                    <option value="GA">Garuda </option>
+                                    <option value="GF">Gulf Air </option>
+                                    <option value="HR">Hahn Air </option>
+                                    <option value="HU">Hainan Airlin</option>
+                                    <option value="YO">Heli-Air Monaco</option>
+                                    <option value="EO">Hewa Bora Air </option>
+                                    <option value="IB">Iberia </option>
+                                    <option value="FI">Iceland Air </option>
+                                    <option value="IC">Indian Air </option>
+                                    <option value="IR">Iran Air </option>
+                                    <option value="6H">Israir</option>
+                                    <option value="JL">Japan Airline</option>
+                                    <option value="JU">Jat Airways</option>
+                                    <option value="9W">Jet Airways </option>
+                                    <option value="KQ">Kenya Airways </option>
+                                    <option value="KL">KLM </option>
+                                    <option value="KE">Korean Air </option>
+                                    <option value="KU">Kuwait Airways </option>
+                                    <option value="LA">Lan Airlines </option>
+                                    <option value="LO">Lot-Polish </option>
+                                    <option value="LH">Lufthansa </option>
+                                    <option value="CC">Macair</option>
+                                    <option value="W5">Mahan Air </option>
+                                    <option value="MA">Malev </option>
+                                    <option value="MH">Malaysia </option>
+                                    <option value="MP">Martinair </option>
+                                    <option value="IG">Meridiana </option>
+                                    <option value="MX">Mexicana </option>
+                                    <option value="ME">Middle East</option>
+                                    <option value="YM">Montenegro</option>
+                                    <option value="CE">Nationwide Air </option>
+                                    <option value="NW">Northwest </option>
+                                    <option value="OA">Olympic </option>
+                                    <option value="WY">Oman Aviation </option>
+                                    <option value="PR">Philippine </option>
+                                    <option value="QR">Qatar Airways </option>
+                                    <option value="AT">Royal Air Maroc </option>
+                                    <option value="BI">Royal Brunei </option>
+                                    <option value="RJ">Royal Jordanian </option>
+                                    <option value="FV">Rossiya </option>
+                                    <option value="SK">Sas </option>
+                                    <option value="S4">Sata Intl </option>
+                                    <option value="SV">Saudi Arabian </option>
+                                    <option value="S7">Siberia Air</option>
+                                    <option value="SQ">Singapore Airlines</option>
+                                    <option value="SA">South African </option>
+                                    <option value="UL">SriLankan </option>
+                                    <option value="SD">Sudan </option>
+                                    <option value="LX">Swiss </option>
+                                    <option value="RB">Syrian Arab</option>
+                                    <option value="DT">Taag-Angola </option>
+                                    <option value="VR">Tacv Carbo Verdes </option>
+                                    <option value="JJ">Tam Linhas Aerea </option>
+                                    <option value="TP">Tap Portugal Airline</option>
+                                    <option value="TG">Thai Intl </option>
+                                    <option value="UN">Transaero</option>
+                                    <option value="TU">Tunis Air</option>
+                                    <option value="TK">Turkish Airlines </option>
+                                    <option value="QF">Qantas Flights </option>
+                                    <option value="PS">Ukraine Intl </option>
+                                    <option value="UA">United</option>
+                                    <option value="US">US Airways </option>
+                                    <option value="HY">Uzbekistan </option>
+                                    <option value="VN">Vietnam Air </option>
+                                    <option value="VS">Virgin Atlantic </option>
+                                    <option value="VK">Virgin Nigeria </option>
+                                    <option value="WM">Windward Island</option>
+                                    <option value="IY">Yemenia Yemen </option>
+                                </select>
+                            </div>
+                            <small data-bv-validator="notEmpty" data-bv-validator-for="return_date" class="help-block"
+                                style="display: none;">The return date is
+                                required</small>
+                        </div>
+                    </div>
+
+                    <div class="clearfix"></div>
+                    <input id="hdn_MultiCityFrom" name="MultiCityFrom" type="hidden" value="" />
+                    <input id="hdn_MultiCityTo" name="MultiCityTo" type="hidden" value="" />
+                    <input id="hdn_MultiCitydate" name="MultiCitydate" type="hidden" value="" />
+                    <input id="hdn_ClassTypeName" name="ClassTypeName" type="hidden" value="" />
+                    <div id="dvNLMessage_FS" class="searchpop12_FS" style="display: none; top: 0; left: 0;"
+                        onclick="NLMessageClose_FS();">
+                        <div class="searchpopinner2_FS searchpopinner12_FS">
+                            <div style="float: right">Close(X)</div>
+                            <br />
+                            <br />
+                            <h3>Sorry! This e-mail id is already registered for our newsletter.</h3>
+                            <div class="searcpoprow2_FS">
+                            </div>
+                            <div class="clearfix"></div>
+                        </div>
+                    </div>
+                    <input type="hidden" id="hfTripType" name="hfTripType" value=>
+                    <input type="hidden" id="hfFromDestination" name="hfFromDestination" value="">
+                    <input type="hidden" id="hfToDestination" name="hfToDestination" value="">
+                    <input type="hidden" id="hfFromDate" name="hfFromDate" value=>
+                    <input type="hidden" id="hfToDate" name="hfToDate" value=>
+                    <input type="hidden" id="hfAdult" name="hfAdult" value=>
+                    <input type="hidden" id="hfChild" name="hfChild" value="0">
+                    <input type="hidden" id="hfInfant" name="hfInfant" value="0">
+                    <input type="hidden" id="hfflex" value="false" name="hfflex" />
+                    <input type="hidden" id="hfdirect" value="false" name="hfdirect" />
+                    <input type="hidden" id="hfcontact" value="false" name="hfcontact" />
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <div class="container1 reviews">
+        <div class="row1 grid grid4">
+            <div class="column">
+                <div class="reviewhead">
+                    <h2><i class="fa-solid fa-quote-left"></i></h2>
+                    <p>Great Experience While booking cheap flights with Go More Miles.</p><br>
+                </div>
+                <div class="reviewfoot">
+                    <p><b>By Sophia</b><br> Jan,2020</p>
+                </div>
+            </div>
+            <div class="column">
+                <div class="reviewhead">
+                    <h2><i class="fa-solid fa-quote-left"></i></h2>
+                    <p>Always Satisfied with 24 Hours Services of Go More Miles for Flights Reservations</p>
+                </div>
+                <div class="reviewfoot">
+                    <p><b>By Peter</b><br> Dec, 2019</p>
+                </div>
+            </div>
+            <div class="column">
+                <div class="reviewhead">
+                    <h2><i class="fa-solid fa-quote-left"></i></h2>
+                    <p>The Trusted Travel Partner for Managing my All Domestic & International Bookings</p>
+                </div>
+                <div class="reviewfoot">
+                    <p><b>By Emma Jackson</b><br> Nov, 2019</p>
+                </div>
+            </div>
+            <div class="column">
+                <div class="reviewhead">
+                    <h2><i class="fa-solid fa-quote-left"></i></h2>
+                    <p>My Last Las Vegas Trip was really cheap for me just because of Cheap Flights of Go More Miles.</p>
+                </div>
+                <div class="reviewfoot">
+                    <p><b>By William</b><br> Jan, 2020</p>
+                </div>
+            </div>
+            <div class="column">
+                <div class="reviewhead">
+                    <h2><i class="fa-solid fa-quote-left"></i></h2>
+                    <p>Love the Superb Cheap Flights Deals of Go More Miles because of Lowest Airfare offers.</p>
+                </div>
+                <div class="reviewfoot">
+                    <p><b>By Ellyn</b><br> Oct, 2019</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container1 gmmdestinations">
+        <div class="row1">
+            <div class="column">
+                <h2>Top Destinations for Travel</h2>
+                <br>
+                <div class="grid grid3">
+                    <a href="https://www.gomoremiles.com/flight/cheap-flights-to-honolulu.aspx">
+                        <div class="column">
+                            <div class="imgcol" style="background-image: url(./images/Honolulu.jpg);"></div>
+                            <div class="gmmcontent">
+                                <h3>Cheap Flights to Honolulu</h3>
+                                <button class="button">Book Now >></button>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="https://www.gomoremiles.com/flight/cheap-flights-to-florida.aspx">
+                        <div class="column">
+                            <div class="imgcol" style="background-image: url(./images/Florida.jpg);"></div>
+                            <div class="gmmcontent">
+                                <h3>Cheap Flights to Florida</h3>
+                                <button class="button">Book Now >></button>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="#">
+                        <div class="column">
+                            <div class="imgcol" style="background-image: url(./images/New-York.jpg);"></div>
+                            <div class="gmmcontent">
+                                <h3>Cheap Flights to New York</h3>
+                                <button class="button">Book Now >></button>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="https://www.gomoremiles.com/flight/cheap-flights-to-dallas.aspx">
+                        <div class="column">
+                            <div class="imgcol" style="background-image: url(./images/Dallas.jpg);"></div>
+                            <div class="gmmcontent">
+                                <h3>Cheap Flights to Dallas</h3>
+                                <button class="button">Book Now >></button>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container1 usps">
+        <div class="row1 grid grid3">
+            <div class="column">
+                <h2><i class="fa-solid fa-xmark"></i></h2>
+                <h3>Online Flight Cancellation</h3>
+            </div>
+            <div class="column">
+                <h2><i class="fa-solid fa-clock-rotate-left"></i></h2>
+                <h3>24 Hours Customer Support</h3>
+            </div>
+            <div class="column">
+                <h2><i class="fa-solid fa-ticket"></i></h2>
+                <h3>Cheap Flight Promo Codes</h3>
+            </div>
+            <div class="column">
+                <h2><i class="fa-solid fa-suitcase-rolling"></i></h2>
+                <h3>Last Minute Travel Partner</h3>
+            </div>
+        </div>
+    </div>
+
+    <div class="container1 gmmtravel">
+        <div class="row1">
+            <div class="column">
+                <h2>Select Go More Miles Travel Deals and Save More!</h2>
+                <br>
+                <table border="1">
+                    <tr>
+                        <th>Origin Destination</th>
+                        <th>Departure Destination</th>
+                        <th>Saving on GMM Flights</th>
+                    </tr>
+                    <tr>
+                        <td>Mumbai</td>
+                        <td>Goa</td>
+                        <td><a href="https://www.gomoremiles.com/Control/Search.aspx?hfTripType=true&amp;flying_from=(BOM)&amp;flying_to=(GOI)&amp;hffromdate=2025-05-09&amp;hftodate=2025-05-11&amp;Adult=1&amp;Children=0&amp;Infant=0&amp;CabinClass=Y"><button class="button">Book Now >></button></a></td>
+                    </tr>
+                    <tr>
+                        <td>Delhi</td>
+                        <td>Pune</td>
+                        <td><a href="https://www.gomoremiles.com/Control/Search.aspx?hfTripType=true&amp;flying_from=(DEL)&amp;flying_to=(PNQ)&amp;hffromdate=2025-05-09&amp;hftodate=2025-05-11&amp;Adult=1&amp;Children=0&amp;Infant=0&amp;CabinClass=Y"><button class="button">Book Now >></button></a></td>
+                    </tr>
+                    <tr>
+                        <td>Banglore</td>
+                        <td>Chennai</td>
+                        <td><a href="https://www.gomoremiles.com/Control/Search.aspx?hfTripType=true&amp;flying_from=(BLR)&amp;flying_to=(MAA)&amp;hffromdate=2025-05-09&amp;hftodate=2025-05-11&amp;Adult=1&amp;Children=0&amp;Infant=0&amp;CabinClass=Y"><button class="button">Book Now >></button></a></td>
+                    </tr>
+                    <tr>
+                        <td>Lucknow</td>
+                        <td>Varanasi</td>
+                        <td><a href="https://www.gomoremiles.com/Control/Search.aspx?hfTripType=true&amp;flying_from=(LKO)&amp;flying_to=(VNS)&amp;hffromdate=2025-05-09&amp;hftodate=2025-05-11&amp;Adult=1&amp;Children=0&amp;Infant=0&amp;CabinClass=Y"><button class="button">Book Now >></button></a></td>
+                    </tr>
+                    <tr>
+                        <td>Patna</td>
+                        <td>Kochi</td>
+                        <td><a href="https://www.gomoremiles.com/Control/Search.aspx?hfTripType=true&amp;flying_from=(PAT)&amp;flying_to=(COK)&amp;hffromdate=2025-05-09&amp;hftodate=2025-05-11&amp;Adult=1&amp;Children=0&amp;Infant=0&amp;CabinClass=Y"><button class="button">Book Now >></button></a></td>
+                    </tr>
+                </table>
+                <br>
+                <p>Going on the popular destinations of the United States is just like a dream of any person. But, people are still confused about the right travel partner. Maybe you have extensive options to book cheap flights on the Internet but which flight booking search engine is offering cheapest airfare deals is the main thing for you. Go, More Miles, a Leading Travel Agency in USA is offering Cheap Flight Deals to Passengers through which can grab the lowest airfare flight booking deals.</p>
+                <br>
+                <h2>Flat 30% Off on International Flight Booking:</h2>
+                <p>From Miami to Texas you can book cheap flight tickets for every popular place in the USA. This time you can save around 30% by confirming your flight reservations from GMM or Go More Miles. Our Airlines Reservations Booking Offers make your travel hassle-free and economically always. From Delta Airlines Reservations to American Airlines Reservations you can book cheap flights from this portal. We love to provide the best flight promo codes and discount coupons on flight booking to the travelers.</p>
+                <p>Therefore, with the motive of Go More Explore More, GMM has become the top alternative for air ticket reservations. Are you going to plan your travel for the festive season? The Go More Miles Flight Deals are amazing for you to save money on your complete travel budget. Therefore, we can say that Go more and explore more with Go More Miles Air Tickets Booking Deals.</p>
+                <br>
+                <h2>Your Last Minute Hassle-Free Travel Partner:</h2>
+                <p>The Last Minute Flight Deals are also the most searchable keywords on search engines like Google or Bing. When you don’t have enough time for confirming flight reservations at last minute then you need to take a look at the Last Minute Flight Booking Deals from GMM. We are also confirming your thrifty flight deals at last minute and you don’t need to face the problem of higher airfare at last minute. In the minimum budget, you can explore the top destinations of the world. Even on the United Airlines Reservations & Frontier Airlines Reservations, you can book your last minute plane tickets.</p>
+                <br>
+                <h2>Latest Flight Booking Promo Code:</h2>
+                <p>Are you looking for the best flight promo code? Start your vacation plan with the flight coupons of Go More Miles. Here we also providing the cheap flight booking Promo Code and you can apply the promo code to book cheap flights.</p>
+                <br>
+                <h2>Flight Promo Code for New Users: NEWGMM</h2>
+            </div>
+        </div>
+    </div>
+
+    <div class="container1 faqs">
+        <div class="row1">
+            <div class="column">
+                <h2>FAQs</h2>
+                <br>
+                <div class="grid grid1">
+                    <div class="column">
+                        <h3>1. How Go More Miles Provide Lowest Airfare Air Tickets Booking Deals?</h3>
+                        <p>Go More Miles is the Best Flight Booking Site in USA and We Filter Top Airlines Results for Your Destinations.</p>
+                        <h3>2. How to Book Cheap Flights?</h3>
+                        <p>You can book cheap flight tickets for one way and round trip from Go More Miles.</p>
+                        <h3>3. Can I Also Plan Last Minute Thrifty Travel Management?</h3>
+                        <p>Designate Go More Miles as your Last Minute Flight Booking Partner and Confirm your air tickets easily.</p>
+                        <h3>4. How to Cancel Flight Online?</h3>
+                        <p>From Flight Cancellation to Check Flight Status you can do everything on GMM Flight Booking Portal.</p>
+                    </div>
+                    <div class="column">
+                        <h3>5. What are the top deals on flight booking from Go More Miles?</h3>
+                        <p><b>The List of Top Flight Deals is:</b></p>
+                        <ul>
+                            <li>$99 Flight Deals</li>
+                            <li>$199 Flight Deals</li>
+                            <li>Last Minute Flight Offers</li>
+                            <li>Cheap New Year Flight Deals</li>
+                            <li>Cheap Christmas Flight Deals</li>
+                            <li>Lowest Airfare Black Friday Deals</li>
+                            <li>Affordable Easter Day Flight Deals</li>
+                            <li>And Many More...</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="cta">
+        <a href="tel:+18004369330">
+            <div class="flex gap2">
+                <h3><ion-icon name="call"></ion-icon></h3>
+                <div>
+                    <p>Call Us Today!</p>
+                    <h4><a href="tel:+18884695403">tel:+1-888-469-5403</a></h4>
+                </div>
+            </div>
+        </a>
+    </div>
+
+    <div class="container1 newfooter">
+        <div class="row1">
+            <div class="flex">
+                <p style="flex: 1;"><a href="/"><img src="./images/logo.png" alt=""></a></p>
+                <p style="flex: 1;">
+                    <a href="https://www.gomoremiles.com/about-us.aspx">About</a> &nbsp;| &nbsp;<a href="https://www.gomoremiles.com/contact-us.aspx">Contact</a> &nbsp;| &nbsp;<a href="https://www.gomoremiles.com/privacy-policy.aspx">Privacy Policy</a> &nbsp;| &nbsp;<a href="https://www.gomoremiles.com/sitemap.aspx">Sitemap</a>
+                </p>
+                <p>
+                    <a href="#" target="_blank"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="#" target="_blank"><i class="fa-brands fa-twitter"></i></a>
+                    <a href="#" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#" target="_blank"><i class="fa-brands fa-youtube"></i></a>
+                </p>
+            </div><hr>
+            <div class="grid grid3">
+                <div class="column">
+                    <h4>About Us</h4>
+                    <p style="font-size: 12px !important;">Go More Miles is a Top-Rated Flight Booking Agency in USA. We are offering Cheap Flight Deal at the Lowest Airfare for Domestic and International Flight Booking. <a href="https://www.gomoremiles.com/about-us.aspx"><u><b>Read More >></b></u></a></p>
+                </div>
+                <div class="column">
+                    <h4>Routes</h4>
+                    <p><a href="https://www.gomoremiles.com/flight/cheap-flights-from-los-angeles-lax-to-houston-iah.aspx">Los Angeles to Houston</a></p>
+                    <p><a href="https://www.gomoremiles.com/flight/cheap-flights-from-new-york-nyc-to-boston-bos.aspx"></a>New York to Boston</p>
+                    <p><a href="https://www.gomoremiles.com/flight/atlanta-atl-to-orlando-mco-flights.aspx"></a>Atlanta to Orlando</p>
+                    <p><a href="https://www.gomoremiles.com/flight/cheap-flights-from-new-york-jfk-to-london-lon.aspx">New York to London</a></p>
+                </div>
+                <div class="column">
+                    <h4>Deals</h4>
+                    <p><a href="https://www.gomoremiles.com/deals/last-minute-flight-deals.aspx">Last Minute Flight</a></p>
+                    <p><a href="https://www.gomoremiles.com/deals/easter-flights-deals.aspx">Easter Day Flight</a></p>
+                    <p><a href="https://www.gomoremiles.com/deals/new-year-flights-deals.aspx">New Year Flight</a></p>
+                    <p><a href="https://www.gomoremiles.com/deals/valentines-flights-deals.aspx">Valentine’s Day Flight</a></p>
+                </div>
+                <div class="contact">
+                    <h4>Contact Information</h4>
+                    <p><a href="tel:+18009183039"><i class="fa-solid fa-phone"></i> +1-800-918-3039</a></p>
+                    <p><a href="mailto:info@gomoremiles.com"><i class="fa-solid fa-at"></i> info@gomoremiles.com</a></p>
+                    <p style="font-size: 13px !important;"><i class="fa-solid fa-home"></i> 6355 Haystack CT Cumming, GA 30040</p>
+                </div>
+            </div>
+            <hr>
+            <p style="font-size: 12px !important;"><b>Disclaimer: </b>Gomoremiles is an Independent Online Travel Agency Portal. We Are Not Working With Any Association, Subsidiary and Third Party Support.  By Visiting, Browsing, Using and Booking from This Website You Agree That Gomoremiles is Not Responsible for Any Type of Loss By Using This Website, Pages, Offers, Content, Links and to Other Sites Attached on This Website. If You Have Any Query Then Call on Our Customer Support Number or Email Us On Official Mail.</p>
+        </div>
+        <hr style="margin: 0;">
+        <div>
+            <div class="foot">
+                <p>© 2025 Go More Miles. All rights Reserved. </p>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="./css/file.js"></script>
+<script src="./css/bootstrap.js"></script>
+<script src="./css/jquery.js"></script>
+<script src="./css/slide.js"></script>
+</html>

@@ -99,7 +99,7 @@ function initializeSlider(sliderSelector, slideSelector, dotSelector, nextBtnSel
 
   
 // Initialize the first slider
-initializeSlider('.slider1', '.slide1', '.dot1', '.next-btn1', '.prev-btn1', 4, 15);
+initializeSlider('.slider1', '.slide1', '.dot1', '.next-btn1', '.prev-btn1', 4, 20);
 initializeSlider('.slider2', '.slide2', '.dot2', '.next-btn2', '.prev-btn2', 4, 15);
 initializeSlider('.slider3', '.slide3', '.dot3', '.next-btn3', '.prev-btn3', 4, 15);
 initializeSlider('.slider4', '.slide4', '.dot4', '.next-btn4', '.prev-btn4', 4, 15);

@@ -26,3 +26,12 @@ navLinks.forEach(link => {
     link.classList.add("active");
   }
 });
+
+window.addEventListener('scroll', () => {
+  const header = document.querySelector('.newheader');
+  if (window.scrollY > 100) { // Adjust the threshold as needed
+    header.classList.add('scrolled');
+  } else {
+    header.classList.remove('scrolled');
+  }
+});

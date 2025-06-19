@@ -1,7 +1,6 @@
 /* Global CSS Starts Here*/
-@import url('https://fonts.googleapis.com/css2?family=Poppins');
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans');
-/* @import url('https://fonts.googleapis.com/css2?family=Playfair+Display'); */
+@import url('https://fonts.googleapis.com/css2?family=Raleway');
+@import url('https://fonts.googleapis.com/css2?family=Outfit');
 
 * {
     margin: 0;
@@ -14,16 +13,16 @@ body {
 }
 
 :root {
-    --primary-color: #41d3ff;
-    --secondary-color: #00c4ff;
-    --third-color: #4141a5;
+    --primary-color: #5496bf;
+    --secondary-color: #03588c;
+    --third-color: #023e73;
     --fourth-color: #ffffff;
     --fifth-color: #141414;
     --sixth-color: rgb(114, 54, 141);
     --seventh-color: #006cd2;
     /*fonts*/
-    --primary-font: "Open Sans";
-    --secondary-font: Poppins;
+    --primary-font: "Outfit";
+    --secondary-font: Raleway;
 }
 
 .row {
@@ -85,8 +84,8 @@ a:hover {
 }
 
 h1 {
-    font-size: 2.2em !important;
-    font-weight: 700 !important;
+    font-size: 2.5em !important;
+    font-weight: 500 !important;
     text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
 }
 
@@ -117,8 +116,8 @@ li {
     background: var(--primary-color);
     padding: 5px 20px;
     border-radius: 0;
-    color: var(--fifth-color);
-    font-weight: 400;
+    color: var(--fourth-color);
+    font-weight: 700;
     border-radius: 5px;
 }
 
@@ -170,6 +169,82 @@ ul#ui-id-1 {
 }
 
 .newfooter {
+    background-color: var(--third-color) !important;
+
+
+    h3,
+    p {
+        color: var(--fourth-color) !important;
+    }
+
+    .social {
+        justify-content: end;
+        margin-bottom: 0 !important;
+
+        i {
+            background-color: var(--fourth-color);
+            color: var(--secondary-color);
+            padding: 10px !important;
+            border-radius: 50px;
+        }
+
+        i:hover {
+            background-color: var(--primary-color);
+            color: var(--fourth-color);
+        }
+
+        div {
+            gap: 12px;
+        }
+    }
+
+    .links {
+        border-top: 1px solid var(--fourth-color);
+        border-bottom: 1px solid var(--fourth-color);
+        padding: 20px 0 !important;
+        margin-top: 20px !important;
+
+        a::before {
+            content: "\f105";
+            font-family: "Font Awesome 6 Free";
+            font-weight: 900;
+            margin-right: 8px;
+        }
+    }
+
+    .column {
+        flex: 1 !important;
+
+        b {
+            font-size: 18px;
+        }
+
+        a {
+            color: var(--fourth-color) !important;
+            text-decoration: none !important;
+        }
+
+        a:hover {
+            color: #cacaca !important;
+        }
+    }
+
+    img {
+        width: 200px !important;
+    }
+
+    .row {
+        padding-bottom: 30px;
+    }
+
+    .foot {
+        padding-top: 20px !important;
+        text-align: center;
+        color: var(--fourth-color) !important;
+    }
+}
+
+/* .newfooter {
     background-color: var(--fifth-color);
 
     .row {
@@ -209,9 +284,4 @@ ul#ui-id-1 {
     .grid {
         grid-template-columns: repeat(3, 1fr);
     }
-}
-
-#off,
-#on {
-    display: none;
-}
+} */

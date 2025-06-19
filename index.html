@@ -21,6 +21,10 @@
     <div class="newheader" id="newheader">
         <div class="newhead">
             <div class="flex">
+                <div class="right flex gap3">
+                    <a href="tel:+18004369330"><button class="button">Call Us!</button></a>
+                </div>
+
                 <div class="column left">
                     <a href="/">
                         <img src="./images/logo.png" alt="">
@@ -28,22 +32,43 @@
                 </div>
 
                 <div class="column navigate" id="view">
-                    <div id="off">
-                        <i class="fa-solid fa-xmark" style="margin-bottom: 30px !important;"></i>
-                    </div>
                     <nav>
+                        <div id="off">
+                            <i class="fa-solid fa-xmark"></i>
+                        </div>
+                        <hr style="border-color: #fff;margin: 0 0 20px 0;">
                         <ul>
-                            <li><a href="/">Home</a></li>
-                            <li><a href="/about.html">About Us</a></li>
-                            <li><a href="/b">Flights</a></li>
-                            <li><a href="/e">Blog</a></li>
-                            <li><a href="/contact.html">Contact</a></li>
+                            <li><a href="https://www.flyingscanner.com/yacht-rentals"><i
+                                        class="fa-solid fa-ship navicons"></i> Yacht</a></li>
+                            <li><a href="https://www.flyingscanner.com/hotels"><i
+                                        class="fa-solid fa-hotel navicons"></i> Stays</a></li>
+                            <li><a href="https://www.flyingscanner.com/car-rental"><i
+                                        class="fa-solid fa-car navicons"></i> Cars</a></li>
+                            <li><a href="https://www.flyingscanner.com/helicopter-tours"><i
+                                        class="fa-solid fa-suitcase-rolling navicons"></i> Tours</a></li>
+                            <li><a href="https://www.flyingscanner.com/blog/"><i
+                                        class="fa-brands fa-blogger-b navicons"></i> Blog</a></li>
+                            <li><a href="https://www.flyingscanner.com/contact"><i
+                                        class="fa-solid fa-address-book navicons"></i> Contact</a></li>
                         </ul>
                     </nav>
-                </div>
-
-                <div class="right flex gap3">
-                    <button class="button">Call Us!</button>
+                    <hr style="margin: 0;border: 1px solid #fff;">
+                    <div class="navbottom">
+                        <p>
+                            <a href="https://www.instagram.com/flyingscanner/" target="_blank">
+                                <i class="fa-brands fa-instagram navicons"></i>
+                            </a>
+                            <a href="https://www.facebook.com/flyingscanner/" target="_blank">
+                                <i class="fa-brands fa-facebook navicons"></i>
+                            </a>
+                            <a href="https://x.com/flyingscan84879" target="_blank">
+                                <i class="fa-brands fa-x-twitter navicons"></i>
+                            </a>
+                        </p>
+                        <br>
+                        <p style="color: var(--fourth-color);">Your Next Adventure Starts Here.</p>
+                        <h3><a href="tel:+18004369330">+1-800-436-9330</a></h3>
+                    </div>
                 </div>
 
                 <div class="column icon" id="on">
@@ -56,367 +81,226 @@
     <div class="container bg1">
         <div class="row">
             <div class="column">
-                <h1>Fly smart, book now with Gotogate India</h1>
-                <form action="/home/_searchenginehome" method="post" id="onflight">
-                    <div class="column radio flex">
-                        <div>
-                            <input name="return" type="radio" value="Return" id="return" checked="checked"
-                                class="slct_btn rndtrp trpact" style="margin-top: 5px !important;" />
-                            <label for="return"><span><span></span></span>Round Trip</label>
-                        </div>
-                        <div>
-                            <input name="return" type="radio" value="OneWay" class="slct_btn onwtrp" id="oneway"
-                                style="margin-top: 5px !important;" />
-                            <label for="oneway"><span><span></span></span>One Way</label>
-                        </div>
-                    </div>
+                <h1>Millions of Flights Booking Deals Waiting for You!</h1>
+                <p>Dates are for informational purpose only. Fares about to be displayed may not necessarily be for the
+                    selected dates.</p>
+                <br>
+                <div class="grid grid1">
+                    <form action="/home/_searchenginehome" method="post" id="onflight">
+                        <div class="column radio flex">
+                            <div>
+                                <input type="radio" name="flight_way" id="rdoRoundtrip"
+                                    class="flight_way slct_btn rndtrp trpact" checked value="2">
 
-                    <div class="col3 d-flex">
-                        <div class="column d-flex">
-                            <div class="labelcol">
-                                <input name="flying_from" type="text" placeholder="🛫 From" id="flying_from"
-                                    onchange="checkdata();" onclick="this.select();" class="location" />
+                                <label for="rdoRoundtrip"><span><span></span></span>Round Trip</label>
                             </div>
-                            <div class="labelcol">
-                                <input name="flying_to" type="text" placeholder="🛬 To" id="flying_to"
-                                    onchange="checkdata1();" onclick="this.select();" class="location1" />
-                            </div>
-                        </div>
-                        <div class="column flex">
-                            <div class="labelcol">
-                                <input autocomplete="off" class="cal calendar mid-dspc-lt" data-val="true"
-                                    data-val-required="Please Select Depart Date" id="from" name="from"
-                                    onclick="this.focus(); this.setSelectionRange(0, 9999);" placeholder="📅 Depart"
-                                    readonly style="cursor:pointer" type="text" value="" />
-                            </div>
-                            <div class="labelcol">
-                                <input autocomplete="off" class="pad-left calendar1 return" data-val="true"
-                                    data-val-required="Please Select Return Date" id="to" name="to"
-                                    onclick="this.focus(); this.setSelectionRange(0, 9999);" placeholder="📅 Return"
-                                    readonly style="cursor:pointer" type="text" value="" />
+                            <div>
+                                <input type="radio" name="flight_way" id="rdoOneway" class="flight_way slct_btn onwtrp"
+                                    style="margin-top: 5px !important;" value="1">
+                                <label for="rdoOneway"><span><span></span></span>One Way</label>
                             </div>
                         </div>
 
-                        <div class="column d-flex">
-                            <div class="labelcol">
-                                <div class="dropdown-container">
-                                    <div class="form_full">
-                                        <div class="form-group">
-                                            <div id="divPaxInfo" data-toggle="collapse" data-target="#divPaxInfo_Fight1"
-                                                class="form-control f-traveller collapsed" aria-expanded="false">
-                                                <span id="spanTotalPax_Flight" class="user">👤 1 Traveller,
-                                                    Economy</span>
+                        <div class="col3">
+                            <div class="column d-flex">
+                                <input type="text" placeholder="Flying From"
+                                    class="autocomplete_from autocomplete_from_new location" id="flight_from"
+                                    name="flight_from">
+                                <input type="text" placeholder="Flying To"
+                                    class="autocomplete_to autocomplete_from_to location1" id="flight_to"
+                                    name="flight_to">
+                            </div>
+                            <div class="column flex">
+                                <input type="text" id="flight_from_date" name="flight_from_date"
+                                    placeholder="DD-MM-YYYY" required>
+                                <input type="text" id="flight_to_date" name="flight_to_date" placeholder="DD-MM-YYYY"
+                                    required>
+                            </div>
+
+                            <div class="bottom-section d-flex">
+                                <div class="pax-contents">
+
+                                    <div class="ind_srch_subBox prp_popup">
+                                        <div class="prsn_popup" id="prsn_add">
+                                            <!-- <i class="fa fa-angle-down"></i> -->
+                                            <input type="text" readonly="" name="pass_info" id="pass_info"
+                                                placeholder="1 Pax, Economy" class="ind_inputBox">
+                                        </div>
+                                        <div class="person_dropdown" id="prsn_popup" style="display: none;">
+                                            <ul class="slect_pssngr">
+                                                <li>
+                                                    <label>Adult &nbsp;<span>(12+ Years)</span></label>
+                                                    <div class="count_pssngr">
+                                                        <a href="javascript:void(0);"><em data-field="adult"
+                                                                data-opt="-" class="fa fa-minus inc_der"></em></a>
+                                                        <input type="text" readonly="" value="1" name="flight_adult"
+                                                            id="flight_adult" class="inpt_cout_pssngr">
+                                                        <a href="javascript:void(0);"><em data-field="adult"
+                                                                data-opt="+" class="fa fa-plus inc_der"></em></a>
+                                                    </div>
+                                                </li>
+                                                <li>
+                                                    <label>Children &nbsp;<span>(2-11 Years)</span></label>
+                                                    <div class="count_pssngr">
+                                                        <a href="javascript:void(0);"><em data-field="child"
+                                                                data-opt="-" class="fa fa-minus inc_der"></em></a>
+                                                        <input type="text" readonly="" value="0" name="flight_child"
+                                                            id="flight_child" class="inpt_cout_pssngr">
+                                                        <a href="javascript:void(0);"><em data-field="child"
+                                                                data-opt="+" class="fa fa-plus inc_der"></em></a>
+                                                    </div>
+                                                </li>
+                                                <li>
+                                                    <label>Infant &nbsp;<span>(0-2 Years)</span></label>
+                                                    <div class="count_pssngr">
+                                                        <a href="javascript:void(0);"><em data-field="infant"
+                                                                data-opt="-" class="fa fa-minus inc_der"></em></a>
+                                                        <input type="text" readonly="" value="0" name="flight_infant"
+                                                            id="flight_infant" class="inpt_cout_pssngr">
+                                                        <a href="javascript:void(0);"><em data-field="infant"
+                                                                data-opt="+" class="fa fa-plus inc_der"></em></a>
+                                                    </div>
+                                                </li>
+                                            </ul>
+                                            <div class="combin_class">
+                                                <ul class="in_list_cls">
+                                                    <li><input type="radio" name="flight_class" id="flight_class_4"
+                                                            value="4" checked=""> <label
+                                                            for="flight_class_4">Economy</label></li>
+                                                    <li><input type="radio" name="flight_class" id="flight_class_3"
+                                                            value="3"> <label for="flight_class_3">Premium
+                                                            Economy</label>
+                                                    </li>
+                                                    <li><input type="radio" name="flight_class" id="flight_class_2"
+                                                            value="2"> <label for="flight_class_2">Business</label></li>
+                                                    <li><input type="radio" name="flight_class" id="flight_class_1"
+                                                            value="1"> <label for="flight_class_1">First</label></li>
+                                                </ul>
+                                            </div>
+                                            <div class="clss_done" id="ind_done">
+                                                <a href="javascript:void(0);" id="prsn_done">Done</a>
                                             </div>
                                         </div>
                                     </div>
-                                    <div id="divPaxInfo_Fight1" class="adult-class-dropdown flight-pax collapse"
-                                        style="position: absolute; height: 0px;" aria-expanded="false">
-                                        <div class="dropdown-content" id="divFlightRoom1">
-                                            <div class="form-group">
-                                                <label>Cabin Class:</label>
-                                                <select id="CabinClass" name="CabinClass" class="form-control"
-                                                    onclick="getPassenger()" style="color: #141414;">
-                                                    <option value="Y">Economy</option>
-                                                    <option value="W">Premium Eco</option>
-                                                    <option value="C">Business</option>
-                                                    <option value="F">First Class</option>
+
+                                </div>
+
+                                <div>
+                                    <ul class="more-options" style="background-color: transparent;margin-bottom: 0;">
+                                        <li style="margin-left: 0;">
+                                            <div class="airlnes">
+                                                <select id="ddlairline" class=" ">
+                                                    <option value="all">All Airlines</option>
+                                                    <option value="EI">Aer Lingus</option>
+                                                    <option value="AR">Aerolineas Argentinas</option>
+                                                    <option value="AB">Air Berlin</option>
+                                                    <option value="AC">Air Canada</option>
+                                                    <option value="CA">Air China</option>
+                                                    <option value="UX">Air Europa Lineas Aereas</option>
+                                                    <option value="AF">Air France</option>
+                                                    <option value="AI">Air India</option>
+                                                    <option value="JM">Air Jamaica</option>
+                                                    <option value="KM">Air Malta</option>
+                                                    <option value="MK">Air Mauritius</option>
+                                                    <option value="SW">Air Namibia</option>
+                                                    <option value="NZ">Air New Zealand</option>
+                                                    <option value="HM">Air Seychelles</option>
+                                                    <option value="AZ">Alitalia</option>
+                                                    <option value="AA">American Airlines</option>
+                                                    <option value="NH">ANA</option>
+                                                    <option value="OZ">Asiana Airlines</option>
+                                                    <option value="OS">Austrian Airlines</option>
+                                                    <option value="BA">British Airways</option>
+                                                    <option value="SN">Brussels Airlines</option>
+                                                    <option value="BW">Caribbean Airlines</option>
+                                                    <option value="CX">Cathay Pacific Airways</option>
+                                                    <option value="CI">China Airlines</option>
+                                                    <option value="MU">China Eastern Airlines</option>
+                                                    <option value="CZ">China Southern</option>
+                                                    <option value="CO">Continental Airlines</option>
+                                                    <option value="CY">Cyprus Airways</option>
+                                                    <option value="OK">Czech Airlines</option>
+                                                    <option value="DL">Delta Airlines</option>
+                                                    <option value="MS">Egypt Air</option>
+                                                    <option value="EK">Emirates Airways</option>
+                                                    <option value="OV">Estonian Air</option>
+                                                    <option value="ET">Ethiopian Airlines</option>
+                                                    <option value="EY">Etihad Airways</option>
+                                                    <option value="BR">EVA Air</option>
+                                                    <option value="AY">Finnair</option>
+                                                    <option value="BE">FlyBe</option>
+                                                    <option value="GA">Garuda Indonesia</option>
+                                                    <option value="GF">Gulf Air</option>
+                                                    <option value="IB">Iberia Airlines </option>
+                                                    <option value="FI">IcelandAir</option>
+                                                    <option value="JL">Japan Airlines</option>
+                                                    <option value="9W">Jet Airways</option>
+                                                    <option value="KL">KLM Royal Dutch Airlines</option>
+                                                    <option value="KE">Korean Air</option>
+                                                    <option value="KU">Kuwait Airways</option>
+                                                    <option value="LA">LAN Airlines</option>
+                                                    <option value="LO">LOT Polish Airlines</option>
+                                                    <option value="LH">Lufthansa</option>
+                                                    <option value="MH">Malaysia Airlines</option>
+                                                    <option value="ZB">Monarch Airlines</option>
+                                                    <option value="NW">Northwest Airlines</option>
+                                                    <option value="OA">Olympic Airlines</option>
+                                                    <option value="WY">Oman Air</option>
+                                                    <option value="QF">Qantas Airways</option>
+                                                    <option value="QR">Qatar Airways</option>
+                                                    <option value="AT">Royal Air Maroc</option>
+                                                    <option value="BI">Royal Brunei Airlines</option>
+                                                    <option value="RJ">Royal Jordanian</option>
+                                                    <option value="SK">SAS - Scandinavian Airlines</option>
+                                                    <option value="SQ">Singapore Airlines</option>
+                                                    <option value="SA">South African Airways</option>
+                                                    <option value="UL">SriLankan Airlines</option>
+                                                    <option value="LX">Swiss Airlines</option>
+                                                    <option value="JJ">TAM Airlines</option>
+                                                    <option value="TP">TAP Portugal</option>
+                                                    <option value="TG">Thai Airways</option>
+                                                    <option value="TK">Turkish Airlines</option>
+                                                    <option value="PS">Ukraine Intl.</option>
+                                                    <option value="UA">United Airlines</option>
+                                                    <option value="US">US Airways</option>
+                                                    <option value="HY">Uzbekistan Airways</option>
+                                                    <option value="RG">Varig Brazilian</option>
+                                                    <option value="VN">Vietnam Airlines</option>
+                                                    <option value="VS">Virgin Atlantic</option>
+                                                    <option value="VG">VLM Airlines</option>
                                                 </select>
+                                                <input type="hidden" name="FlightSearchEngine1$hfAirline"
+                                                    id="FlightSearchEngine1_hfAirline" value="All Airlines">
+                                                <!-- <i class="fa fa-angle-down"></i> -->
                                             </div>
-                                            <div class="adult-panel">
-                                                <div class="min-max-outer">
-                                                    <span class="age-text">Adult(s)</span>
-                                                    <div class="min-max">
-                                                        <input class="input-btn1 qtyminus" value="-" id="mins_adt"
-                                                            type="button" field='quantity'>
-                                                        <input Value="1" class="input-text" data-val="true"
-                                                            data-val-number="The field Adult must be a number."
-                                                            data-val-required="The Adult field is required."
-                                                            field="quantity" id="Adult" name="Adult" readonly
-                                                            type="text" value="" style="padding: 5px;margin: 0;" />
-                                                        <input class="input-btn2 qtyplus" value="+" id="plus_adt"
-                                                            type="button" field='quantity'>
-                                                    </div>
+                                            <div class="dropdown-section" id="mopt_list" style="display:none;">
+                                                <div class="dflexibility">
+                                                    <select name="FlightSearchEngine1$ddlFlexible"
+                                                        id="FlightSearchEngine1_ddlFlexible" class="custom-select"
+                                                        onchange="checkHidefilevalue();" style="display: none;">
+                                                        <option value="My dates are fixed">My dates are fixed</option>
+                                                    </select>
+                                                    <input type="hidden" name="FlightSearchEngine1$hfFlexible"
+                                                        id="FlightSearchEngine1_hfFlexible">
                                                 </div>
+                                                <button type="button" class="done_btn">Done</button>
                                             </div>
-                                            <div class="adult-panel">
-                                                <div class="min-max-outer">
-                                                    <span class="age-text">Child(ren)</span>
-                                                    <div class="min-max">
-                                                        <input class="input-btn1 qtyminus" data-field="Children"
-                                                            value="-" id="mins_chd" type="button" field='quantity'>
-                                                        <input Value="0" class="input-text" data-val="true"
-                                                            data-val-number="The field Children must be a number."
-                                                            data-val-required="The Children field is required."
-                                                            field="quantity" id="Children" name="Children" readonly
-                                                            type="text" value="" style="padding: 5px;margin: 0;" />
-                                                        <input class="input-btn2 qtyplus" data-field="Children"
-                                                            value="+" id="plus_chd" type="button" field='quantity'>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="adult-panel">
-                                                <div class="min-max-outer">
-                                                    <span class="age-text">Infant(s)</span>
-                                                    <div class="min-max">
-                                                        <input class="input-btn1 qtyminus" value="-" id="mins_inf"
-                                                            type="button" field='quantity'>
-                                                        <input Value="0" class="input-text" data-val="true"
-                                                            data-val-number="The field Infant must be a number."
-                                                            data-val-required="The Infant field is required."
-                                                            field="quantity" id="Infant" name="Infant" readonly
-                                                            type="text" value="" style="padding: 5px;margin: 0;" />
-                                                        <input class="input-btn2 qtyplus" value="+" id="plus_inf"
-                                                            type="button" field='quantity'>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="done-btn-full">
-                                                <a href="javascript:void(0);" class="done-btn" id="prsn_done">Done</a>
-                                            </div>
-                                        </div>
-                                    </div>
+                                        </li>
+                                    </ul>
                                 </div>
                             </div>
-
-                            <button class="button" type="submit" id="flight_submit" name="flight_submit"
-                                onclick="return CheckValidation();">Search</button>
                         </div>
-                    </div>
-                    <div class="form-group col-md-3 col-sm-4 col-xs-12 search-col-padding has-feedback"
-                        style="display:none!important">
-                        <label>Airline</label>
-                        <div class="inputGroupContainer no_padding">
-                            <div class="input-group" id="datetimePickerReturn_date">
-                                <span id="return_dateSpan" class="input-group-addon"><i
-                                        class="fa fa-paper-plane fa-fw"></i></span>
-                                <select id="airline" name="airline" class="form-control">
-                                    <option selected="selected" value="">Any</option>
-                                    <option value="JP">Adria Airways</option>
-                                    <option value="EI">Aerlingus</option>
-                                    <option value="SU">Aeroflot</option>
-                                    <option value="AR">Aerolineas Argen </option>
-                                    <option value="AM">Aeromexico</option>
-                                    <option value="5L">Aerosur </option>
-                                    <option value="VV">Aerosvit</option>
-                                    <option value="8U">Afriqiyah Airline</option>
-                                    <option value="AH">Air Algerie</option>
-                                    <option value="KC">Air Astana</option>
-                                    <option value="BT">Air Baltic</option>
-                                    <option value="AB">Air Berlin</option>
-                                    <option value="2J">Air Burkina </option>
-                                    <option value="AC">Air Canada</option>
-                                    <option value="CA">Air China </option>
-                                    <option value="A7">Air Comet </option>
-                                    <option value="UX">Air Europa </option>
-                                    <option value="AF">Air France </option>
-                                    <option value="AI">Air India </option>
-                                    <option value="JM">Air Jamaica</option>
-                                    <option value="KM">Air Malta </option>
-                                    <option value="MK">Air Mauritius </option>
-                                    <option value="9U">Air Maldova</option>
-                                    <option value="SW">Air Namibia </option>
-                                    <option value="NZ">Air New Zealand </option>
-                                    <option value="HM">Air Seychelles </option>
-                                    <option value="VT">Air Tahiti </option>
-                                    <option value="TN">Air Tahiti Nui </option>
-                                    <option value="TS">Air Transat</option>
-                                    <option value="UM">Air Zimbabwe</option>
-                                    <option value="AS">Alaska Air</option>
-                                    <option value="LV">Albanian Air</option>
-                                    <option value="AZ">Alitalia </option>
-                                    <option value="NH">All Nippon </option>
-                                    <option value="AA">American Air</option>
-                                    <option value="OZ">Asiana Airlines</option>
-                                    <option value="GR">Aurigny</option>
-                                    <option value="OS">Austrian Airline </option>
-                                    <option value="AV">Avianca </option>
-                                    <option value="J2">Azerbaijan</option>
-                                    <option value="UP">Bahamasair</option>
-                                    <option value="PG">Bangkok Airways </option>
-                                    <option value="BG">Biman Bangla</option>
-                                    <option value="BD">Bmi British </option>
-                                    <option value="BA">British Airways</option>
-                                    <option value="SN">Brussels Airline </option>
-                                    <option value="FB">Bulgaria Air</option>
-                                    <option value="BW">Caribbean Air</option>
-                                    <option value="CX">Cathay Pacific </option>
-                                    <option value="CI">China Airlines </option>
-                                    <option value="MU">China Eastern </option>
-                                    <option value="CZ">China Southern </option>
-                                    <option value="QI">Cimber Sterli</option>
-                                    <option value="CF">City Airline</option>
-                                    <option value="DE">Condor </option>
-                                    <option value="CO">Continental </option>
-                                    <option value="OU">Croatia Air </option>
-                                    <option value="CU">Cubana Airlines </option>
-                                    <option value="CY">Cyprus Airways </option>
-                                    <option value="OK">Czech Airlines </option>
-                                    <option value="D3">Daallo</option>
-                                    <option value="DL">Delta </option>
-                                    <option value="T3">Eastern airways</option>
-                                    <option value="MS">Egyptair </option>
-                                    <option value="EK">Emirates Air </option>
-                                    <option value="OV">Estonian Air</option>
-                                    <option value="ET">Ethiopian Air </option>
-                                    <option value="EY">Etihad Airways </option>
-                                    <option value="BR">EVA Airways </option>
-                                    <option value="AY">Finnair </option>
-                                    <option value="BE">Flybe </option>
-                                    <option value="GA">Garuda </option>
-                                    <option value="GF">Gulf Air </option>
-                                    <option value="HR">Hahn Air </option>
-                                    <option value="HU">Hainan Airlin</option>
-                                    <option value="YO">Heli-Air Monaco</option>
-                                    <option value="EO">Hewa Bora Air </option>
-                                    <option value="IB">Iberia </option>
-                                    <option value="FI">Iceland Air </option>
-                                    <option value="IC">Indian Air </option>
-                                    <option value="IR">Iran Air </option>
-                                    <option value="6H">Israir</option>
-                                    <option value="JL">Japan Airline</option>
-                                    <option value="JU">Jat Airways</option>
-                                    <option value="9W">Jet Airways </option>
-                                    <option value="KQ">Kenya Airways </option>
-                                    <option value="KL">KLM </option>
-                                    <option value="KE">Korean Air </option>
-                                    <option value="KU">Kuwait Airways </option>
-                                    <option value="LA">Lan Airlines </option>
-                                    <option value="LO">Lot-Polish </option>
-                                    <option value="LH">Lufthansa </option>
-                                    <option value="CC">Macair</option>
-                                    <option value="W5">Mahan Air </option>
-                                    <option value="MA">Malev </option>
-                                    <option value="MH">Malaysia </option>
-                                    <option value="MP">Martinair </option>
-                                    <option value="IG">Meridiana </option>
-                                    <option value="MX">Mexicana </option>
-                                    <option value="ME">Middle East</option>
-                                    <option value="YM">Montenegro</option>
-                                    <option value="CE">Nationwide Air </option>
-                                    <option value="NW">Northwest </option>
-                                    <option value="OA">Olympic </option>
-                                    <option value="WY">Oman Aviation </option>
-                                    <option value="PR">Philippine </option>
-                                    <option value="QR">Qatar Airways </option>
-                                    <option value="AT">Royal Air Maroc </option>
-                                    <option value="BI">Royal Brunei </option>
-                                    <option value="RJ">Royal Jordanian </option>
-                                    <option value="FV">Rossiya </option>
-                                    <option value="SK">Sas </option>
-                                    <option value="S4">Sata Intl </option>
-                                    <option value="SV">Saudi Arabian </option>
-                                    <option value="S7">Siberia Air</option>
-                                    <option value="SQ">Singapore Airlines</option>
-                                    <option value="SA">South African </option>
-                                    <option value="UL">SriLankan </option>
-                                    <option value="SD">Sudan </option>
-                                    <option value="LX">Swiss </option>
-                                    <option value="RB">Syrian Arab</option>
-                                    <option value="DT">Taag-Angola </option>
-                                    <option value="VR">Tacv Carbo Verdes </option>
-                                    <option value="JJ">Tam Linhas Aerea </option>
-                                    <option value="TP">Tap Portugal Airline</option>
-                                    <option value="TG">Thai Intl </option>
-                                    <option value="UN">Transaero</option>
-                                    <option value="TU">Tunis Air</option>
-                                    <option value="TK">Turkish Airlines </option>
-                                    <option value="QF">Qantas Flights </option>
-                                    <option value="PS">Ukraine Intl </option>
-                                    <option value="UA">United</option>
-                                    <option value="US">US Airways </option>
-                                    <option value="HY">Uzbekistan </option>
-                                    <option value="VN">Vietnam Air </option>
-                                    <option value="VS">Virgin Atlantic </option>
-                                    <option value="VK">Virgin Nigeria </option>
-                                    <option value="WM">Windward Island</option>
-                                    <option value="IY">Yemenia Yemen </option>
-                                </select>
-                            </div>
-                            <small data-bv-validator="notEmpty" data-bv-validator-for="return_date" class="help-block"
-                                style="display: none;">The return date is
-                                required</small>
-                        </div>
-                    </div>
-
-                    <div class="clearfix"></div>
-                    <input id="hdn_MultiCityFrom" name="MultiCityFrom" type="hidden" value="" />
-                    <input id="hdn_MultiCityTo" name="MultiCityTo" type="hidden" value="" />
-                    <input id="hdn_MultiCitydate" name="MultiCitydate" type="hidden" value="" />
-                    <input id="hdn_ClassTypeName" name="ClassTypeName" type="hidden" value="" />
-                    <div id="dvNLMessage_FS" class="searchpop12_FS" style="display: none; top: 0; left: 0;"
-                        onclick="NLMessageClose_FS();">
-                        <div class="searchpopinner2_FS searchpopinner12_FS">
-                            <div style="float: right">Close(X)</div>
-                            <br />
-                            <br />
-                            <h3>Sorry! This e-mail id is already registered for our newsletter.</h3>
-                            <div class="searcpoprow2_FS">
-                            </div>
-                            <div class="clearfix"></div>
-                        </div>
-                    </div>
-                    <input type="hidden" id="hfTripType" name="hfTripType" value=>
-                    <input type="hidden" id="hfFromDestination" name="hfFromDestination" value="">
-                    <input type="hidden" id="hfToDestination" name="hfToDestination" value="">
-                    <input type="hidden" id="hfFromDate" name="hfFromDate" value=>
-                    <input type="hidden" id="hfToDate" name="hfToDate" value=>
-                    <input type="hidden" id="hfAdult" name="hfAdult" value=>
-                    <input type="hidden" id="hfChild" name="hfChild" value="0">
-                    <input type="hidden" id="hfInfant" name="hfInfant" value="0">
-                    <input type="hidden" id="hfflex" value="false" name="hfflex" />
-                    <input type="hidden" id="hfdirect" value="false" name="hfdirect" />
-                    <input type="hidden" id="hfcontact" value="false" name="hfcontact" />
-                </form>
+                        <div class="search_flights" style="text-align:right;margin-top: 10px;"> <a
+                                onclick="return validateSearchengine();" name="flight_submit" id="flight_submit"
+                                class="search_btn"><i class="fa-solid fa-magnifying-glass"></i>&nbsp;
+                                <span>Search</span> </a> </div>
+                    </form>
+                </div>
             </div>
         </div>
     </div>
 
-    <div class="container usps">
-        <div class="row grid grid2">
-            <div class="column">
-                <h4><img src="./images/icon-1.png" alt=""> Wide selection</h4>
-            </div>
-            <div class="column">
-                <h4><img src="./images/icon-2.png" alt=""> Trusted by 30M passengers a year</h4>
-            </div>
-            <div class="column">
-                <h4><img src="./images/icon-3.png" alt=""> Over 20 years of experience</h4>
-            </div>
-        </div>
-    </div>
 
-    <div class="container text2">
-        <div class="row grid grid2">
-            <div class="column">
-                <h3>Flexibility on demand</h3>
-                <p>Make your trip perfect for your needs with Flexible Ticket, Cancellation Guarantee and countless more services to choose from to protect your flight and plan with freedom.</p>
-                <p><a href="#">Discover our services <ion-icon name="arrow-forward-outline"></ion-icon></a></p>
-            </div>
-            <div class="column">
-                <h3>Easy to manage</h3>
-                <p>Log in to My Bookings for a world of travel opportunities. Manage your trip, add what you need from a selection of services, get flight info or refund updates - all this and more at My Bookings.</p>
-                <p><a href="#">Log In to My Bookings <ion-icon name="arrow-forward-outline"></ion-icon></a></p>
-            </div>
-            <div class="column">
-                <h3>Save more, travel smarter on the app</h3>
-                <p>Discover unbeatable savings for every destination with the Gotogate app! Enjoy exclusive deals, seamless flight booking, and streamlined travel management—all in one convenient app. Download now and start your journey today!</p>
-                <p><a href="#">Download the app for free <ion-icon name="arrow-forward-outline"></ion-icon></a></p>
-            </div>
-        </div>
-    </div>
-
-    <div class="container">
-        <div class="row d-flex gap">
-            <div class="column">
-                <h2>Carbon Offset Solutions</h2>
-                <p>Want to lower your impact? Discover how you can offset your flight’s carbon footprint with us by supporting GoClimate’s projects or by opting for sustainable aviation fuel with SkyNRG.</p>
-                <p><a href="#">Discover more here</a></p>
-            </div>
-            <div class="column">
-                <img src="./images/img-1.png" width="200px" alt="">
-            </div>
-        </div>
-    </div>
 
     <div class="cta">
         <a href="tel:+18004369330">
@@ -430,7 +314,80 @@
         </a>
     </div>
 
-    <div class="container newfooter">
+    <div class="newfooter">
+        <div class="row">
+            <div class="mainfooter">
+                <div class="d-flex gap logo">
+                    <div class="column">
+                        <a href="/">
+                            <img src="/images/logo.png" alt="logo">
+                        </a>
+                    </div>
+                    <div class="column flex gap1 social">
+                        <h3>Connect with Us</h3>
+                        <div class="flex">
+                            <a href="https://www.instagram.com/flyingscanner/" target="_blank">
+                                <i class="fa-brands fa-instagram"></i>
+                            </a>
+                            <a href="https://www.facebook.com/flyingscanner/" target="_blank">
+                                <i class="fa-brands fa-facebook"></i>
+                            </a>
+                            <a href="https://x.com/flyingscan84879" target="_blank">
+                                <i class="fa-brands fa-x-twitter"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="links d-flex gap1">
+                    <div class="column">
+                        <p><b>Contact details</b></p>
+                        <p>6355 Haystack CT Cumming , GA 30040 </p>
+                        <p><a href="mailto:support@flyingscanner.com">support@flyingscanner.com</a></p>
+                        <p><a href="tel:+18004369330">+1-800-436-9330</a></p>
+                    </div>
+
+                    <div class="column">
+                        <p><b>International Routes</b></p>
+                        <p><a href="https://www.flyingscanner.com/seattle-to-tokyo">Seattle → Tokyo</a></p>
+                        <p><a href="https://www.flyingscanner.com/las-vegas-to-costa-rica">Las Vegas → Costa Rica</a>
+                        </p>
+                        <p><a href="https://www.flyingscanner.com/miami-to-tokyo">Miami → Tokyo</a></p>
+                        <p><a href="https://www.flyingscanner.com/chicago-to-london">Chicago → London</a></p>
+                        <p><a href="https://www.flyingscanner.com/seattle-and-beijing">Seattle → Beijing</a></p>
+                    </div>
+
+                    <div class="column">
+                        <p><b>Domestic Routes</b></p>
+                        <p><a href="https://www.flyingscanner.com/billings-to-phoenix">Billings → Phoenix</a></p>
+                        <p><a href="https://www.flyingscanner.com/miami-to-san-diego">Miami → San Diego</a></p>
+                        <p><a href="https://www.flyingscanner.com/tampa-to-dallas">Tampa → Dallas</a></p>
+                        <p><a href="https://www.flyingscanner.com/jacksonville-to-chicago">Jacksonville → Chicago</a>
+                        </p>
+                        <p><a href="https://www.flyingscanner.com/dallas-to-chicago">Dallas → Chicago</a></p>
+                    </div>
+
+                    <div class="column">
+                        <p><b>Information</b></p>
+                        <p><a href="https://www.flyingscanner.com/about">About</a></p>
+                        <p><a href="https://www.flyingscanner.com/contact">Contact</a></p>
+                        <p><a href="https://www.flyingscanner.com/privacy-policy">Privacy Policy</a></p>
+                        <p><a href="https://www.flyingscanner.com/term-conditions">Terms &amp; Conditions</a></p>
+
+                    </div>
+                </div>
+            </div>
+            <div class="foot">
+                <div class="column">
+                    <p>
+                        © Copyright 2025 <b>FlyingScanner</b>. All Rights Reserved. | Cheap flight booking from
+                        anywhere, to everywhere
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- <div class="container newfooter">
         <div class="row">
             <div class="grid">
                 <div class="column">
@@ -456,10 +413,11 @@
                 <p>© 2025 Cayman Airways. All rights Reserved. </p>
             </div>
         </div>
-    </div>
+    </div> -->
 </body>
 <script src="./css/file.js"></script>
 <script src="./css/bootstrap.js"></script>
 <script src="./css/jquery.js"></script>
 <script src="./css/slide.js"></script>
+
 </html>

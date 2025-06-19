@@ -526,7 +526,7 @@ form {
 
 .fsdestinations {
     .row {
-        padding-top: 0;
+        padding-block: 0;
     }
 
     .slider-container2 {
@@ -590,5 +590,80 @@ form {
         box-shadow: 0 0 2px 2px rgba(20, 20, 20, 0.2);
         margin: 2px;
         border-radius: 5px;
+    }
+}
+
+.fscardsec {
+    /* text-align: center;
+
+    .column {
+        border: 2px solid var(--third-color);
+        border-radius: 12px;
+    }
+
+    .innercol {
+        padding: 0 20px 20px 20px;
+    }
+
+    img {
+        width: 100%;
+        border-radius: 10px 10px 0 0;
+    }
+
+    p {
+        line-height: 1.5;
+        font-size: 15px;
+    }
+
+    button {
+        margin-top: 10px;
+    }
+
+    h3 {
+        margin: -22px auto 10px auto !important;
+        width: fit-content;
+        background-color: var(--secondary-color) !important;
+        padding: 7px 25px;
+        border-radius: 25px;
+        position: relative;
+        color: var(--fourth-color) !important;
+    } */
+
+
+    .column {
+        border: 2px solid var(--third-color);
+        border-radius: 12px;
+    }
+
+    .innercol {
+        padding: 25px 20px;
+        margin: auto 0;
+    }
+
+    img {
+        width: 100%;
+        border-radius: 10px 0 0 10px;
+    }
+
+    .innerimgcol {
+        border-radius: 10px 0 0 10px;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    
+    p {
+        line-height: 1.5;
+        font-size: 15px;
+    }
+
+    h3 {
+        margin: 0 auto 10px -60px !important;
+        width: fit-content;
+        background-color: var(--secondary-color) !important;
+        padding: 7px 25px;
+        border-radius: 25px;
+        position: relative;
+        color: var(--fourth-color) !important;
     }
 }

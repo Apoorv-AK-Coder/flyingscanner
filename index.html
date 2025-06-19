@@ -4,26 +4,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
-    <title>Go More Miles &nbsp;| &nbsp;Home</title>
-    <link href="/css/style.css" rel="stylesheet">
-    <link href="/css/index.css" rel="stylesheet">
-    <link href="/css/homepax.css" rel="stylesheet">
-    <link href="/css/main.css" rel="stylesheet">
-    <link href="/css/responsive.css" rel="stylesheet">
-    <script defer src="/css/slider.js"></script>
-    <link href="/fontawesome/css/all.css" rel="stylesheet">
-    <link href="/fontawesome/css/all.min.css" rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="./images/favicon.ico">
+    <title>Royal Caribbean &nbsp;| &nbsp;Home</title>
+    <link href="./css/style.css" rel="stylesheet">
+    <link href="./css/index.css" rel="stylesheet">
+    <link href="./css/homepax.css" rel="stylesheet">
+    <link href="./css/main.css" rel="stylesheet">
+    <link href="./css/responsive.css" rel="stylesheet">
+    <script defer src="./css/slider.js"></script>
+    <link href="./fontawesome/css/all.css" rel="stylesheet">
+    <link href="./fontawesome/css/all.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 </head>
 
 <body>
     <div class="newheader" id="newheader">
         <div class="newhead">
-            <div class="grid grid4">
+            <div class="flex">
                 <div class="column left">
                     <a href="/">
-                        <img src="/images/logo.png" alt="">
+                        <img src="./images/logo.png" alt="">
                     </a>
                 </div>
 
@@ -33,16 +33,17 @@
                     </div>
                     <nav>
                         <ul>
-                            <li><a href="/airlines.html">Airlines</a></li>
-                            <li><a href="/deals.html">Deals</a></li>
-                            <li><a href="/flights.html">Flights</a></li>
-                            <li><a href="/blog.html">Blog</a></li>
+                            <li><a href="/">Home</a></li>
+                            <li><a href="/about.html">About Us</a></li>
+                            <li><a href="/b">Flights</a></li>
+                            <li><a href="/e">Blog</a></li>
+                            <li><a href="/contact.html">Contact</a></li>
                         </ul>
                     </nav>
                 </div>
 
-                <div class="right">
-                    <a href="tel:+18009183039"><button class="button"><i class="fa-solid fa-phone"></i> Call Us!</button></a>
+                <div class="right flex gap3">
+                    <button class="button">Call Us!</button>
                 </div>
 
                 <div class="column icon" id="on">
@@ -52,10 +53,10 @@
         </div>
     </div>
 
-    <div class="container1 bg1">
-        <div class="row1 grid grid1">
+    <div class="container bg1">
+        <div class="row">
             <div class="column">
-                <h1>Home - GMM</h1>
+                <h1>Fly smart, book now with Gotogate India</h1>
                 <form action="/home/_searchenginehome" method="post" id="onflight">
                     <div class="column radio flex">
                         <div>
@@ -70,39 +71,34 @@
                         </div>
                     </div>
 
-                    <div class="col3">
+                    <div class="col3 d-flex">
                         <div class="column d-flex">
                             <div class="labelcol">
-                                <div class="labelhead"><label for="">Flying From</label></div>
                                 <input name="flying_from" type="text" placeholder="🛫 From" id="flying_from"
-                                onchange="checkdata();" onclick="this.select();" class="location" />
+                                    onchange="checkdata();" onclick="this.select();" class="location" />
                             </div>
                             <div class="labelcol">
-                                <div class="labelhead"><label for="">Flying To</label></div>
                                 <input name="flying_to" type="text" placeholder="🛬 To" id="flying_to"
-                                onchange="checkdata1();" onclick="this.select();" class="location1" />
+                                    onchange="checkdata1();" onclick="this.select();" class="location1" />
                             </div>
                         </div>
                         <div class="column flex">
                             <div class="labelcol">
-                                <div class="labelhead"><label for="">Departure Date</label></div>
                                 <input autocomplete="off" class="cal calendar mid-dspc-lt" data-val="true"
-                                data-val-required="Please Select Depart Date" id="from" name="from"
-                                onclick="this.focus(); this.setSelectionRange(0, 9999);" placeholder="📅 Depart"
-                                readonly style="cursor:pointer" type="text" value="" />
+                                    data-val-required="Please Select Depart Date" id="from" name="from"
+                                    onclick="this.focus(); this.setSelectionRange(0, 9999);" placeholder="📅 Depart"
+                                    readonly style="cursor:pointer" type="text" value="" />
                             </div>
                             <div class="labelcol">
-                                <div class="labelhead"><label for="">Return Date</label></div>
                                 <input autocomplete="off" class="pad-left calendar1 return" data-val="true"
-                                data-val-required="Please Select Return Date" id="to" name="to"
-                                onclick="this.focus(); this.setSelectionRange(0, 9999);" placeholder="📅 Return"
-                                readonly style="cursor:pointer" type="text" value="" />
+                                    data-val-required="Please Select Return Date" id="to" name="to"
+                                    onclick="this.focus(); this.setSelectionRange(0, 9999);" placeholder="📅 Return"
+                                    readonly style="cursor:pointer" type="text" value="" />
                             </div>
                         </div>
-                        
+
                         <div class="column d-flex">
                             <div class="labelcol">
-                                <div class="labelhead"><label for="">Passenger details</label></div>
                                 <div class="dropdown-container">
                                     <div class="form_full">
                                         <div class="form-group">
@@ -375,280 +371,95 @@
         </div>
     </div>
 
-    <div class="container1 reviews">
-        <div class="row1 grid grid4">
+    <div class="container usps">
+        <div class="row grid grid2">
             <div class="column">
-                <div class="reviewhead">
-                    <h2><i class="fa-solid fa-quote-left"></i></h2>
-                    <p>Great Experience While booking cheap flights with Go More Miles.</p><br>
-                </div>
-                <div class="reviewfoot">
-                    <p><b>By Sophia</b><br> Jan,2020</p>
-                </div>
+                <h4><img src="./images/icon-1.png" alt=""> Wide selection</h4>
             </div>
             <div class="column">
-                <div class="reviewhead">
-                    <h2><i class="fa-solid fa-quote-left"></i></h2>
-                    <p>Always Satisfied with 24 Hours Services of Go More Miles for Flights Reservations</p>
-                </div>
-                <div class="reviewfoot">
-                    <p><b>By Peter</b><br> Dec, 2019</p>
-                </div>
+                <h4><img src="./images/icon-2.png" alt=""> Trusted by 30M passengers a year</h4>
             </div>
             <div class="column">
-                <div class="reviewhead">
-                    <h2><i class="fa-solid fa-quote-left"></i></h2>
-                    <p>The Trusted Travel Partner for Managing my All Domestic & International Bookings</p>
-                </div>
-                <div class="reviewfoot">
-                    <p><b>By Emma Jackson</b><br> Nov, 2019</p>
-                </div>
-            </div>
-            <div class="column">
-                <div class="reviewhead">
-                    <h2><i class="fa-solid fa-quote-left"></i></h2>
-                    <p>My Last Las Vegas Trip was really cheap for me just because of Cheap Flights of Go More Miles.</p>
-                </div>
-                <div class="reviewfoot">
-                    <p><b>By William</b><br> Jan, 2020</p>
-                </div>
-            </div>
-            <div class="column">
-                <div class="reviewhead">
-                    <h2><i class="fa-solid fa-quote-left"></i></h2>
-                    <p>Love the Superb Cheap Flights Deals of Go More Miles because of Lowest Airfare offers.</p>
-                </div>
-                <div class="reviewfoot">
-                    <p><b>By Ellyn</b><br> Oct, 2019</p>
-                </div>
+                <h4><img src="./images/icon-3.png" alt=""> Over 20 years of experience</h4>
             </div>
         </div>
     </div>
 
-    <div class="container1 gmmdestinations">
-        <div class="row1">
+    <div class="container text2">
+        <div class="row grid grid2">
             <div class="column">
-                <h2>Top Destinations for Travel</h2>
-                <br>
-                <div class="grid grid3">
-                    <a href="https://www.gomoremiles.com/flight/cheap-flights-to-honolulu.aspx">
-                        <div class="column">
-                            <div class="imgcol" style="background-image: url(/images/Honolulu.jpg);"></div>
-                            <div class="gmmcontent">
-                                <h3>Cheap Flights to Honolulu</h3>
-                                <button class="button">Book Now >></button>
-                            </div>
-                        </div>
-                    </a>
-                    <a href="https://www.gomoremiles.com/flight/cheap-flights-to-florida.aspx">
-                        <div class="column">
-                            <div class="imgcol" style="background-image: url(/images/Florida.jpg);"></div>
-                            <div class="gmmcontent">
-                                <h3>Cheap Flights to Florida</h3>
-                                <button class="button">Book Now >></button>
-                            </div>
-                        </div>
-                    </a>
-                    <a href="#">
-                        <div class="column">
-                            <div class="imgcol" style="background-image: url(/images/New-York.jpg);"></div>
-                            <div class="gmmcontent">
-                                <h3>Cheap Flights to New York</h3>
-                                <button class="button">Book Now >></button>
-                            </div>
-                        </div>
-                    </a>
-                    <a href="https://www.gomoremiles.com/flight/cheap-flights-to-dallas.aspx">
-                        <div class="column">
-                            <div class="imgcol" style="background-image: url(/images/Dallas.jpg);"></div>
-                            <div class="gmmcontent">
-                                <h3>Cheap Flights to Dallas</h3>
-                                <button class="button">Book Now >></button>
-                            </div>
-                        </div>
-                    </a>
-                </div>
+                <h3>Flexibility on demand</h3>
+                <p>Make your trip perfect for your needs with Flexible Ticket, Cancellation Guarantee and countless more services to choose from to protect your flight and plan with freedom.</p>
+                <p><a href="#">Discover our services <ion-icon name="arrow-forward-outline"></ion-icon></a></p>
+            </div>
+            <div class="column">
+                <h3>Easy to manage</h3>
+                <p>Log in to My Bookings for a world of travel opportunities. Manage your trip, add what you need from a selection of services, get flight info or refund updates - all this and more at My Bookings.</p>
+                <p><a href="#">Log In to My Bookings <ion-icon name="arrow-forward-outline"></ion-icon></a></p>
+            </div>
+            <div class="column">
+                <h3>Save more, travel smarter on the app</h3>
+                <p>Discover unbeatable savings for every destination with the Gotogate app! Enjoy exclusive deals, seamless flight booking, and streamlined travel management—all in one convenient app. Download now and start your journey today!</p>
+                <p><a href="#">Download the app for free <ion-icon name="arrow-forward-outline"></ion-icon></a></p>
             </div>
         </div>
     </div>
 
-    <div class="container1 usps">
-        <div class="row1 grid grid3">
+    <div class="container">
+        <div class="row d-flex gap">
             <div class="column">
-                <h2><i class="fa-solid fa-xmark"></i></h2>
-                <h3>Online Flight Cancellation</h3>
+                <h2>Carbon Offset Solutions</h2>
+                <p>Want to lower your impact? Discover how you can offset your flight’s carbon footprint with us by supporting GoClimate’s projects or by opting for sustainable aviation fuel with SkyNRG.</p>
+                <p><a href="#">Discover more here</a></p>
             </div>
             <div class="column">
-                <h2><i class="fa-solid fa-clock-rotate-left"></i></h2>
-                <h3>24 Hours Customer Support</h3>
-            </div>
-            <div class="column">
-                <h2><i class="fa-solid fa-ticket"></i></h2>
-                <h3>Cheap Flight Promo Codes</h3>
-            </div>
-            <div class="column">
-                <h2><i class="fa-solid fa-suitcase-rolling"></i></h2>
-                <h3>Last Minute Travel Partner</h3>
-            </div>
-        </div>
-    </div>
-
-    <div class="container1 gmmtravel">
-        <div class="row1">
-            <div class="column">
-                <h2>Select Go More Miles Travel Deals and Save More!</h2>
-                <br>
-                <div>
-                <table border="1">
-                    <tr>
-                        <th>Origin Destination</th>
-                        <th>Departure Destination</th>
-                        <th>Saving on GMM Flights</th>
-                    </tr>
-                    <tr>
-                        <td>Los Angeles</td>
-                        <td>San Francisco</td>
-                        <td><a href="https://www.gomoremiles.com/Control/Search.aspx?hfTripType=true&amp;flying_from=(LAX)&amp;flying_to=(SFO)&amp;hffromdate=2025-05-09&amp;hftodate=2025-05-11&amp;Adult=1&amp;Children=0&amp;Infant=0&amp;CabinClass=Y"><button class="button">Book Now >></button></a></td>
-                    </tr>
-                    <tr>
-                        <td>Las Vegas</td>
-                        <td>Los Angeles</td>
-                        <td><a href="https://www.gomoremiles.com/Control/Search.aspx?hfTripType=true&amp;flying_from=(Las)&amp;flying_to=(LAX)&amp;hffromdate=2025-05-09&amp;hftodate=2025-05-11&amp;Adult=1&amp;Children=0&amp;Infant=0&amp;CabinClass=Y"><button class="button">Book Now >></button></a></td>
-                    </tr>
-                    <tr>
-                        <td>Atlanta</td>
-                        <td>Orlando</td>
-                        <td><a href="https://www.gomoremiles.com/Control/Search.aspx?hfTripType=true&amp;flying_from=(ATL)&amp;flying_to=(MCO)&amp;hffromdate=2025-05-09&amp;hftodate=2025-05-11&amp;Adult=1&amp;Children=0&amp;Infant=0&amp;CabinClass=Y"><button class="button">Book Now >></button></a></td>
-                    </tr>
-                    <tr>
-                        <td>New York</td>
-                        <td>Los Angeles</td>
-                        <td><a href="https://www.gomoremiles.com/Control/Search.aspx?hfTripType=true&amp;flying_from=(JFK)&amp;flying_to=(LAX)&amp;hffromdate=2025-05-09&amp;hftodate=2025-05-11&amp;Adult=1&amp;Children=0&amp;Infant=0&amp;CabinClass=Y"><button class="button">Book Now >></button></a></td>
-                    </tr>
-                    <tr>
-                        <td>Honolulu</td>
-                        <td>Kahului</td>
-                        <td><a href="https://www.gomoremiles.com/Control/Search.aspx?hfTripType=true&amp;flying_from=(HNL)&amp;flying_to=(OGG)&amp;hffromdate=2025-05-09&amp;hftodate=2025-05-11&amp;Adult=1&amp;Children=0&amp;Infant=0&amp;CabinClass=Y"><button class="button">Book Now >></button></a></td>
-                    </tr>
-                </table>
-                </div>
-                <br>
-                <p>Going on the popular destinations of the United States is just like a dream of any person. But, people are still confused about the right travel partner. Maybe you have extensive options to book cheap flights on the Internet but which flight booking search engine is offering cheapest airfare deals is the main thing for you. Go, More Miles, a Leading Travel Agency in USA is offering Cheap Flight Deals to Passengers through which can grab the lowest airfare flight booking deals.</p>
-                <br>
-                <h2>Flat 30% Off on International Flight Booking:</h2>
-                <p>From Miami to Texas you can book cheap flight tickets for every popular place in the USA. This time you can save around 30% by confirming your flight reservations from GMM or Go More Miles. Our Airlines Reservations Booking Offers make your travel hassle-free and economically always. From Delta Airlines Reservations to American Airlines Reservations you can book cheap flights from this portal. We love to provide the best flight promo codes and discount coupons on flight booking to the travelers.</p>
-                <p>Therefore, with the motive of Go More Explore More, GMM has become the top alternative for air ticket reservations. Are you going to plan your travel for the festive season? The Go More Miles Flight Deals are amazing for you to save money on your complete travel budget. Therefore, we can say that Go more and explore more with Go More Miles Air Tickets Booking Deals.</p>
-                <br>
-                <h2>Your Last Minute Hassle-Free Travel Partner:</h2>
-                <p>The Last Minute Flight Deals are also the most searchable keywords on search engines like Google or Bing. When you don’t have enough time for confirming flight reservations at last minute then you need to take a look at the Last Minute Flight Booking Deals from GMM. We are also confirming your thrifty flight deals at last minute and you don’t need to face the problem of higher airfare at last minute. In the minimum budget, you can explore the top destinations of the world. Even on the United Airlines Reservations & Frontier Airlines Reservations, you can book your last minute plane tickets.</p>
-                <br>
-                <h2>Latest Flight Booking Promo Code:</h2>
-                <p>Are you looking for the best flight promo code? Start your vacation plan with the flight coupons of Go More Miles. Here we also providing the cheap flight booking Promo Code and you can apply the promo code to book cheap flights.</p>
-                <br>
-                <h2>Flight Promo Code for New Users: NEWGMM</h2>
-            </div>
-        </div>
-    </div>
-
-    <div class="container1 faqs">
-        <div class="row1">
-            <div class="column">
-                <h2>FAQs</h2>
-                <br>
-                <div class="grid grid1">
-                    <div class="column">
-                        <h3>1. How Go More Miles Provide Lowest Airfare Air Tickets Booking Deals?</h3>
-                        <p>Go More Miles is the Best Flight Booking Site in USA and We Filter Top Airlines Results for Your Destinations.</p>
-                        <h3>2. How to Book Cheap Flights?</h3>
-                        <p>You can book cheap flight tickets for one way and round trip from Go More Miles.</p>
-                        <h3>3. Can I Also Plan Last Minute Thrifty Travel Management?</h3>
-                        <p>Designate Go More Miles as your Last Minute Flight Booking Partner and Confirm your air tickets easily.</p>
-                        <h3>4. How to Cancel Flight Online?</h3>
-                        <p>From Flight Cancellation to Check Flight Status you can do everything on GMM Flight Booking Portal.</p>
-                    </div>
-                    <div class="column">
-                        <h3>5. What are the top deals on flight booking from Go More Miles?</h3>
-                        <p><b>The List of Top Flight Deals is:</b></p>
-                        <ul>
-                            <li>$99 Flight Deals</li>
-                            <li>$199 Flight Deals</li>
-                            <li>Last Minute Flight Offers</li>
-                            <li>Cheap New Year Flight Deals</li>
-                            <li>Cheap Christmas Flight Deals</li>
-                            <li>Lowest Airfare Black Friday Deals</li>
-                            <li>Affordable Easter Day Flight Deals</li>
-                            <li>And Many More...</li>
-                        </ul>
-                    </div>
-                </div>
+                <img src="./images/img-1.png" width="200px" alt="">
             </div>
         </div>
     </div>
 
     <div class="cta">
         <a href="tel:+18004369330">
-            <div class="flex">
+            <div class="flex gap2">
                 <h3><i class="fa-solid fa-phone"></i></h3>
                 <div>
-                    <p><a href="tel:+18009183039"><b>+1-800-918-3039</b></a></p>
+                    <p>Call Us Today!</p>
+                    <h4><a href="tel:+18884695403">tel:+1-888-469-5403</a></h4>
                 </div>
             </div>
         </a>
     </div>
 
-    <div class="container1 newfooter">
-        <div class="row1">
-            <div class="d-flex">
-                <p style="flex: 1;"><a href="/"><img src="/images/logo.png" alt=""></a></p><br>
-                <p style="flex: 1;">
-                    <a href="https://www.gomoremiles.com/about-us.aspx">About</a> &nbsp;| &nbsp;<a href="https://www.gomoremiles.com/contact-us.aspx">Contact</a> &nbsp;| &nbsp;<a href="https://www.gomoremiles.com/privacy-policy.aspx">Privacy Policy</a> &nbsp;| &nbsp;<a href="https://www.gomoremiles.com/sitemap.aspx">Sitemap</a>
-                </p><br>
-                <p>
-                    <a href="#" target="_blank"><i class="fa-brands fa-facebook-f"></i></a>
-                    <a href="#" target="_blank"><i class="fa-brands fa-twitter"></i></a>
-                    <a href="#" target="_blank"><i class="fa-brands fa-instagram"></i></a>
-                    <a href="#" target="_blank"><i class="fa-brands fa-youtube"></i></a>
-                </p>
-            </div><hr>
-            <div class="grid grid3">
+    <div class="container newfooter">
+        <div class="row">
+            <div class="grid">
                 <div class="column">
-                    <h4>About Us</h4>
-                    <p style="font-size: 12px !important;">Go More Miles is a Top-Rated Flight Booking Agency in USA. We are offering Cheap Flight Deal at the Lowest Airfare for Domestic and International Flight Booking. <a href="https://www.gomoremiles.com/about-us.aspx"><u><b>Read More >></b></u></a></p>
+                    <a href="/"><img src="./images/logo.png" alt=""></a>
                 </div>
                 <div class="column">
-                    <h4>Routes</h4>
-                    <p><a href="https://www.gomoremiles.com/flight/cheap-flights-from-los-angeles-lax-to-houston-iah.aspx">Los Angeles to Houston</a></p>
-                    <p><a href="https://www.gomoremiles.com/flight/cheap-flights-from-new-york-nyc-to-boston-bos.aspx"></a>New York to Boston</p>
-                    <p><a href="https://www.gomoremiles.com/flight/atlanta-atl-to-orlando-mco-flights.aspx"></a>Atlanta to Orlando</p>
-                    <p><a href="https://www.gomoremiles.com/flight/cheap-flights-from-new-york-jfk-to-london-lon.aspx">New York to London</a></p>
+                    <h4>LINKS</h4>
+                    <p><a href="#">About us</a></p>
+                    <p><a href="#">Help Center</a></p>
+                    <p><a href="#">Airlines Information</a></p>
+                    <p><a href="#">Career</a></p>
                 </div>
                 <div class="column">
-                    <h4>Deals</h4>
-                    <p><a href="https://www.gomoremiles.com/deals/last-minute-flight-deals.aspx">Last Minute Flight</a></p>
-                    <p><a href="https://www.gomoremiles.com/deals/easter-flights-deals.aspx">Easter Day Flight</a></p>
-                    <p><a href="https://www.gomoremiles.com/deals/new-year-flights-deals.aspx">New Year Flight</a></p>
-                    <p><a href="https://www.gomoremiles.com/deals/valentines-flights-deals.aspx">Valentine’s Day Flight</a></p>
-                </div>
-                <div class="contact">
-                    <h4>Contact Information</h4>
-                    <p><a href="tel:+18009183039"><i class="fa-solid fa-phone"></i> +1-800-918-3039</a></p>
-                    <p><a href="mailto:info@gomoremiles.com"><i class="fa-solid fa-at"></i> info@gomoremiles.com</a></p>
-                    <p style="font-size: 13px !important;"><i class="fa-solid fa-home"></i> 6355 Haystack CT Cumming, GA 30040</p>
+                    <h4>LEGAL</h4>
+                    <p><a href="#">Terms & Conditions</a></p>
+                    <p><a href="#">Privacy Policy</a></p>
                 </div>
             </div>
-            <hr>
-            <p style="font-size: 12px !important;"><b>Disclaimer: </b>Gomoremiles is an Independent Online Travel Agency Portal. We Are Not Working With Any Association, Subsidiary and Third Party Support.  By Visiting, Browsing, Using and Booking from This Website You Agree That Gomoremiles is Not Responsible for Any Type of Loss By Using This Website, Pages, Offers, Content, Links and to Other Sites Attached on This Website. If You Have Any Query Then Call on Our Customer Support Number or Email Us On Official Mail.</p>
         </div>
         <hr style="margin: 0;">
-        <div>
+        <div style="text-align:center;">
             <div class="foot">
-                <p>© 2025 Go More Miles. All rights Reserved. </p>
+                <p>© 2025 Cayman Airways. All rights Reserved. </p>
             </div>
         </div>
     </div>
 </body>
-<script src="/css/file.js"></script>
-<script src="/css/bootstrap.js"></script>
-<script src="/css/jquery.js"></script>
-<script src="/css/slide.js"></script>
+<script src="./css/file.js"></script>
+<script src="./css/bootstrap.js"></script>
+<script src="./css/jquery.js"></script>
+<script src="./css/slide.js"></script>
 </html>

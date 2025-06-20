@@ -594,42 +594,6 @@ form {
 }
 
 .fscardsec {
-    /* text-align: center;
-
-    .column {
-        border: 2px solid var(--third-color);
-        border-radius: 12px;
-    }
-
-    .innercol {
-        padding: 0 20px 20px 20px;
-    }
-
-    img {
-        width: 100%;
-        border-radius: 10px 10px 0 0;
-    }
-
-    p {
-        line-height: 1.5;
-        font-size: 15px;
-    }
-
-    button {
-        margin-top: 10px;
-    }
-
-    h3 {
-        margin: -22px auto 10px auto !important;
-        width: fit-content;
-        background-color: var(--secondary-color) !important;
-        padding: 7px 25px;
-        border-radius: 25px;
-        position: relative;
-        color: var(--fourth-color) !important;
-    } */
-
-
     .column {
         border: 2px solid var(--third-color);
         border-radius: 12px;
@@ -665,5 +629,52 @@ form {
         border-radius: 25px;
         position: relative;
         color: var(--fourth-color) !important;
+    }
+}
+
+.usps {
+    background-color: #f1f1f1;
+
+    .innercol {
+        box-shadow: 0 0 2px 2px rgba(20, 20, 20, 0.2);
+        padding: 20px;
+        border-radius: 0 10px 10px 10px;
+    }
+
+    i {
+        border-radius: 50px 50px 0 0;
+        background-color: var(--primary-color);
+        padding: 12px;
+        font-size: 25px;
+        color: var(--fourth-color);
+    }
+
+    hr {
+        border: 2px solid var(--third-color);
+        width: 100px;
+        margin-block: 10px;
+    }
+}
+
+.faqsec {
+    h3:nth-child(1) {
+        flex: 1;
+    }
+
+    .fa-angle-up, .faqdetail {
+        display: none;
+    }
+
+    .faqdetail {
+        border-top: 1px solid var(--secondary-color);
+        padding-top: 15px;
+        margin-top: 15px;
+    }
+
+    .newfaq{
+        box-shadow: 0 0 2px 2px rgba(20, 20, 20, 0.2);
+        padding: 20px;
+        border-radius: 10px;
+        margin-bottom: 15px;
     }
 }

@@ -35,3 +35,22 @@ window.addEventListener('scroll', () => {
     header.classList.remove('scrolled');
   }
 });
+
+document.querySelectorAll('.faqhead').forEach(head => {
+  head.addEventListener('click', () => {
+    const detail = head.nextElementSibling; // Get the next sibling (headdetail)
+    const plusIcon = head.querySelector('.fa-angle-down');
+    const minusIcon = head.querySelector('.fa-angle-up');
+
+    detail.classList.toggle('show'); // Toggle visibility
+
+    // Toggle icons
+    if (detail.classList.contains('show')) {
+      plusIcon.style.display = 'none'; // Hide plus
+      minusIcon.style.display = 'inline'; // Show minus
+    } else {
+      plusIcon.style.display = 'inline'; // Show plus
+      minusIcon.style.display = 'none'; // Hide minus
+    }
+  });
+});

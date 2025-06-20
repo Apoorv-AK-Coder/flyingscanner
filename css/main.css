@@ -8342,8 +8342,7 @@ button.close {
 .pager:after,
 .pager:before,
 .panel-body:after,
-.panel-body:before,
-.row:after {
+.panel-body:before {
 	display: table;
 	content: " "
 }
@@ -16551,7 +16550,6 @@ button.close {
 .dl-horizontal dd:after,
 .container:after,
 .container-fluid:after,
-.row:after,
 .form-horizontal .form-group:after,
 .btn-toolbar:after,
 .btn-group-vertical>.btn-group:after,

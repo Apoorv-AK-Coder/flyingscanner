@@ -26,92 +26,8 @@
         gap: 10px;
     }
 
-    .newheader {
-        width: 100% !important;
-
-        .latesthide {
-            display: none;
-        }
-
-        .newhead {
-            width: 100% !important;
-            padding: 15px 20px;
-
-            .icon {
-                margin: auto 0;
-                flex: 1;
-            }
-
-            .left {
-                img {
-                    width: 125px;
-                }
-            }
-        }
-
-        .right {
-            justify-content: center;
-            flex: 1;
-        }
-    }
-
-    .navigate {
-        z-index: 99;
-        display: none;
-        position: absolute;
-        background-color: var(--fourth-color);
-        box-shadow: 0px 2px 2px rgba(20, 20, 20, 0.5);
-        padding: 30px;
-        top: 0;
-        right: 0;
-        width: 70%;
-        height: 100vh;
-        border: none;
-
-        ul {
-            flex-direction: column;
-            gap: 5px !important;
-
-
-            li {
-                margin: 0;
-                padding: 5px;
-                cursor: pointer;
-            }
-
-            a {
-                color: var(--fifth-color) !important;
-            }
-        }
-    }
-
-    #on,
-    #off {
-        display: block !important;
-        font-size: 22px;
-        text-align: right;
-        color: var(--fifth-color);
-    }
-
-    #on {
-        color: var(--fourth-color);
-        max-width: 30px;
-    }
-
     .newfooter {
-        .foot {
-            width: 100%;
-
-            p {
-                font-size: 15px;
-            }
-
-            padding-bottom: 100px;
-        }
-
-        .row {
-            padding: 20px;
-        }
+        padding-bottom: 70px;
     }
 
     .cta {
@@ -122,12 +38,22 @@
             line-height: 1.5;
         }
     }
-    
+
     .grid1,
     .grid2,
     .grid3 {
         grid-template-columns: repeat(2, 1fr);
         gap: 10px;
+    }
+
+    .fsroutes {
+        .slide1 {
+
+            p,
+            button {
+                display: block;
+            }
+        }
     }
 }
 
@@ -150,9 +76,65 @@
         }
     }
 
+    .fsroutes {
+        .slide1 {
+            min-width: 70%;
+        }
+    }
+
+    .fsdestinations {
+        .slide2 {
+            min-width: 46%;
+
+            .innerdiv {
+                height: 200px;
+            }
+        }
+    }
+
+    .fscardsec {
+        .innerimgcol {
+            height: 200px;
+            border-radius: 10px 10px 0 0;
+        }
+
+        h3 {
+            margin: 0 auto 10px 0 !important;
+        }
+    }
+
     .newfooter {
-        .grid {
-            grid-template-columns: repeat(1, 1fr);
+        .row {
+            padding-top: 20px !important;
+        }
+
+        .foot {
+            font-size: 13px;
+        }
+    }
+
+    .newheader {
+        .left {
+            img {
+                width: 150px;
+            }
+        }
+
+        .newhead {
+            padding: 15px 0;
+        }
+    }
+
+    .navigate {
+        width: 100%;
+        padding: 40px;
+        background: rgba(20, 20, 20, 0.9);
+    }
+
+    .bg1 {
+        .row {
+            padding-top: 75px;
+            padding-bottom: 20px;
         }
     }
 }

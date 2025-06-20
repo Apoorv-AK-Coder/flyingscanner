@@ -213,10 +213,6 @@ ul#ui-id-1 {
     .column {
         flex: 1 !important;
 
-        b {
-            font-size: 18px;
-        }
-
         a {
             color: var(--fourth-color) !important;
             text-decoration: none !important;

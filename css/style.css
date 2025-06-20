@@ -14,20 +14,10 @@ body {
 
 :root {
     --primary-color: #f74a1f;
-    --secondary-color: #560ce3;
+    --secondary-color: #006cd2;
     --third-color: #0D1B2A;
     --fourth-color: #ffffff;
     --fifth-color: #141414;
-    --sixth-color: rgb(114, 54, 141);
-    --seventh-color: #006cd2;
-
-    /* --primary-color: #5496bf;
-    --secondary-color: #03588c;
-    --third-color: #023e73;
-    --fourth-color: #ffffff;
-    --fifth-color: #141414;
-    --sixth-color: rgb(114, 54, 141);
-    --seventh-color: #006cd2; */
     /*fonts*/
     --primary-font: "Outfit";
     --secondary-font: Raleway;

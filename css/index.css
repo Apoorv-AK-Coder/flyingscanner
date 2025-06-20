@@ -233,7 +233,7 @@ form {
 }
 
 .herobg {
-    background-image: linear-gradient(to bottom, rgba(20, 20, 20, 0.5), rgba(20, 20, 20, 0)), url(../images/hero.jpg);
+    background-image: linear-gradient(to bottom, rgba(20, 20, 20, 0.5), rgba(20, 20, 20, 0)), url(../newimages/hero.jpg);
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -345,7 +345,7 @@ form {
 }
 
 .bg1 {
-    background-image: linear-gradient(to bottom, var(--third-color), rgb(20, 20, 20, 0)), url(../images/hero.jpg);
+    background-image: linear-gradient(to bottom, var(--third-color), rgb(20, 20, 20, 0)), url(../newimages/hero.jpg);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -404,20 +404,20 @@ form {
     }
 
     #flight_from {
-        background-image: url(../images/departure.png);
+        background-image: url(../newimages/departure.png);
     }
 
     #flight_to {
-        background-image: url(../images/arrivals.png);
+        background-image: url(../newimages/arrivals.png);
     }
 
     #flight_from_date,
     #flight_to_date {
-        background-image: url(../images/cdate.png);
+        background-image: url(../newimages/cdate.png);
     }
 
     #pass_info {
-        background-image: url(../images/passengers.png);
+        background-image: url(../newimages/passengers.png);
     }
 
     .radio {
@@ -471,25 +471,31 @@ form {
         display: grid;
         align-items: end;
         cursor: pointer;
+        padding: 20px;
 
         img {
             width: 100%;
             border-radius: 10px 10px 0 0;
         }
 
-        .innerdiv {
-            padding: 15px;
-            background-color: rgba(255, 255, 255, 0.75);
-            border-radius: 0 0 10px 10px;
+        hr {
+            border: 1px solid var(--primary-color);
+            margin-block: 5px;
+            width: 100px;
         }
 
         p,
         button {
             display: none;
+            line-height: 1.5;
         }
 
         b {
             font-size: 20px;
+        }
+
+        h3, p {
+            color: var(--fourth-color) !important;
         }
     }
 
@@ -529,10 +535,6 @@ form {
 }
 
 .fsdestinations {
-    .row {
-        padding-block: 0;
-    }
-
     .slider-container2 {
         position: relative;
         overflow: hidden;
@@ -597,7 +599,11 @@ form {
     }
 }
 
-.fscardsec {
+.fscardsec {    
+    .row {
+        padding-block: 0;
+    }
+
     .column {
         border: 2px solid var(--third-color);
         border-radius: 12px;
@@ -637,8 +643,6 @@ form {
 }
 
 .usps {
-    background-color: #f1f1f1;
-
     .innercol {
         box-shadow: 0 0 2px 2px rgba(20, 20, 20, 0.2);
         padding: 20px;
@@ -671,14 +675,18 @@ form {
 
     .faqdetail {
         border-top: 1px solid var(--secondary-color);
-        padding-top: 15px;
-        margin-top: 15px;
+        padding-top: 10px;
+        margin-top: 10px;
     }
 
     .newfaq{
         box-shadow: 0 0 2px 2px rgba(20, 20, 20, 0.2);
-        padding: 20px;
+        padding: 15px;
         border-radius: 10px;
         margin-bottom: 15px;
+    }
+
+    h3 {
+        font-size: 18px !important;
     }
 }

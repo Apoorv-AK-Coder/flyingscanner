@@ -42,7 +42,8 @@
 .navigate {
     margin: auto 0;
     display: flex;
-    justify-content: center;
+    justify-content: end;
+    padding-right: 40px;
 
     hr {
         display: none;
@@ -74,6 +75,7 @@
         transition: border-color 0.5s ease-in-out;
         padding: 0;
         text-decoration: none;
+        font-size: 18px;
     }
 
     li {
@@ -300,7 +302,8 @@ form {
     }
 
     .col3 {
-
+        margin-top: 10px;
+        gap: 5px;
         .column,
         div {
             flex: 1;
@@ -488,11 +491,11 @@ form {
     }
 
     .slide2 {
-        min-width: 23.4%;
+        min-width: 20%;
 
         .innerdiv {
             border-radius: 10px;
-            height: 275px;
+            height: 325px;
             background-position: center;
             background-repeat: no-repeat;
             background-size: cover;

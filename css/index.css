@@ -574,24 +574,15 @@ form {
 }
 
 .usps {
-    .innercol {
-        box-shadow: 0 0 2px 2px rgba(20, 20, 20, 0.2);
+    .column {
+        border: 1px solid ;
         padding: 20px;
-        border-radius: 0 10px 10px 10px;
+        border-radius: 10px;
     }
 
-    i {
-        border-radius: 50px 50px 0 0;
-        background-color: var(--primary-color);
-        padding: 12px;
-        font-size: 25px;
-        color: var(--fourth-color);
-    }
-
-    hr {
-        border: 2px solid var(--third-color);
-        width: 100px;
-        margin-block: 10px;
+    p {
+        font-size: 14px;
+        line-height: 1.7;
     }
 }
 

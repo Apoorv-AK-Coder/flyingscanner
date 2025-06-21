@@ -67,28 +67,40 @@
                                 <label for="rdoRoundtrip"><span><span></span></span>Round Trip</label>
                             </div>
                             <div>
-                                <input type="radio" name="flight_way" id="rdoOneway" class="flight_way slct_btn onwtrp"
-                                    style="margin-top: 5px !important;" value="1">
+                                <input type="radio" name="flight_way" id="rdoOneway" class="flight_way slct_btn onwtrp" value="1">
                                 <label for="rdoOneway"><span><span></span></span>One Way</label>
                             </div>
                         </div>
                         <div class="col3 grid grid2">
-                            <div class="column d-flex">
-                                <input type="text" placeholder="Flying From"
+                            <div class="column grid grid1">
+                                <label for="">Departure
+                                    <input type="text" placeholder="Flying From"
                                     class="autocomplete_from autocomplete_from_new location" id="flight_from"
                                     name="flight_from">
-                                <input type="text" placeholder="Flying To"
+                                </label>
+                                <label for="">
+                                    Arrival
+                                    <input type="text" placeholder="Flying To"
                                     class="autocomplete_to autocomplete_from_to location1" id="flight_to"
                                     name="flight_to">
+                                </label>
                             </div>
                             <div class="column flex">
-                                <input type="text" id="flight_from_date" name="flight_from_date"
+                                <label for="">
+                                    Departure Date
+                                    <input type="text" id="flight_from_date" name="flight_from_date"
                                     placeholder="DD-MM-YYYY" required>
-                                <input type="text" id="flight_to_date" name="flight_to_date" placeholder="DD-MM-YYYY"
+                                </label>
+                                <label for="">
+                                    Return Date
+                                    <input type="text" id="flight_to_date" name="flight_to_date" placeholder="DD-MM-YYYY"
                                     required>
+                                </label>
                             </div>
 
                             <div class="bottom-section d-flex">
+                                <label for="">
+                                    Passenger
                                 <div class="pax-contents">
 
                                     <div class="ind_srch_subBox prp_popup">
@@ -155,8 +167,11 @@
                                     </div>
 
                                 </div>
+                                </label>
 
-                                <div>
+                                <label for="">
+                                        <div>
+                                        Select Airlines
                                     <ul class="more-options" style="background-color: transparent;margin-bottom: 0;">
                                         <li style="margin-left: 0;">
                                             <div class="airlnes">
@@ -259,6 +274,7 @@
                                         </li>
                                     </ul>
                                 </div>
+                            </label>
                             </div>
                         </div>
                         <div class="search_flights" style="text-align:right;margin-top: 10px;"> <a

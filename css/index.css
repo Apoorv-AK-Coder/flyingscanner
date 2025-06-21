@@ -117,11 +117,10 @@ form {
     input,
     select,
     textarea {
-        line-height: 1em !important;
+        line-height: 2em !important;
         background-color: var(--fourth-color);
         width: 100%;
         padding: 10px;
-        /* margin: 5px 0; */
         border: 1px solid #cacaca;
         border-radius: 5px;
     }
@@ -130,7 +129,6 @@ form {
         flex: 1;
         font-family: var(--secondary-font);
         font-size: 16px;
-        margin-top: 10px;
         text-align: left;
         font-weight: 400;
     }
@@ -314,13 +312,27 @@ form {
             margin: 5px 0;
         }
 
-        input {
-            padding-left: 30px;
-            background-position-x: 7px;
-            background-position-y: center;
-            background-repeat: no-repeat;
-            background-size: 15px;
+        input, select {
+            padding: 0;
+            margin-top: 10px;
+            border: none;
         }
+
+        label {
+            width: 100%;
+            border: 1px solid var(--fifth-color);
+            padding: 10px;
+            border-radius: 10px;
+        }
+
+        .grid {
+            gap: 5px;
+        }
+    }
+
+    ::placeholder {
+        color: #8f8f8f;
+        font-size: 16px;
     }
 
     p {
@@ -346,23 +358,6 @@ form {
         background-color: var(--secondary-color);
     }
 
-    #flight_from {
-        background-image: url(../newimages/departure.png);
-    }
-
-    #flight_to {
-        background-image: url(../newimages/arrivals.png);
-    }
-
-    #flight_from_date,
-    #flight_to_date {
-        background-image: url(../newimages/cdate.png);
-    }
-
-    #pass_info {
-        background-image: url(../newimages/passengers.png);
-    }
-
     .radio {
         div {
             background-color: var(--secondary-color);
@@ -374,6 +369,12 @@ form {
                 font-weight: 700 !important;
             }
         }
+    }
+
+    form {
+        background-color: var(--fourth-color);
+        border-radius: 10px;
+        padding: 20px;
     }
 }
 

@@ -47,9 +47,9 @@ document.querySelectorAll('.faqhead').forEach(head => {
     // Toggle icons
     if (detail.classList.contains('show')) {
       plusIcon.style.display = 'none'; // Hide plus
-      minusIcon.style.display = 'inline'; // Show minus
+      minusIcon.style.display = 'block'; // Show minus
     } else {
-      plusIcon.style.display = 'inline'; // Show plus
+        plusIcon.style.display = 'block'; // Show plus
       minusIcon.style.display = 'none'; // Hide minus
     }
   });

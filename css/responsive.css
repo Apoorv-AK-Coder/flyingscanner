@@ -28,6 +28,10 @@
 
     .newfooter {
         padding-bottom: 50px;
+
+        .footsocial {
+        justify-content: start;
+        }
     }
 
     .cta {

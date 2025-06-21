@@ -30,7 +30,7 @@
         padding-bottom: 50px;
 
         .footsocial {
-        justify-content: start;
+            justify-content: start;
         }
     }
 
@@ -57,6 +57,36 @@
             button {
                 display: block;
             }
+        }
+    }
+
+    #on,
+    #off {
+        display: block;
+    }
+
+    .navigate {
+        background-color: var(--third-color);
+        display: grid;
+        position: absolute;
+        left: 0;
+        top: 0;
+        height: 100vh;
+        width: 60%;
+        padding: 30px;
+        display: none;
+
+        hr {
+            display: block;
+            margin-bottom: 20px;
+        }
+
+        nav {
+            width: 100%;
+        }
+
+        ul {
+            display: grid;
         }
     }
 }
@@ -127,18 +157,16 @@
         .newhead {
             padding: 15px 0;
         }
-    }
 
-    .navigate {
-        width: 100%;
-        padding: 40px;
-        background: rgba(20, 20, 20, 0.9);
+        .right {
+            flex: 1;
+            justify-content: center;
+        }
     }
 
     .bg1 {
         .row {
-            padding-top: 75px;
-            padding-bottom: 20px;
+            padding-block: 20px;
         }
     }
 

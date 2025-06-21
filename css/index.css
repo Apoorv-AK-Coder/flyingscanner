@@ -121,7 +121,7 @@ form {
         background-color: var(--fourth-color);
         width: 100%;
         padding: 10px;
-        margin: 5px 0;
+        /* margin: 5px 0; */
         border: 1px solid #cacaca;
         border-radius: 5px;
     }
@@ -403,7 +403,7 @@ form {
     }
 
     .slide1 {
-        min-width: 23.4%;
+        min-width: 31.7%;
         box-shadow: 0 0 2px 2px rgba(20, 20, 20, 0.2);
         margin: 10px;
         border-radius: 10px;
@@ -491,11 +491,11 @@ form {
     }
 
     .slide2 {
-        min-width: 20%;
+        min-width: 23.6%;
 
         .innerdiv {
             border-radius: 10px;
-            height: 325px;
+            height: 350px;
             background-position: center;
             background-repeat: no-repeat;
             background-size: cover;

@@ -13,8 +13,8 @@ body {
 }
 
 :root {
-    --primary-color: #f74a1f;
-    --secondary-color: #006cd2;
+    --primary-color: #006cd2;
+    --secondary-color: #0068EF;
     --third-color: #0D1B2A;
     --fourth-color: #ffffff;
     --fifth-color: #141414;
@@ -117,6 +117,7 @@ li {
     color: var(--fourth-color);
     font-weight: 700;
     border-radius: 5px;
+    cursor: pointer;
 }
 
 .button:hover {

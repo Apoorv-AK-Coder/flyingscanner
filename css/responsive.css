@@ -52,7 +52,6 @@
 
     .fsroutes {
         .slide1 {
-
             p,
             button {
                 display: block;
@@ -127,13 +126,8 @@
     }
 
     .fscardsec {
-        .innerimgcol {
-            height: 200px;
-            border-radius: 10px 10px 0 0;
-        }
-
-        h3 {
-            margin: 0 auto 10px 0 !important;
+        .column {
+            height: 300px;
         }
     }
 
@@ -167,12 +161,6 @@
     .bg1 {
         .row {
             padding-block: 20px;
-        }
-    }
-
-    .herobg {
-        .row {
-            padding-top: 85px;
         }
     }
 }

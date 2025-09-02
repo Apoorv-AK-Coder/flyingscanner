@@ -6,11 +6,11 @@
     }
 
     h1 {
-        font-size: 1.8em !important;
+        font-size: 1.7em !important;
     }
 
     h2 {
-        font-size: 1.5em !important;
+        font-size: 1.4em !important;
     }
 
     h3 {
@@ -26,12 +26,76 @@
         gap: 10px;
     }
 
-    .newfooter {
-        padding-bottom: 50px;
+    .newheader {
+        width: 100% !important;
 
-        .footsocial {
-            justify-content: start;
+        .latesthide {
+            display: none;
         }
+
+        .newhead {
+            width: 100% !important;
+            padding: 10px 20px;
+
+            .icon {
+                margin: auto 0;
+                flex: 1;
+            }
+
+            .left {
+                img {
+                    width: 100px;
+                }
+            }
+        }
+
+        .right {
+            text-align: center;
+            flex: 1;
+        }
+    }
+
+    .navigate {
+        z-index: 99;
+        display: none;
+        position: absolute;
+        background-color: var(--fourth-color);
+        box-shadow: 0px 2px 2px rgba(20, 20, 20, 0.5);
+        padding: 30px;
+        top: 0;
+        right: 0;
+        width: 70%;
+        height: 100vh;
+        border: none;
+
+        ul {
+            flex-direction: column;
+            gap: 5px !important;
+
+
+            li {
+                margin: 0;
+                padding: 5px;
+                cursor: pointer;
+            }
+
+            a {
+                color: var(--fifth-color) !important;
+            }
+        }
+    }
+
+    #on,
+    #off {
+        display: block !important;
+        font-size: 22px;
+        text-align: right;
+        color: var(--fifth-color);
+    }
+
+    #on {
+        color: var(--fifth-color);
+        max-width: 30px;
     }
 
     .cta {
@@ -50,47 +114,24 @@
         gap: 10px;
     }
 
-    .fsroutes {
-        .slide1 {
-            p,
-            button {
-                display: block;
-            }
-        }
-    }
-
-    #on,
-    #off {
-        display: block;
-    }
-
-    .navigate {
-        background-color: var(--third-color);
-        display: grid;
-        position: absolute;
-        right: 0;
-        top: 0;
-        height: 100vh;
-        width: 60%;
-        padding: 30px;
-        display: none;
-
-        hr {
-            display: block;
-            margin-bottom: 20px;
-        }
-
-        nav {
-            width: 100%;
-        }
-
-        ul {
-            display: grid;
-        }
+    .usps {
+        text-align: left;
     }
 }
 
 @media (max-width: 768px) {
+    h1 {
+        font-size: 1.5em !important;
+    }
+
+    h2 {
+        font-size: 1.3em !important;
+    }
+
+    h3 {
+        font-size: 1.17em !important;
+    }
+
     .d-flex {
         flex-direction: column;
     }
@@ -109,56 +150,125 @@
         }
     }
 
-    .fsroutes {
-        .slide1 {
-            min-width: 70%;
-        }
-    }
-
-    .fsdestinations {
-        .slide2 {
-            min-width: 46%;
-
-            .innerdiv {
-                height: 200px;
-            }
-        }
-    }
-
-    .fscardsec {
-        .column {
-            height: 300px;
-        }
-    }
-
     .newfooter {
-        .row {
-            padding-top: 20px !important;
+        .grid {
+            grid-template-columns: repeat(1, 1fr);
         }
 
-        .foot {
-            font-size: 13px;
-        }
+        padding-bottom: 50px;
     }
 
     .newheader {
-        .left {
-            img {
-                width: 150px;
+        .right {
+            a {
+                font-size: 13px;
             }
         }
 
         .newhead {
-            padding: 15px 0;
-        }
-
-        .right {
-            flex: 1;
-            justify-content: center;
+            .left {
+                img {
+                    width: 100px;
+                }
+            }
         }
     }
 
-    .bg1 {
+    .vootticketbook {
+        .innerrow:nth-child(odd) {
+            border-right: 0;
+        }
+    }
+
+    .vootdestinations {
+        .slide1 {
+            min-width: 100%;
+        }
+    }
+
+    .vootroutes {
+        .slide2 {
+            min-width: 100%;
+        }
+    }
+
+    .vootpackages {
+        .slide3 {
+            min-width: 100%;
+        }
+    }
+
+    .search-container {
+        width: 100%;
+    }
+
+    .destinations {
+        .grid {
+            .imgcolumn {
+                height: 250px;
+            }
+
+            a:nth-child(2) {
+                .imgcolumn {
+                    height: 250px;
+                }
+            }
+        }
+    }
+
+    .usps1 {
+        .grid {
+            .innercol1 {
+                text-align: left;
+            }
+        }
+    }
+
+    .bg {
+        .column {
+            width: 100%;
+        }
+    }
+
+    .deals {
+        .grid {
+
+            .column:first-child,
+            .column:last-child {
+                grid-column: span 1;
+            }
+        }
+    }
+
+    .usps {
+        p:first-child {
+            display: none;
+        }
+    }
+
+    .VootBanner {
+        .row {
+            padding-block: 20px;
+        }
+
+        .col3 {
+
+            input,
+            select {
+                padding-block: 12px !important;
+            }
+        }
+
+        .search_flights {
+            margin-top: 15px !important;
+        }
+    }
+
+    .textmedia {
+        .column:nth-child(1) {
+            padding-block: 0;
+        }
+
         .row {
             padding-block: 20px;
         }

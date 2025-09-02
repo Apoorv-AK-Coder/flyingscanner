@@ -4,816 +4,492 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" type="image/x-icon" href="./newimages/favicon.ico">
-    <title>Royal Caribbean &nbsp;| &nbsp;Home</title>
+    <link rel="icon" type="image/x-icon" href="./images/favicon.ico">
+    <title>Home – A2zflightservicellc</title>
     <link href="./css/style.css" rel="stylesheet">
     <link href="./css/index.css" rel="stylesheet">
-    <link href="./css/homepax.css" rel="stylesheet">
-    <link href="./css/main.css" rel="stylesheet">
     <link href="./css/responsive.css" rel="stylesheet">
     <link href="./fontawesome/css/all.css" rel="stylesheet">
     <link href="./fontawesome/css/all.min.css" rel="stylesheet">
+
+    <link href="/Content/flcss/bootstrap.min.css" rel="stylesheet" />
+    <link href="/Content/flcss/home.css" rel="stylesheet" />
+    <link href="/Content/flcss/styles.css" rel="stylesheet" />
+    <link href="/Content/flcss/inner.css" rel="stylesheet" />
+    <link href="/Content/flcss/animated.css" rel="stylesheet" />
+    <link href="/Content/flcss/common.css" rel="stylesheet" />
+    <link href="/Content/flcss/style_result.css" rel="stylesheet" />
+    <link href="/Content/flcss/jquery-ui.min.css" rel="stylesheet" />
+    <link href="/Content/flcss/owl.theme.default.css" rel="stylesheet" />
+    <link href="/Content/flcss/owl.carousel.css" rel="stylesheet" type="text/css" />
+    <link href="/Content/flcss/owl.carousel.min.css" rel="stylesheet" type="text/css" />
+    <link href="/Content/searchAirport.css" rel="stylesheet" />
+    <link href="/Content/jquery-ui.css" rel="stylesheet" />
 </head>
 
 <body>
     <div class="newheader" id="newheader">
-        <div class="newhead flex">
-            <div class="column left">
-                <a href="/">
-                    <img src="./newimages/logo.png" alt="">
-                </a>
-            </div>
+        <div class="newhead">
+            <div class="flex">
+                <div class="column left">
+                    <a href="/">
+                        <img src="./images/logo.png" alt="">
+                    </a>
+                </div>
 
-            <div class="column navigate" id="view">
-                <nav>
+                <div class="column navigate" id="view">
                     <div id="off">
-                        <i class="fa-solid fa-xmark"></i>
+                        <i class="fa-solid fa-xmark" style="margin-bottom: 30px !important;"></i>
                     </div>
-                    <hr>
-                    <ul>
-                        <li><a href="https://www.flyingscanner.com/yacht-rentals">Yacht</a></li>
-                        <li><a href="https://www.flyingscanner.com/hotels">Stays</a></li>
-                        <li><a href="https://www.flyingscanner.com/car-rental">Cars</a></li>
-                        <li><a href="https://www.flyingscanner.com/helicopter-tours">Tours</a></li>
-                        <li><a href="https://www.flyingscanner.com/blog/">Blog</a></li>
-                    </ul>
-                </nav>
-            </div>
+                    <nav>
+                        <ul>
+                            <li><a href="/">Home</a></li>
+                            <li><a href="/about">About Us</a></li>
+                            <li><a href="/contact-us">Contact</a></li>
+                        </ul>
+                    </nav>
+                </div>
 
-            <div class="right flex gap3">
-                <a href="tel:+18004369330"><button class="button">Call Us!</button></a>
-            </div>
+                <div class="right">
+                    <a href="tel:+10000000000"><button class="button">Call Us!</button></a>
+                </div>
 
-            <div class="column icon" id="on">
-                <i class="fa-solid fa-bars"></i>
+                <div class="column icon" id="on">
+                    <i class="fa-solid fa-bars"></i>
+                </div>
             </div>
         </div>
     </div>
 
-    <div class="container bg1">
-        <div class="row">
-            <div class="column">
-                <h1>Find, Filter, & Fix Airfare Deals with Flyingscanner</h1>
-                <p>Avail the exclusive airfare deals with more flexibility along with finding, filtering, and fixing airfare deals at this website.</p>
-                <br>
-                <div class="">
-                    <form action="/home/_searchenginehome" method="post" id="onflight">
-                        <div class="column radio flex">
+    <div class="container BannerBg">
+        <div class="innervootbg">
+            <div class="row">
+                <div class="column">
+                    <h1>Home - A2zflightservicellc</h1>
+                    <form action="/Home/_SearchEngineHome" method="post">
+                        <div class="column radio">
                             <div>
-                                <input type="radio" name="flight_way" id="rdoRoundtrip"
-                                    class="flight_way slct_btn rndtrp trpact" checked value="2">
-
+                                <input name="flight_way" type="radio" id="rdoRoundtrip" checked="" value="2"
+                                    class="flight_way slct_btn onwtrp">
                                 <label for="rdoRoundtrip"><span><span></span></span>Round Trip</label>
                             </div>
                             <div>
-                                <input type="radio" name="flight_way" id="rdoOneway" class="flight_way slct_btn onwtrp"
-                                    value="1">
+                                <input name="flight_way" type="radio" value="1" id="rdoOneway"
+                                    class="flight_way slct_btn rndtrp trpact">
                                 <label for="rdoOneway"><span><span></span></span>One Way</label>
                             </div>
                         </div>
                         <div class="col3 grid grid2">
-                            <div class="column grid grid1">
-                                <label for="">Departure
-                                    <input type="text" placeholder="Flying From"
-                                        class="autocomplete_from autocomplete_from_new location" id="flight_from"
-                                        name="flight_from">
-                                </label>
-                                <label for="">
-                                    Arrival
-                                    <input type="text" placeholder="Flying To"
-                                        class="autocomplete_to autocomplete_from_to location1" id="flight_to"
-                                        name="flight_to">
-                                </label>
+                            <div class="grid grid1">
+                                <div class="autocomplete-wrapper labelcol">
+                                    <label for="">From</label>
+                                    <input name="flight_from" type="text" placeholder="Origin" id="flight_from"
+                                        onchange="checkdata();" onclick="this.select();"
+                                        class="autocomplete_from autocomplete_from_new location">
+                                    <div class="autocomplete-results"></div>
+                                </div>
+                                <div class="autocomplete-wrapper labelcol">
+                                    <label for="">To</label>
+                                    <input name="flight_to" type="text" placeholder="Destination" id="flight_to"
+                                        onchange="checkdata1();" onclick="this.select();"
+                                        class="autocomplete_to autocomplete_from_to location1">
+                                    <div class="autocomplete-results_to"></div>
+                                </div>
                             </div>
-                            <div class="column flex">
-                                <label for="">
-                                    Departure Date
+                            <div class="grid grid1">
+                                <div class="labelcol">
+                                    <label for="">Depart</label>
                                     <input type="text" id="flight_from_date" name="flight_from_date"
-                                        placeholder="DD-MM-YYYY" required>
-                                </label>
-                                <label for="">
-                                    Return Date
+                                        placeholder="DD-MM-YYYY" required="" class="hasDatepicker">
+                                </div>
+                                <div class="labelcol">
+                                    <label for="">Return</label>
                                     <input type="text" id="flight_to_date" name="flight_to_date"
-                                        placeholder="DD-MM-YYYY" required>
-                                </label>
+                                        placeholder="DD-MM-YYYY" required="" class="hasDatepicker">
+                                </div>
                             </div>
-
                             <div class="bottom-section d-flex">
-                                <label for="">
-                                    Passenger
-                                    <div class="pax-contents">
+                                <div class="pax-contents" style="flex: 1;">
 
-                                        <div class="ind_srch_subBox prp_popup">
-                                            <div class="prsn_popup" id="prsn_add">
-                                                <!-- <i class="fa fa-angle-down"></i> -->
-                                                <input type="text" readonly="" name="pass_info" id="pass_info"
-                                                    placeholder="1 Pax, Economy" class="ind_inputBox">
-                                            </div>
-                                            <div class="person_dropdown" id="prsn_popup" style="display: none;">
-                                                <ul class="slect_pssngr">
-                                                    <li>
-                                                        <label>Adult &nbsp;<span>(12+ Years)</span></label>
-                                                        <div class="count_pssngr">
-                                                            <a href="javascript:void(0);"><em data-field="adult"
-                                                                    data-opt="-" class="fa fa-minus inc_der"></em></a>
-                                                            <input type="text" readonly="" value="1" name="flight_adult"
-                                                                id="flight_adult" class="inpt_cout_pssngr">
-                                                            <a href="javascript:void(0);"><em data-field="adult"
-                                                                    data-opt="+" class="fa fa-plus inc_der"></em></a>
-                                                        </div>
+                                    <div class="ind_srch_subBox prp_popup">
+                                        <div class="prsn_popup" id="prsn_add">
+                                            <label for="">Pass. Info.</label>
+                                            <input type="text" readonly="" name="pass_info" id="pass_info"
+                                                placeholder="1 Pax, Economy" class="ind_inputBox">
+                                        </div>
+                                        <div class="person_dropdown" id="prsn_popup" style="display: none;">
+                                            <ul class="slect_pssngr">
+                                                <li>
+                                                    <label>Adult &nbsp;<span>(12+ Years)</span></label>
+                                                    <div class="count_pssngr">
+                                                        <a href="javascript:void(0);"><em data-field="adult"
+                                                                data-opt="-"
+                                                                class="fa fa-minus inc_der"></em></a>
+                                                        <input type="text" style="color: #141414 !important;"
+                                                            readonly="" value="1" name="flight_adult"
+                                                            id="flight_adult" class="inpt_cout_pssngr">
+                                                        <a href="javascript:void(0);"><em data-field="adult"
+                                                                data-opt="+"
+                                                                class="fa fa-plus inc_der"></em></a>
+                                                    </div>
+                                                </li>
+                                                <li>
+                                                    <label style="max-width: 125px; line-height: 1.3;">Children
+                                                        &nbsp;<span>(2-11 Years)</span></label>
+                                                    <div class="count_pssngr">
+                                                        <a href="javascript:void(0);"><em data-field="child"
+                                                                data-opt="-"
+                                                                class="fa fa-minus inc_der"></em></a>
+                                                        <input type="text" style="color: #141414 !important;"
+                                                            readonly="" value="0" name="flight_child"
+                                                            id="flight_child" class="inpt_cout_pssngr">
+                                                        <a href="javascript:void(0);"><em data-field="child"
+                                                                data-opt="+"
+                                                                class="fa fa-plus inc_der"></em></a>
+                                                    </div>
+                                                </li>
+                                                <li>
+                                                    <label>Infant &nbsp;<span>(0-2 Years)</span></label>
+                                                    <div class="count_pssngr">
+                                                        <a href="javascript:void(0);"><em data-field="infant"
+                                                                data-opt="-"
+                                                                class="fa fa-minus inc_der"></em></a>
+                                                        <input type="text" style="color: #141414 !important;"
+                                                            readonly="" value="0" name="flight_infant"
+                                                            id="flight_infant" class="inpt_cout_pssngr">
+                                                        <a href="javascript:void(0);"><em data-field="infant"
+                                                                data-opt="+"
+                                                                class="fa fa-plus inc_der"></em></a>
+                                                    </div>
+                                                </li>
+                                            </ul>
+                                            <div class="combin_class">
+                                                <ul class="in_list_cls">
+                                                    <li><input type="radio" name="flight_class"
+                                                            id="flight_class_4" value="4" checked=""> <label
+                                                            for="flight_class_4">Economy</label></li>
+                                                    <li><input type="radio" name="flight_class"
+                                                            id="flight_class_3" value="3"> <label
+                                                            for="flight_class_3">Premium
+                                                            Economy</label></li>
+                                                    <li><input type="radio" name="flight_class"
+                                                            id="flight_class_2" value="2"> <label
+                                                            for="flight_class_2">Business</label>
                                                     </li>
-                                                    <li>
-                                                        <label>Children &nbsp;<span>(2-11 Years)</span></label>
-                                                        <div class="count_pssngr">
-                                                            <a href="javascript:void(0);"><em data-field="child"
-                                                                    data-opt="-" class="fa fa-minus inc_der"></em></a>
-                                                            <input type="text" readonly="" value="0" name="flight_child"
-                                                                id="flight_child" class="inpt_cout_pssngr">
-                                                            <a href="javascript:void(0);"><em data-field="child"
-                                                                    data-opt="+" class="fa fa-plus inc_der"></em></a>
-                                                        </div>
-                                                    </li>
-                                                    <li>
-                                                        <label>Infant &nbsp;<span>(0-2 Years)</span></label>
-                                                        <div class="count_pssngr">
-                                                            <a href="javascript:void(0);"><em data-field="infant"
-                                                                    data-opt="-" class="fa fa-minus inc_der"></em></a>
-                                                            <input type="text" readonly="" value="0"
-                                                                name="flight_infant" id="flight_infant"
-                                                                class="inpt_cout_pssngr">
-                                                            <a href="javascript:void(0);"><em data-field="infant"
-                                                                    data-opt="+" class="fa fa-plus inc_der"></em></a>
-                                                        </div>
+                                                    <li><input type="radio" name="flight_class"
+                                                            id="flight_class_1" value="1"> <label
+                                                            for="flight_class_1">First</label>
                                                     </li>
                                                 </ul>
-                                                <div class="combin_class">
-                                                    <ul class="in_list_cls">
-                                                        <li><input type="radio" name="flight_class" id="flight_class_4"
-                                                                value="4" checked=""> <label
-                                                                for="flight_class_4">Economy</label></li>
-                                                        <li><input type="radio" name="flight_class" id="flight_class_3"
-                                                                value="3"> <label for="flight_class_3">Premium
-                                                                Economy</label>
-                                                        </li>
-                                                        <li><input type="radio" name="flight_class" id="flight_class_2"
-                                                                value="2"> <label for="flight_class_2">Business</label>
-                                                        </li>
-                                                        <li><input type="radio" name="flight_class" id="flight_class_1"
-                                                                value="1"> <label for="flight_class_1">First</label>
-                                                        </li>
-                                                    </ul>
-                                                </div>
-                                                <div class="clss_done" id="ind_done">
-                                                    <a href="javascript:void(0);" id="prsn_done">Done</a>
-                                                </div>
+                                            </div>
+                                            <div class="clss_done" id="ind_done">
+                                                <a href="javascript:void(0);" id="prsn_done">Done</a>
                                             </div>
                                         </div>
-
                                     </div>
-                                </label>
 
-                                <label for="">
-                                    <div>
-                                        Select Airlines
-                                        <ul class="more-options"
-                                            style="background-color: transparent;margin-bottom: 0;">
-                                            <li style="margin-left: 0;">
-                                                <div class="airlnes">
-                                                    <select id="ddlairline" class=" ">
-                                                        <option value="all">All Airlines</option>
-                                                        <option value="EI">Aer Lingus</option>
-                                                        <option value="AR">Aerolineas Argentinas</option>
-                                                        <option value="AB">Air Berlin</option>
-                                                        <option value="AC">Air Canada</option>
-                                                        <option value="CA">Air China</option>
-                                                        <option value="UX">Air Europa Lineas Aereas</option>
-                                                        <option value="AF">Air France</option>
-                                                        <option value="AI">Air India</option>
-                                                        <option value="JM">Air Jamaica</option>
-                                                        <option value="KM">Air Malta</option>
-                                                        <option value="MK">Air Mauritius</option>
-                                                        <option value="SW">Air Namibia</option>
-                                                        <option value="NZ">Air New Zealand</option>
-                                                        <option value="HM">Air Seychelles</option>
-                                                        <option value="AZ">Alitalia</option>
-                                                        <option value="AA">American Airlines</option>
-                                                        <option value="NH">ANA</option>
-                                                        <option value="OZ">Asiana Airlines</option>
-                                                        <option value="OS">Austrian Airlines</option>
-                                                        <option value="BA">British Airways</option>
-                                                        <option value="SN">Brussels Airlines</option>
-                                                        <option value="BW">Caribbean Airlines</option>
-                                                        <option value="CX">Cathay Pacific Airways</option>
-                                                        <option value="CI">China Airlines</option>
-                                                        <option value="MU">China Eastern Airlines</option>
-                                                        <option value="CZ">China Southern</option>
-                                                        <option value="CO">Continental Airlines</option>
-                                                        <option value="CY">Cyprus Airways</option>
-                                                        <option value="OK">Czech Airlines</option>
-                                                        <option value="DL">Delta Airlines</option>
-                                                        <option value="MS">Egypt Air</option>
-                                                        <option value="EK">Emirates Airways</option>
-                                                        <option value="OV">Estonian Air</option>
-                                                        <option value="ET">Ethiopian Airlines</option>
-                                                        <option value="EY">Etihad Airways</option>
-                                                        <option value="BR">EVA Air</option>
-                                                        <option value="AY">Finnair</option>
-                                                        <option value="BE">FlyBe</option>
-                                                        <option value="GA">Garuda Indonesia</option>
-                                                        <option value="GF">Gulf Air</option>
-                                                        <option value="IB">Iberia Airlines </option>
-                                                        <option value="FI">IcelandAir</option>
-                                                        <option value="JL">Japan Airlines</option>
-                                                        <option value="9W">Jet Airways</option>
-                                                        <option value="KL">KLM Royal Dutch Airlines</option>
-                                                        <option value="KE">Korean Air</option>
-                                                        <option value="KU">Kuwait Airways</option>
-                                                        <option value="LA">LAN Airlines</option>
-                                                        <option value="LO">LOT Polish Airlines</option>
-                                                        <option value="LH">Lufthansa</option>
-                                                        <option value="MH">Malaysia Airlines</option>
-                                                        <option value="ZB">Monarch Airlines</option>
-                                                        <option value="NW">Northwest Airlines</option>
-                                                        <option value="OA">Olympic Airlines</option>
-                                                        <option value="WY">Oman Air</option>
-                                                        <option value="QF">Qantas Airways</option>
-                                                        <option value="QR">Qatar Airways</option>
-                                                        <option value="AT">Royal Air Maroc</option>
-                                                        <option value="BI">Royal Brunei Airlines</option>
-                                                        <option value="RJ">Royal Jordanian</option>
-                                                        <option value="SK">SAS - Scandinavian Airlines</option>
-                                                        <option value="SQ">Singapore Airlines</option>
-                                                        <option value="SA">South African Airways</option>
-                                                        <option value="UL">SriLankan Airlines</option>
-                                                        <option value="LX">Swiss Airlines</option>
-                                                        <option value="JJ">TAM Airlines</option>
-                                                        <option value="TP">TAP Portugal</option>
-                                                        <option value="TG">Thai Airways</option>
-                                                        <option value="TK">Turkish Airlines</option>
-                                                        <option value="PS">Ukraine Intl.</option>
-                                                        <option value="UA">United Airlines</option>
-                                                        <option value="US">US Airways</option>
-                                                        <option value="HY">Uzbekistan Airways</option>
-                                                        <option value="RG">Varig Brazilian</option>
-                                                        <option value="VN">Vietnam Airlines</option>
-                                                        <option value="VS">Virgin Atlantic</option>
-                                                        <option value="VG">VLM Airlines</option>
-                                                    </select>
-                                                    <input type="hidden" name="FlightSearchEngine1$hfAirline"
-                                                        id="FlightSearchEngine1_hfAirline" value="All Airlines">
-                                                    <!-- <i class="fa fa-angle-down"></i> -->
-                                                </div>
-                                                <div class="dropdown-section" id="mopt_list" style="display:none;">
-                                                    <div class="dflexibility">
-                                                        <select name="FlightSearchEngine1$ddlFlexible"
-                                                            id="FlightSearchEngine1_ddlFlexible" class="custom-select"
-                                                            onchange="checkHidefilevalue();" style="display: none;">
-                                                            <option value="My dates are fixed">My dates are fixed
-                                                            </option>
-                                                        </select>
-                                                        <input type="hidden" name="FlightSearchEngine1$hfFlexible"
-                                                            id="FlightSearchEngine1_hfFlexible">
-                                                    </div>
-                                                    <button type="button" class="done_btn">Done</button>
-                                                </div>
-                                            </li>
-                                        </ul>
+                                </div>
+
+
+                                <!-- <ul class="more-options">
+                                <li>
+                                    <div class="airlnes">
+                                        <select id="ddlairline" class=" ">
+                                            <option value="all">All Airlines</option>
+                                            <option value="EI">Aer Lingus</option>
+                                            <option value="AR">Aerolineas Argentinas</option>
+                                            <option value="AB">Air Berlin</option>
+                                            <option value="AC">Air Canada</option>
+                                            <option value="CA">Air China</option>
+                                            <option value="UX">Air Europa Lineas Aereas</option>
+                                            <option value="AF">Air France</option>
+                                            <option value="AI">Air India</option>
+                                            <option value="JM">Air Jamaica</option>
+                                            <option value="KM">Air Malta</option>
+                                            <option value="MK">Air Mauritius</option>
+                                            <option value="SW">Air Namibia</option>
+                                            <option value="NZ">Air New Zealand</option>
+                                            <option value="HM">Air Seychelles</option>
+                                            <option value="AZ">Alitalia</option>
+                                            <option value="AA">American Airlines</option>
+                                            <option value="NH">ANA</option>
+                                            <option value="OZ">Asiana Airlines</option>
+                                            <option value="OS">Austrian Airlines</option>
+                                            <option value="BA">British Airways</option>
+                                            <option value="SN">Brussels Airlines</option>
+                                            <option value="BW">Caribbean Airlines</option>
+                                            <option value="CX">Cathay Pacific Airways</option>
+                                            <option value="CI">China Airlines</option>
+                                            <option value="MU">China Eastern Airlines</option>
+                                            <option value="CZ">China Southern</option>
+                                            <option value="CO">Continental Airlines</option>
+                                            <option value="CY">Cyprus Airways</option>
+                                            <option value="OK">Czech Airlines</option>
+                                            <option value="DL">Delta Airlines</option>
+                                            <option value="MS">Egypt Air</option>
+                                            <option value="EK">Emirates Airways</option>
+                                            <option value="OV">Estonian Air</option>
+                                            <option value="ET">Ethiopian Airlines</option>
+                                            <option value="EY">Etihad Airways</option>
+                                            <option value="BR">EVA Air</option>
+                                            <option value="AY">Finnair</option>
+                                            <option value="BE">FlyBe</option>
+                                            <option value="GA">Garuda Indonesia</option>
+                                            <option value="GF">Gulf Air</option>
+                                            <option value="IB">Iberia Airlines </option>
+                                            <option value="FI">IcelandAir</option>
+                                            <option value="JL">Japan Airlines</option>
+                                            <option value="9W">Jet Airways</option>
+                                            <option value="KL">KLM Royal Dutch Airlines</option>
+                                            <option value="KE">Korean Air</option>
+                                            <option value="KU">Kuwait Airways</option>
+                                            <option value="LA">LAN Airlines</option>
+                                            <option value="LO">LOT Polish Airlines</option>
+                                            <option value="LH">Lufthansa</option>
+                                            <option value="MH">Malaysia Airlines</option>
+                                            <option value="ZB">Monarch Airlines</option>
+                                            <option value="NW">Northwest Airlines</option>
+                                            <option value="OA">Olympic Airlines</option>
+                                            <option value="WY">Oman Air</option>
+                                            <option value="QF">Qantas Airways</option>
+                                            <option value="QR">Qatar Airways</option>
+                                            <option value="AT">Royal Air Maroc</option>
+                                            <option value="BI">Royal Brunei Airlines</option>
+                                            <option value="RJ">Royal Jordanian</option>
+                                            <option value="SK">SAS - Scandinavian Airlines</option>
+                                            <option value="SQ">Singapore Airlines</option>
+                                            <option value="SA">South African Airways</option>
+                                            <option value="UL">SriLankan Airlines</option>
+                                            <option value="LX">Swiss Airlines</option>
+                                            <option value="JJ">TAM Airlines</option>
+                                            <option value="TP">TAP Portugal</option>
+                                            <option value="TG">Thai Airways</option>
+                                            <option value="TK">Turkish Airlines</option>
+                                            <option value="PS">Ukraine Intl.</option>
+                                            <option value="UA">United Airlines</option>
+                                            <option value="US">US Airways</option>
+                                            <option value="HY">Uzbekistan Airways</option>
+                                            <option value="RG">Varig Brazilian</option>
+                                            <option value="VN">Vietnam Airlines</option>
+                                            <option value="VS">Virgin Atlantic</option>
+                                            <option value="VG">VLM Airlines</option>
+                                        </select>
+                                        <input type="hidden" name="FlightSearchEngine1$hfAirline"
+                                            id="FlightSearchEngine1_hfAirline" value="All Airlines">
                                     </div>
-                                </label>
+                                    <div class="dropdown-section" id="mopt_list" style="display:none;">
+                                        <div class="dflexibility">
+                                            <select name="FlightSearchEngine1$ddlFlexible"
+                                                id="FlightSearchEngine1_ddlFlexible" class="custom-select"
+                                                onchange="checkHidefilevalue();" style="display: none;">
+                                                <option value="My dates are fixed">My dates are fixed</option>
+                                            </select>
+                                            <input type="hidden" name="FlightSearchEngine1$hfFlexible"
+                                                id="FlightSearchEngine1_hfFlexible">
+                                        </div>
+                                        <button type="button" class="done_btn">Done</button>
+                                    </div>
+                                </li>
+
+                            </ul> -->
+                                <div class="search_flights"> <a onclick="return validateSearchengine();"
+                                        name="flight_submit" id="flight_submit" class="search_btn"
+                                        style="padding: 8px 15px !important;"><span>Search</span> </a> </div>
                             </div>
                         </div>
-                        <div class="search_flights" style="text-align:right;margin-top: 10px;"> <a
-                                onclick="return validateSearchengine();" name="flight_submit" id="flight_submit"
-                                class="search_btn"><i class="fa-solid fa-magnifying-glass"></i>&nbsp;
-                                <span>Search</span> </a> </div>
                     </form>
                 </div>
             </div>
         </div>
     </div>
 
+    <div class="container">
+        <div class="row">
+            <div class="column">
+                <p>Lorem Ipsum is simply dummy text of the printing & typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type & scrambled it to make a type specimen book. Lorem Ipsum is simply dummy text of the printing & typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type & scrambled it to make a type specimen book.</p>
+            </div>
+        </div>
+    </div>
+
     <div class="container usps">
+        <div class="row">
+            <div class="column">
+                <h2>Lorem Ipsum is simply dummy text</h2>
+                <br>
+                <div class="grid grid2">
+                    <div class="colum">
+                        <h3><i class="fa-solid fa-plane-departure"></i> &nbsp; Lorem Ipsum is dummy text</h3>
+                        <p>Lorem Ipsum is simply dummy text of the printing & typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type & scrambled it to make a type specimen book.</p>
+                    </div>
+                    <div class="colum">
+                        <h3><i class="fa-solid fa-plane-departure"></i> &nbsp; Lorem Ipsum is dummy text</h3>
+                        <p>Lorem Ipsum is simply dummy text of the printing & typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type & scrambled it to make a type specimen book.</p>
+                    </div>
+                    <div class="colum">
+                        <h3><i class="fa-solid fa-plane-departure"></i> &nbsp; Lorem Ipsum is dummy text</h3>
+                        <p>Lorem Ipsum is simply dummy text of the printing & typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type & scrambled it to make a type specimen book.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container destinations">
+        <div class="row">
+            <div class="column">
+                <h2>Lorem Ipsum is simply dummy text</h2>
+                <p>Lorem Ipsum is simply dummy text of the printing & typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type & scrambled it to make a type specimen book.</p>
+                <br>
+            </div>
+            <div class="colu grid grid3">
+                <div class="colum">
+                    <a href="/">
+                        <img src="./images/flight-to-new-york.jpg" alt="">
+                        <div>
+                            <h3>Lorem Ipsum is simply dummy text</h3>
+                            <p>Lorem Ipsum is simply text of the printing & typesetting industry...</p>
+                                <p class="parag">Read More <i class="fa-solid fa-arrow-right-long"></i></p>
+                        </div>
+                    </a>
+                </div>
+                <div class="colum">
+                    <a href="/">
+                        <img src="./images/flight-to-orlando.jpg" alt="">
+                        <div>
+                            <h3>Lorem Ipsum is simply dummy text</h3>
+                            <p>Lorem Ipsum is simply text of the printing & typesetting industry...</p>
+                                <p class="parag">Read More <i class="fa-solid fa-arrow-right-long"></i></p>
+                        </div>
+                    </a>
+                </div>
+                <div class="colum">
+                    <a href="/">
+                        <img src="./images/flight-to-new-york.jpg" alt="">
+                        <div>
+                            <h3>Lorem Ipsum is simply dummy text</h3>
+                            <p>Lorem Ipsum is simply text of the printing & typesetting industry...</p>
+                                <p class="parag">Read More <i class="fa-solid fa-arrow-right-long"></i></p>
+                        </div>
+                    </a>
+                </div>
+                <div class="colum">
+                    <a href="/">
+                        <img src="./images/flight-to-orlando.jpg" alt="">
+                        <div>
+                            <h3>Lorem Ipsum is simply dummy text</h3>
+                            <p>Lorem Ipsum is simply text of the printing & typesetting industry...</p>
+                                <p class="parag">Read More <i class="fa-solid fa-arrow-right-long"></i></p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container sections">
         <div class="row grid grid3">
-            <div class="column flex gap2">
-                <h2><i class="fa-solid fa-chart-line"></i></h2>
-                <div class="innercol">
-                    <h3>Real-Time Fare Aggregation</h3>
-                    <p>An easy way to compare flight prices from multiple providers to get the lowest fare in real-time.</p>
-                </div>
-            </div>
-            <div class="column flex gap2">
-                <h2><i class="fa-solid fa-tags"></i></h2>
-                <div class="innercol">
-                    <h3>Transparent Price Breakdown</h3>
-                    <p>No hidden fees—just a clear, transparent breakdown of flight booking costs so you know the exact amount.</p>
-                </div>
-            </div>
-            <div class="column flex gap2">
-                <h2><i class="fa-solid fa-bell"></i></h2>
-                <div class="innercol">
-                    <h3>Multi-Platform Alerts</h3>
-                    <p>With Flyingscanner, we offer fare drop alerts via website, app notifications, SMS, and email.</p>
-                </div>
-            </div>
-            <div class="column flex gap2">
-                <h2><i class="fa-solid fa-magnifying-glass"></i></h2>
-                <div class="innercol">
-                    <h3>Customized Filters</h3>
-                    <p>Our tailored recommendations help you plan your travel more cost-effectively.</p>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <div class="container media1">
-        <img src="./newimages/Wave1.svg" style="margin-top: -2px;" alt="">
-        <div class="row grid grid1">
-            <div class="column"><img src="./newimages/media-1.jpg" alt=""></div>
             <div class="column">
-                <h2>Compare Flight Fares – Find the Best Deals Instantly</h2>
-                <p>Find the right deal for your upcoming travel plan with Flyingscanner. Fare comparison is never easy without a comprehensive search, using advance search filters, and following the principle of flexibility. All these things are mandatory to find the accurate cheapest deals. Are you confused where to do this? Flyingscanner is the leading airfare compare portal for domestic and international travel. Thus, manage your booking here to find, filter and fix the airfare.</p><br>
-                <a href="tel:+18004369330"><button class="button">Call Now</button></a>
-            </div>
-        </div>
-        <img src="./newimages/Wave.svg" alt="">
-    </div>
-
-    <div class="container fsroutes">
-        <div class="row">
-            <div class="column">
-                <div class="slider-container1">
-                    <div class="flex">
-                        <h2>Top Trending Routes</h2>
-                        <div class="slidebtn">
-                            <button class="prev-btn1">&#10094;</button>
-                            <button class="next-btn1">&#10095;</button>
-                        </div>
-                    </div>
-                    <div class="slider1">
-                        <div class="slide1"
-                            style="background-image: linear-gradient(to top, rgb(20, 20, 20, 0.7), rgb(20, 20, 20, 0)), url(./newimages/cancun.jpg);">
-                            <div class="innerdiv">
-                                <h3>Atlanta to Cancun</h3>
-                                <hr>
-                                <p>Starting From <b>$116</b></p>
-                                <button class="button"
-                                    onclick="window.location.href='https://www.flyingscanner.com/atlanta-to-cancun'">Book
-                                    Now</button>
-                            </div>
-                        </div>
-                        <div class="slide1"
-                            style="background-image: linear-gradient(to top, rgb(20, 20, 20, 0.7), rgb(20, 20, 20, 0)), url(./newimages/orlando.jpg);">
-                            <div class="innerdiv">
-                                <h3>Atlanta to Orlando</h3>
-                                <hr>
-                                <p>Starting From <b>$44</b></p>
-                                <button class="button"
-                                    onclick="window.location.href='https://www.flyingscanner.com/atlanta-to-orlando'">Book
-                                    Now</button>
-                            </div>
-                        </div>
-                        <div class="slide1"
-                            style="background-image: linear-gradient(to top, rgb(20, 20, 20, 0.7), rgb(20, 20, 20, 0)), url(./newimages/miami.jpg);">
-                            <div class="innerdiv">
-                                <h3>Boston to Miami</h3>
-                                <hr>
-                                <p>Starting From <b>$49</b></p>
-                                <button class="button"
-                                    onclick="window.location.href='https://www.flyingscanner.com/boston-to-miami'">Book
-                                    Now</button>
-                            </div>
-                        </div>
-                        <div class="slide1"
-                            style="background-image: linear-gradient(to top, rgb(20, 20, 20, 0.7), rgb(20, 20, 20, 0)), url(./newimages/mexico-city.jpg);">
-                            <div class="innerdiv">
-                                <h3>Chicago to Mexico City</h3>
-                                <hr>
-                                <p>Starting From <b>$128</b></p>
-                                <button class="button"
-                                    onclick="window.location.href='https://www.flyingscanner.com/chicago-to-mexico-city'">Book
-                                    Now</button>
-                            </div>
-                        </div>
-                        <div class="slide1"
-                            style="background-image: linear-gradient(to top, rgb(20, 20, 20, 0.7), rgb(20, 20, 20, 0)), url(./newimages/new-york.jpg);">
-                            <div class="innerdiv">
-                                <h3>Chicago to New York</h3>
-                                <hr>
-                                <p>Starting From <b>$44</b></p>
-                                <button class="button"
-                                    onclick="window.location.href='https://www.flyingscanner.com/chicago-to-new-york'">Book
-                                    Now</button>
-                            </div>
-                        </div>
-                        <div class="slide1"
-                            style="background-image: linear-gradient(to top, rgb(20, 20, 20, 0.7), rgb(20, 20, 20, 0)), url(./newimages/los-angeles.jpg);">
-                            <div class="innerdiv">
-                                <h3>Dallas to Los Angeles</h3>
-                                <hr>
-                                <p>Starting From <b>$53</b></p>
-                                <button class="button"
-                                    onclick="window.location.href='https://www.flyingscanner.com/dallas-to-los-angeles'">Book
-                                    Now</button>
-                            </div>
-                        </div>
-                        <div class="slide1"
-                            style="background-image: linear-gradient(to top, rgb(20, 20, 20, 0.7), rgb(20, 20, 20, 0)), url(./newimages/london.jpg);">
-                            <div class="innerdiv">
-                                <h3>New York to London</h3>
-                                <hr>
-                                <p>Starting From <b>$125</b></p>
-                                <button class="button"
-                                    onclick="window.location.href='https://www.flyingscanner.com/new-york-to-london'">Book
-                                    Now</button>
-                            </div>
-                        </div>
-                        <div class="slide1"
-                            style="background-image: linear-gradient(to top, rgb(20, 20, 20, 0.7), rgb(20, 20, 20, 0)), url(./newimages/miami.jpg);">
-                            <div class="innerdiv">
-                                <h3>New York to Miami</h3>
-                                <hr>
-                                <p>Starting From <b>$44</b></p>
-                                <button class="button"
-                                    onclick="window.location.href='https://www.flyingscanner.com/new-york-to-miami'">Book
-                                    Now</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <div class="container" style="background-color: #f1f1f1;">
-        <div class="row d-flex gap">
-            <div class="column">
-                <img src="./newimages/discount_14042002.png" width="125px" alt="">
-            </div>
-            <div class="column">
-                <h2>Unlock Affordable Flight Deals With Airfare Compare Portal</h2>
-                <hr style="width: 150px;margin: 10px 0;border: 2px solid var(--secondary-color);">
-                <p>Flyingscanner is the leading website to unlock the affordable flight deals with airfare comparison formula. We help millions of users to find the best deals and airfare compare for domestic and international travel is now more easy and affordable. What are you waiting now? Just book your travel with the most suitable deals after the advanced search feature of fare compare.</p>
-            </div>
-        </div>
-    </div>
-
-    <div class="container fsdestinations">
-        <div class="row">
-            <div class="column">
-                <div class="slider-container2">
-                    <div class="flex">
-                        <h2>Top Trending Destinations</h2>
-                        <div class="slidebtn">
-                            <button class="prev-btn2">&#10094;</button>
-                            <button class="next-btn2">&#10095;</button>
-                        </div>
-                    </div>
-                    <div class="slider2">
-                        <div class="slide2">
-                            <a href="https://www.flyingscanner.com/flights-to-akron">
-                                <div class="innerdiv"
-                                    style="background-image: linear-gradient(to top, rgb(20, 20, 20, 1), rgb(20, 20, 20, 0)), url(./newimages/akron.jpg);">
-                                    <h3>Akron</h3>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="slide2">
-                            <a href="https://www.flyingscanner.com/flights-to-alabama">
-                                <div class="innerdiv"
-                                    style="background-image: linear-gradient(to top, rgb(20, 20, 20, 1), rgb(20, 20, 20, 0)), url(./newimages/alabama.jpg);">
-                                    <h3>Alabama</h3>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="slide2">
-                            <a href="https://www.flyingscanner.com/flights-to-alaska">
-                                <div class="innerdiv"
-                                    style="background-image: linear-gradient(to top, rgb(20, 20, 20, 1), rgb(20, 20, 20, 0)), url(./newimages/alaska.jpg);">
-                                    <h3>Alaska</h3>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="slide2">
-                            <a href="https://www.flyingscanner.com/flights-to-albany">
-                                <div class="innerdiv"
-                                    style="background-image: linear-gradient(to top, rgb(20, 20, 20, 1), rgb(20, 20, 20, 0)), url(./newimages/albany.jpg);">
-                                    <h3>Albany</h3>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="slide2">
-                            <a href="https://www.flyingscanner.com/flights-to-amarillo">
-                                <div class="innerdiv"
-                                    style="background-image: linear-gradient(to top, rgb(20, 20, 20, 1), rgb(20, 20, 20, 0)), url(./newimages/amarillo.jpg);">
-                                    <h3>Amarillo</h3>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="slide2">
-                            <a href="https://www.flyingscanner.com/flights-to-anaheim">
-                                <div class="innerdiv"
-                                    style="background-image: linear-gradient(to top, rgb(20, 20, 20, 1), rgb(20, 20, 20, 0)), url(./newimages/anaheim.jpg);">
-                                    <h3>Anaheim</h3>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="slide2">
-                            <a href="https://www.flyingscanner.com/flights-to-anchorage">
-                                <div class="innerdiv"
-                                    style="background-image: linear-gradient(to top, rgb(20, 20, 20, 1), rgb(20, 20, 20, 0)), url(./newimages/anchorage.jpg);">
-                                    <h3>Anchorage</h3>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="slide2">
-                            <a href="https://www.flyingscanner.com/flights-to-arizona">
-                                <div class="innerdiv"
-                                    style="background-image: linear-gradient(to top, rgb(20, 20, 20, 1), rgb(20, 20, 20, 0)), url(./newimages/arizona.jpg);">
-                                    <h3>Arizona</h3>
-                                </div>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <div class="container fscardsec">
-        <div class="row grid grid1">
-            <div class="column"
-                style="background-image: linear-gradient(to top, rgba(20, 20, 20, 0.6), rgba(20, 20, 20, 0)), url(./newimages/yacht-rental.jpg);">
-                <div>
-                    <h3>Yacht Rental</h3>
-                    <p>Trip by water is not just a trip, it is an experience of fineness, freedom &...</p>
-                    <button class="button"
-                        onclick="window.location.href='https://www.flyingscanner.com/yacht-rentals'">Book Now</button>
-                </div>
+                <h2>Lorem Ipsum is simply dummy text</h2>
+                <hr>
+                <p>Lorem Ipsum is simply dummy text of the printing & typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type & scrambled it to make a type specimen book.</p>
             </div>
             <div class="colum">
-                <div class="column"
-                        style="background-image: linear-gradient(to top, rgba(20, 20, 20, 0.6), rgba(20, 20, 20, 0)), url(./newimages/hotel-rental.jpg);">
-                        <div>
-                            <h3>Hotels</h3>
-                    <p>If you’re arranging a luxurious getaway or simply need a last-minute adventure, then you are
-                        at...</p>
-                        <button class="button"
-                            onclick="window.location.href='https://www.flyingscanner.com/hotels'">Book Now</button>
-                        </div>
+                <a href="/">
+                    <img src="./images/flight-to-new-york.jpg" alt="">
+                    <div>
+                        <h3>Lorem Ipsum is simply dummy text</h3>
+                        <p>Lorem Ipsum is simply text of the printing & typesetting industry...</p>
+                            <p class="parag">Read More <i class="fa-solid fa-arrow-right-long"></i></p>
                     </div>
-                    <br>
-                <div class="grid grid1">
-                    <div class="column"
-                        style="background-image: linear-gradient(to top, rgba(20, 20, 20, 0.6), rgba(20, 20, 20, 0)), url(./newimages/car-rental.jpg);">
-                        <div>
-                            <h3>Car Rental</h3>
-                    <p>Because of the growing need for cost-friendly and readily available transport systems, the quest
-                        for...</p>
-                        <button class="button"
-                            onclick="window.location.href='https://www.flyingscanner.com/car-rental'">Book Now</button>
-                        </div>
+                </a>
+            </div>
+            <div class="colum">
+                <a href="/">
+                    <img src="./images/flight-to-new-york.jpg" alt="">
+                    <div>
+                        <h3>Lorem Ipsum is simply dummy text</h3>
+                        <p>Lorem Ipsum is simply text of the printing & typesetting industry...</p>
+                            <p class="parag">Read More <i class="fa-solid fa-arrow-right-long"></i></p>
                     </div>
-                    <div class="column"
-                        style="background-image: linear-gradient(to top, rgba(20, 20, 20, 0.6), rgba(20, 20, 20, 0)), url(./newimages/helicopter-tour.jpg);">
-                        <div>
-                            <h3>Helicopter Tours</h3>
-                    <p>More and more, contemporary travellers are looking for unique experiences, which has led...</p>
-                        <button class="button"
-                            onclick="window.location.href='https://www.flyingscanner.com/helicopter-tours'">Book
-                            Now</button>
-                        </div>
+                </a>
+            </div>
+            <div class="colum">
+                <a href="/">
+                    <img src="./images/flight-to-orlando.jpg" alt="">
+                    <div>
+                        <h3>Lorem Ipsum is simply dummy text</h3>
+                        <p>Lorem Ipsum is simply text of the printing & typesetting industry...</p>
+                            <p class="parag">Read More <i class="fa-solid fa-arrow-right-long"></i></p>
                     </div>
-                </div>
+                </a>
             </div>
         </div>
     </div>
 
-    <div class="container faqsec">
-        <div class="row">
+    <div class="container textmedia">
+        <div class="row grid grid1">
             <div class="column">
-                <h2>FAQs</h2>
-                <br>
-                <div class="grid grid1">
-                    <div class="column">
-                        <div class="newfaq">
-                            <div class="faqhead flex">
-                                <h3>What is Flyingscanner?</h3>
-                                <h3><i class="fa-solid fa-angle-down"></i> <i class="fa-solid fa-angle-up"></i></h3>
-                            </div>
-                            <div class="faqdetail">
-                                <p>Flyingscanner is a travel fare comparison website that helps travelers find the most affordable deals by searching multiple airlines and travel agencies in real-time.</p>
-                            </div>
-                        </div>
-                        <div class="newfaq">
-                            <div class="faqhead flex">
-                                <h3>How does Flyingscanner compare fares from different airlines?</h3>
-                                <h3><i class="fa-solid fa-angle-down"></i> <i class="fa-solid fa-angle-up"></i></h3>
-                            </div>
-                            <div class="faqdetail">
-                                <p>Our platform pulls flight data from hundreds of providers and displays them side-by-side, so you can easily compare fares, travel times, and multiple options.</p>
-                            </div>
-                        </div>
-                        <div class="newfaq">
-                            <div class="faqhead flex">
-                                <h3>Does Flyingscanner charge any service fees?</h3>
-                                <h3><i class="fa-solid fa-angle-down"></i> <i class="fa-solid fa-angle-up"></i></h3>
-                            </div>
-                            <div class="faqdetail">
-                                <p>No, we do not charge any service fees for fare comparison. The portal is free to use—we don't charge you anything to compare flights.</p>
-                            </div>
-                        </div>
-                        <div class="newfaq">
-                            <div class="faqhead flex">
-                                <h3>How accurate are the flight prices shown on this portal?</h3>
-                                <h3><i class="fa-solid fa-angle-down"></i> <i class="fa-solid fa-angle-up"></i></h3>
-                            </div>
-                            <div class="faqdetail">
-                                <p>Prices are updated frequently to reflect the most recent available information. However, fares may change until you finalize your booking.</p>
-                            </div>
-                        </div>
-                        <div class="newfaq">
-                            <div class="faqhead flex">
-                                <h3>How often are flight prices updated?</h3>
-                                <h3><i class="fa-solid fa-angle-down"></i> <i class="fa-solid fa-angle-up"></i></h3>
-                            </div>
-                            <div class="faqdetail">
-                                <p>Flyingscanner updates fare prices in real-time, ensuring you get the most accurate fares at the moment of your search.</p>
-                            </div>
-                        </div>
-                        <div class="newfaq">
-                            <div class="faqhead flex">
-                                <h3>Can I book flights directly on Flyingscanner?</h3>
-                                <h3><i class="fa-solid fa-angle-down"></i> <i class="fa-solid fa-angle-up"></i></h3>
-                            </div>
-                            <div class="faqdetail">
-                                <p>Flyingscanner showcases prices from different travel service providers. Bookings are redirected to the respective provider—we simply help you find the best fares before booking.</p>
-                            </div>
-                        </div>
-                        <div class="newfaq">
-                            <div class="faqhead flex">
-                                <h3>Which airlines are included in your comparison?</h3>
-                                <h3><i class="fa-solid fa-angle-down"></i> <i class="fa-solid fa-angle-up"></i></h3>
-                            </div>
-                            <div class="faqdetail">
-                                <p>Flyingscanner includes both full-service and low-cost airlines from around the world for airfare comparison.</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="column">
-                        <div class="newfaq">
-                            <div class="faqhead flex">
-                                <h3>Does Flyingscanner compare international flight fares?</h3>
-                                <h3><i class="fa-solid fa-angle-down"></i> <i class="fa-solid fa-angle-up"></i></h3>
-                            </div>
-                            <div class="faqdetail">
-                                <p>Yes. Whether it's a domestic or international trip, you can compare both types of flights worldwide through our platform.</p>
-                            </div>
-                        </div>
-                        <div class="newfaq">
-                            <div class="faqhead flex">
-                                <h3>What is the most important factor when comparing airfares?</h3>
-                                <h3><i class="fa-solid fa-angle-down"></i> <i class="fa-solid fa-angle-up"></i></h3>
-                            </div>
-                            <div class="faqdetail">
-                                <p>Flexibility! Flexibility with travel dates, airlines, and routes can help you find the best flight deals.</p>
-                            </div>
-                        </div>
-                        <div class="newfaq">
-                            <div class="faqhead flex">
-                                <h3>How can I filter search results by airline, date, and more?</h3>
-                                <h3><i class="fa-solid fa-angle-down"></i> <i class="fa-solid fa-angle-up"></i></h3>
-                            </div>
-                            <div class="faqdetail">
-                                <p>Use the advanced filters on the flight search form to narrow down results by airline, flight duration, number of stops, and departure/arrival times.</p>
-                            </div>
-                        </div>
-                        <div class="newfaq">
-                            <div class="faqhead flex">
-                                <h3>Can I set fare alerts for a specific route?</h3>
-                                <h3><i class="fa-solid fa-angle-down"></i> <i class="fa-solid fa-angle-up"></i></h3>
-                            </div>
-                            <div class="faqdetail">
-                                <p>Yes. Setting fare alerts is important—you can receive email notifications for any route. Just set a price alert on Flyingscanner.</p>
-                            </div>
-                        </div>
-                        <div class="newfaq">
-                            <div class="faqhead flex">
-                                <h3>Are the prices shown inclusive of all taxes and fees?</h3>
-                                <h3><i class="fa-solid fa-angle-down"></i> <i class="fa-solid fa-angle-up"></i></h3>
-                            </div>
-                            <div class="faqdetail">
-                                <p>We strive to display the total cost, but we recommend verifying the full fare on the final booking page before completing your purchase.</p>
-                            </div>
-                        </div>
-                        <div class="newfaq">
-                            <div class="faqhead flex">
-                                <h3>Can I compare one-way and round-trip flights?</h3>
-                                <h3><i class="fa-solid fa-angle-down"></i> <i class="fa-solid fa-angle-up"></i></h3>
-                            </div>
-                            <div class="faqdetail">
-                                <p>Yes, Flyingscanner allows you to compare both one-way and round-trip fares.</p>
-                            </div>
-                        </div>
-                        <div class="newfaq">
-                            <div class="faqhead flex">
-                                <h3>Can I search for multi-city or open-jaw trips?</h3>
-                                <h3><i class="fa-solid fa-angle-down"></i> <i class="fa-solid fa-angle-up"></i></h3>
-                            </div>
-                            <div class="faqdetail">
-                                <p>Absolutely. Our search engine supports complex itineraries, including multi-city trips. </p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                <h2>Lorem Ipsum is simply dummy text</h2>
+                <p>Lorem Ipsum is simply dummy text of the printing & typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type & scrambled it to make a type specimen book. Lorem Ipsum is simply dummy text of the printing & typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type & scrambled it to make a type specimen book. Lorem Ipsum is simply dummy text of the printing & typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type & scrambled it to make a type specimen book.</p>
             </div>
+            <div class="column" style="background-image: url(./images/a2zbg.jpg);"></div>
         </div>
     </div>
 
     <div class="cta">
-        <a href="tel:+18004369330">
-            <div class="flex">
+        <div class="flex gap2">
+            <a href="tel:+18004369330">
                 <h3><i class="fa-solid fa-phone"></i></h3>
-                <h4>+1-800-436-9330</h4>
-            </div>
-        </a>
+                <div>
+                    <h4><a href="tel:+00000000000">+1 000-000-0000</a></h4>
+                </div>
+            </a>
+        </div>
     </div>
 
-    <div class="newfooter">
+    <div class="container newfooter">
         <div class="row">
-            <div class="mainfooter">
-                <div class="d-flex gap logo">
-                    <div class="column">
-                        <a href="/">
-                            <img src="./newimages/logo.png" alt="logo">
-                        </a>
-                    </div>
-                    <div class="column flex gap1 footsocial">
-                        <h3>Connect with Us</h3>
-                        <div class="flex">
-                            <a href="https://www.instagram.com/flyingscanner/" target="_blank">
-                                <i class="fa-brands fa-instagram"></i>
-                            </a>
-                            <a href="https://www.facebook.com/flyingscanner/" target="_blank">
-                                <i class="fa-brands fa-facebook"></i>
-                            </a>
-                            <a href="https://x.com/flyingscan84879" target="_blank">
-                                <i class="fa-brands fa-x-twitter"></i>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <div class="links grid grid3">
-                    <div class="column">
-                        <p><b>Contact details</b></p>
-                        <p>6355 Haystack CT Cumming , GA 30040 </p>
-                        <p><a href="mailto:support@flyingscanner.com">support@flyingscanner.com</a></p>
-                        <p><a href="tel:+18004369330">+1-800-436-9330</a></p>
-                    </div>
-
-                    <div class="column">
-                        <p><b>International Routes</b></p>
-                        <p><a href="https://www.flyingscanner.com/seattle-to-tokyo">Seattle → Tokyo</a></p>
-                        <p><a href="https://www.flyingscanner.com/las-vegas-to-costa-rica">Las Vegas → Costa Rica</a>
-                        </p>
-                        <p><a href="https://www.flyingscanner.com/miami-to-tokyo">Miami → Tokyo</a></p>
-                        <p><a href="https://www.flyingscanner.com/chicago-to-london">Chicago → London</a></p>
-                        <p><a href="https://www.flyingscanner.com/seattle-and-beijing">Seattle → Beijing</a></p>
-                    </div>
-
-                    <div class="column">
-                        <p><b>Domestic Routes</b></p>
-                        <p><a href="https://www.flyingscanner.com/billings-to-phoenix">Billings → Phoenix</a></p>
-                        <p><a href="https://www.flyingscanner.com/miami-to-san-diego">Miami → San Diego</a></p>
-                        <p><a href="https://www.flyingscanner.com/tampa-to-dallas">Tampa → Dallas</a></p>
-                        <p><a href="https://www.flyingscanner.com/jacksonville-to-chicago">Jacksonville → Chicago</a>
-                        </p>
-                        <p><a href="https://www.flyingscanner.com/dallas-to-chicago">Dallas → Chicago</a></p>
-                    </div>
-
-                    <div class="column">
-                        <p><b>Information</b></p>
-                        <p><a href="https://www.flyingscanner.com/about">About</a></p>
-                        <p><a href="https://www.flyingscanner.com/contact">Contact</a></p>
-                        <p><a href="https://www.flyingscanner.com/privacy-policy">Privacy Policy</a></p>
-                        <p><a href="https://www.flyingscanner.com/term-conditions">Terms &amp; Conditions</a></p>
-
-                    </div>
-                </div>
-            </div>
-            <div class="foot">
+            <div class="grid">
                 <div class="column">
-                    <p>
-                        © Copyright 2025 <b>FlyingScanner</b>. All Rights Reserved. | Cheap flight booking from
-                        anywhere, to everywhere
-                    </p>
+                    <a href="/"><img src="./images/logo.png" alt=""></a>
+                    <br><br>
+                    <a target="_blank" href="https://www.facebook.com/A2zflightservicellc/"><i
+                            class="fa-brands fa-facebook"></i></a>
+                    <a target="_blank" href="https://x.com/A2zflightservicellc"><i class="fa-brands fa-twitter"></i></a>
+                    <a target="_blank" href="http://instagram.com/A2zflightservicellc"><i
+                            class="fa-brands fa-instagram"></i></a>
+                    <a target="_blank" href="https://www.linkedin.com/company/A2zflightservicellc"><i
+                            class="fa-brands fa-linkedin-in"></i></a>
+                    <a target="_blank" href="https://www.youtube.com/A2zflightservicellc"><i
+                            class="fa-brands fa-youtube"></i></a>
+                </div>
+                <div class="column">
+                    <h4>Reach Us</h4>
+                    <p><i class="fa-solid fa-location-dot"></i> New Delhi 110093</p>
+                    <a href="tel:+10000000000">
+                        <p><i class="fa-solid fa-phone-volume"></i> +1 000-000-0000</p>
+                    </a>
+                    <a href="mailto:support@A2zflightservicellc.com">
+                        <p><i class="fa-solid fa-at"></i> support@A2zflightservicellc.com</p>
+                    </a>
+                </div>
+                <div class="column">
+                    <h4>Legal</h4>
+                    <p><a href="/terms-condition">Terms & Conditions</a></p>
+                    <p><a href="/privacy-policy">Privacy Policy</a></p>
+                    <p><a href="/refund-policy">Refund Policy</a></p>
+                </div>
+                <div class="column">
+                    <h4>Other Links</h4>
+                    <p><a href="/">Home</a></p>
+                    <p><a href="/about">About Us</a></p>
+                    <p><a href="/contact">Contact Us</a></p>
                 </div>
             </div>
+            <hr style="border-color: var(--primary-color);">
+            <p style="text-align: center;">© 2025 A2zflightservicellc. All rights Reserved. </p>
         </div>
     </div>
 </body>
-<script src="./css/style.js"></script>
-<script src="./css/bootstrap.js"></script>
-<script src="./css/jquery.js"></script>
-<script src="./css/slide.js"></script>
-
+<script src="./css/file.js"></script>
 </html>

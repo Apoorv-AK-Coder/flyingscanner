@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="./images/favicon.ico">
+    <title>Book Cheap Flights to New York City – A2Z FLIGHT SERVICE LLC</title>
+    <meta name="DESCRIPTION"
+        content="Get up to 33% discount on each ticket for cheap flights to New York City with A2Z FLIGHT SERVICE LLC deals and offers. Also, know some tips." />
+    <link href="./css/style.css" rel="stylesheet">
+    <link href="./css/index.css" rel="stylesheet">
+    <link href="./css/responsive.css" rel="stylesheet">
+    <link href="./fontawesome/css/all.css" rel="stylesheet">
+    <link href="./fontawesome/css/all.min.css" rel="stylesheet">
+
+    <link href="/Content/flcss/bootstrap.min.css" rel="stylesheet" />
+    <link href="/Content/flcss/home.css" rel="stylesheet" />
+    <link href="/Content/flcss/styles.css" rel="stylesheet" />
+    <link href="/Content/flcss/inner.css" rel="stylesheet" />
+    <link href="/Content/flcss/animated.css" rel="stylesheet" />
+    <link href="/Content/flcss/common.css" rel="stylesheet" />
+    <link href="/Content/flcss/style_result.css" rel="stylesheet" />
+    <link href="/Content/flcss/jquery-ui.min.css" rel="stylesheet" />
+    <link href="/Content/flcss/owl.theme.default.css" rel="stylesheet" />
+    <link href="/Content/flcss/owl.carousel.css" rel="stylesheet" type="text/css" />
+    <link href="/Content/flcss/owl.carousel.min.css" rel="stylesheet" type="text/css" />
+    <link href="/Content/searchAirport.css" rel="stylesheet" />
+    <link href="/Content/jquery-ui.css" rel="stylesheet" />
+</head>
+
+<body>
+    <div class="newheader" id="newheader">
+        <div class="newhead">
+            <div class="flex">
+                <div class="column left">
+                    <a href="/">
+                        <img src="./images/logo.png" alt="">
+                    </a>
+                </div>
+
+                <div class="column navigate" id="view">
+                    <div id="off">
+                        <i class="fa-solid fa-xmark" style="margin-bottom: 30px !important;"></i>
+                    </div>
+                    <nav>
+                        <ul>
+                            <li><a href="/">Home</a></li>
+                            <li><a href="/about">About Us</a></li>
+                            <li><a href="/contact-us">Contact</a></li>
+                        </ul>
+                    </nav>
+                </div>
+
+                <div class="right">
+                    <a href="tel:+10000000000"><button class="button">Call Us!</button></a>
+                </div>
+
+                <div class="column icon" id="on">
+                    <i class="fa-solid fa-bars"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container BannerBg">
+        <div class="innervootbg">
+            <div class="row">
+                <div class="column">
+                    <h1>Find Cheap Flights to New York City</h1>
+                    <form action="/Home/_SearchEngineHome" method="post">
+                        <div class="column radio">
+                            <div>
+                                <input name="flight_way" type="radio" id="rdoRoundtrip" checked="" value="2"
+                                    class="flight_way slct_btn onwtrp">
+                                <label for="rdoRoundtrip"><span><span></span></span>Round Trip</label>
+                            </div>
+                            <div>
+                                <input name="flight_way" type="radio" value="1" id="rdoOneway"
+                                    class="flight_way slct_btn rndtrp trpact">
+                                <label for="rdoOneway"><span><span></span></span>One Way</label>
+                            </div>
+                        </div>
+                        <div class="col3 grid grid2">
+                            <div class="grid grid1">
+                                <div class="autocomplete-wrapper labelcol">
+                                    <label for="">From</label>
+                                    <input name="flight_from" type="text" placeholder="Origin" id="flight_from"
+                                        onchange="checkdata();" onclick="this.select();"
+                                        class="autocomplete_from autocomplete_from_new location">
+                                    <div class="autocomplete-results"></div>
+                                </div>
+                                <div class="autocomplete-wrapper labelcol">
+                                    <label for="">To</label>
+                                    <input name="flight_to" type="text" placeholder="Destination" id="flight_to"
+                                        onchange="checkdata1();" onclick="this.select();"
+                                        class="autocomplete_to autocomplete_from_to location1">
+                                    <div class="autocomplete-results_to"></div>
+                                </div>
+                            </div>
+                            <div class="grid grid1">
+                                <div class="labelcol">
+                                    <label for="">Depart</label>
+                                    <input type="text" id="flight_from_date" name="flight_from_date"
+                                        placeholder="DD-MM-YYYY" required="" class="hasDatepicker">
+                                </div>
+                                <div class="labelcol">
+                                    <label for="">Return</label>
+                                    <input type="text" id="flight_to_date" name="flight_to_date"
+                                        placeholder="DD-MM-YYYY" required="" class="hasDatepicker">
+                                </div>
+                            </div>
+                            <div class="bottom-section d-flex">
+                                <div class="pax-contents" style="flex: 1;">
+
+                                    <div class="ind_srch_subBox prp_popup">
+                                        <div class="prsn_popup" id="prsn_add">
+                                            <label for="">Pass. Info.</label>
+                                            <input type="text" readonly="" name="pass_info" id="pass_info"
+                                                placeholder="1 Pax, Economy" class="ind_inputBox">
+                                        </div>
+                                        <div class="person_dropdown" id="prsn_popup" style="display: none;">
+                                            <ul class="slect_pssngr">
+                                                <li>
+                                                    <label>Adult &nbsp;<span>(12+ Years)</span></label>
+                                                    <div class="count_pssngr">
+                                                        <a href="javascript:void(0);"><em data-field="adult"
+                                                                data-opt="-"
+                                                                class="fa fa-minus inc_der"></em></a>
+                                                        <input type="text" style="color: #141414 !important;"
+                                                            readonly="" value="1" name="flight_adult"
+                                                            id="flight_adult" class="inpt_cout_pssngr">
+                                                        <a href="javascript:void(0);"><em data-field="adult"
+                                                                data-opt="+"
+                                                                class="fa fa-plus inc_der"></em></a>
+                                                    </div>
+                                                </li>
+                                                <li>
+                                                    <label style="max-width: 125px; line-height: 1.3;">Children
+                                                        &nbsp;<span>(2-11 Years)</span></label>
+                                                    <div class="count_pssngr">
+                                                        <a href="javascript:void(0);"><em data-field="child"
+                                                                data-opt="-"
+                                                                class="fa fa-minus inc_der"></em></a>
+                                                        <input type="text" style="color: #141414 !important;"
+                                                            readonly="" value="0" name="flight_child"
+                                                            id="flight_child" class="inpt_cout_pssngr">
+                                                        <a href="javascript:void(0);"><em data-field="child"
+                                                                data-opt="+"
+                                                                class="fa fa-plus inc_der"></em></a>
+                                                    </div>
+                                                </li>
+                                                <li>
+                                                    <label>Infant &nbsp;<span>(0-2 Years)</span></label>
+                                                    <div class="count_pssngr">
+                                                        <a href="javascript:void(0);"><em data-field="infant"
+                                                                data-opt="-"
+                                                                class="fa fa-minus inc_der"></em></a>
+                                                        <input type="text" style="color: #141414 !important;"
+                                                            readonly="" value="0" name="flight_infant"
+                                                            id="flight_infant" class="inpt_cout_pssngr">
+                                                        <a href="javascript:void(0);"><em data-field="infant"
+                                                                data-opt="+"
+                                                                class="fa fa-plus inc_der"></em></a>
+                                                    </div>
+                                                </li>
+                                            </ul>
+                                            <div class="combin_class">
+                                                <ul class="in_list_cls">
+                                                    <li><input type="radio" name="flight_class"
+                                                            id="flight_class_4" value="4" checked=""> <label
+                                                            for="flight_class_4">Economy</label></li>
+                                                    <li><input type="radio" name="flight_class"
+                                                            id="flight_class_3" value="3"> <label
+                                                            for="flight_class_3">Premium
+                                                            Economy</label></li>
+                                                    <li><input type="radio" name="flight_class"
+                                                            id="flight_class_2" value="2"> <label
+                                                            for="flight_class_2">Business</label>
+                                                    </li>
+                                                    <li><input type="radio" name="flight_class"
+                                                            id="flight_class_1" value="1"> <label
+                                                            for="flight_class_1">First</label>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                            <div class="clss_done" id="ind_done">
+                                                <a href="javascript:void(0);" id="prsn_done">Done</a>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+
+
+                                <!-- <ul class="more-options">
+                                <li>
+                                    <div class="airlnes">
+                                        <select id="ddlairline" class=" ">
+                                            <option value="all">All Airlines</option>
+                                            <option value="EI">Aer Lingus</option>
+                                            <option value="AR">Aerolineas Argentinas</option>
+                                            <option value="AB">Air Berlin</option>
+                                            <option value="AC">Air Canada</option>
+                                            <option value="CA">Air China</option>
+                                            <option value="UX">Air Europa Lineas Aereas</option>
+                                            <option value="AF">Air France</option>
+                                            <option value="AI">Air India</option>
+                                            <option value="JM">Air Jamaica</option>
+                                            <option value="KM">Air Malta</option>
+                                            <option value="MK">Air Mauritius</option>
+                                            <option value="SW">Air Namibia</option>
+                                            <option value="NZ">Air New Zealand</option>
+                                            <option value="HM">Air Seychelles</option>
+                                            <option value="AZ">Alitalia</option>
+                                            <option value="AA">American Airlines</option>
+                                            <option value="NH">ANA</option>
+                                            <option value="OZ">Asiana Airlines</option>
+                                            <option value="OS">Austrian Airlines</option>
+                                            <option value="BA">British Airways</option>
+                                            <option value="SN">Brussels Airlines</option>
+                                            <option value="BW">Caribbean Airlines</option>
+                                            <option value="CX">Cathay Pacific Airways</option>
+                                            <option value="CI">China Airlines</option>
+                                            <option value="MU">China Eastern Airlines</option>
+                                            <option value="CZ">China Southern</option>
+                                            <option value="CO">Continental Airlines</option>
+                                            <option value="CY">Cyprus Airways</option>
+                                            <option value="OK">Czech Airlines</option>
+                                            <option value="DL">Delta Airlines</option>
+                                            <option value="MS">Egypt Air</option>
+                                            <option value="EK">Emirates Airways</option>
+                                            <option value="OV">Estonian Air</option>
+                                            <option value="ET">Ethiopian Airlines</option>
+                                            <option value="EY">Etihad Airways</option>
+                                            <option value="BR">EVA Air</option>
+                                            <option value="AY">Finnair</option>
+                                            <option value="BE">FlyBe</option>
+                                            <option value="GA">Garuda Indonesia</option>
+                                            <option value="GF">Gulf Air</option>
+                                            <option value="IB">Iberia Airlines </option>
+                                            <option value="FI">IcelandAir</option>
+                                            <option value="JL">Japan Airlines</option>
+                                            <option value="9W">Jet Airways</option>
+                                            <option value="KL">KLM Royal Dutch Airlines</option>
+                                            <option value="KE">Korean Air</option>
+                                            <option value="KU">Kuwait Airways</option>
+                                            <option value="LA">LAN Airlines</option>
+                                            <option value="LO">LOT Polish Airlines</option>
+                                            <option value="LH">Lufthansa</option>
+                                            <option value="MH">Malaysia Airlines</option>
+                                            <option value="ZB">Monarch Airlines</option>
+                                            <option value="NW">Northwest Airlines</option>
+                                            <option value="OA">Olympic Airlines</option>
+                                            <option value="WY">Oman Air</option>
+                                            <option value="QF">Qantas Airways</option>
+                                            <option value="QR">Qatar Airways</option>
+                                            <option value="AT">Royal Air Maroc</option>
+                                            <option value="BI">Royal Brunei Airlines</option>
+                                            <option value="RJ">Royal Jordanian</option>
+                                            <option value="SK">SAS - Scandinavian Airlines</option>
+                                            <option value="SQ">Singapore Airlines</option>
+                                            <option value="SA">South African Airways</option>
+                                            <option value="UL">SriLankan Airlines</option>
+                                            <option value="LX">Swiss Airlines</option>
+                                            <option value="JJ">TAM Airlines</option>
+                                            <option value="TP">TAP Portugal</option>
+                                            <option value="TG">Thai Airways</option>
+                                            <option value="TK">Turkish Airlines</option>
+                                            <option value="PS">Ukraine Intl.</option>
+                                            <option value="UA">United Airlines</option>
+                                            <option value="US">US Airways</option>
+                                            <option value="HY">Uzbekistan Airways</option>
+                                            <option value="RG">Varig Brazilian</option>
+                                            <option value="VN">Vietnam Airlines</option>
+                                            <option value="VS">Virgin Atlantic</option>
+                                            <option value="VG">VLM Airlines</option>
+                                        </select>
+                                        <input type="hidden" name="FlightSearchEngine1$hfAirline"
+                                            id="FlightSearchEngine1_hfAirline" value="All Airlines">
+                                    </div>
+                                    <div class="dropdown-section" id="mopt_list" style="display:none;">
+                                        <div class="dflexibility">
+                                            <select name="FlightSearchEngine1$ddlFlexible"
+                                                id="FlightSearchEngine1_ddlFlexible" class="custom-select"
+                                                onchange="checkHidefilevalue();" style="display: none;">
+                                                <option value="My dates are fixed">My dates are fixed</option>
+                                            </select>
+                                            <input type="hidden" name="FlightSearchEngine1$hfFlexible"
+                                                id="FlightSearchEngine1_hfFlexible">
+                                        </div>
+                                        <button type="button" class="done_btn">Done</button>
+                                    </div>
+                                </li>
+
+                            </ul> -->
+                                <div class="search_flights"> <a onclick="return validateSearchengine();"
+                                        name="flight_submit" id="flight_submit" class="search_btn"
+                                        style="padding: 8px 15px !important;"><span>Search</span> </a> </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <div class="column">
+                <p>New York City is one of the busiest cities in the United States, and if you are considering exploring this city, you must know the most popular deals for flight ticket booking. Welcome to the A2Z FLIGHT SERVICE LLC portal, where you can explore the cheap flights to New York City. This time, with the proper planning and an expert travel team, you can manage everything in a cost-effective budget. The best places to visit in New York are Statue of Liberty, Ellis Island, Empire State Building, Central Park, Times Square, Brooklyn Bridge, Grand Central Terminal, Rockefeller Center, 9/11 Memorial & Museum, The Metropolitan Museum of Art, Museum of Modern Art (MoMA), Solomon R. Guggenheim Museum, American Museum of Natural History, The High Line and One World Observatory.</p>
+                <p>From booking tickets early to managing hotel reservations in advance or at least 3 to 4 weeks before departure date for the domestic flight is important for the traveler. On the other hand, if you are coming from another country and it is your international route, then book your tickets at least 2 months before the departure. Don’t book too early and don’t book too late to find the cheap flights to New York.</p>
+                <br>
+                <h2>Route Details of New York</h2>
+                <br>
+                <h3>Airlines</h3>
+                <p><b>Domestic (within the U.S.): </b>Major domestic carriers include American Airlines, Delta Air Lines, United Airlines, JetBlue, Alaska Airlines, Southwest Airlines, Spirit Airlines, and Frontier Airlines.</p>
+                <p><b>International: </b>New York is a central international hub served by many airlines. The most prominent international carriers include British Airways, Air France, Lufthansa, Emirates, Qatar Airways, Cathay Pacific, Singapore Airlines, Air India, and many more.</p>
+                <br>
+                <h3>Airports</h3>
+                <p>Three major airports serve New York City:</p>
+                <ol style="list-style-type: decimal;margin-left: 20px;">
+                    <li><b>John F. Kennedy International Airport (JFK): </b>Located in Queens, JFK is the largest and busiest airport in the New York City area, handling most international flights. It is a hub for American Airlines and Delta Air Lines.</li>
+                    <li><b>LaGuardia Airport (LGA): </b>Also in Queens, LaGuardia is the closest airport to Manhattan and primarily serves domestic destinations, with some flights to Canada and the Caribbean.</li>
+                    <li><b>Newark Liberty International Airport (EWR): </b>In Newark, New Jersey, EWR is a central hub for United Airlines and serves domestic and international destinations.</li>
+                </ol>
+                <p><b>An alternative airport to consider, especially if you are looking for potentially cheaper flights and are willing to travel a bit further, is:</b></p>
+                <p>New York Stewart International Airport (SWF): Located about 60 miles north of Manhattan.</p>
+                <br>
+                <h3>Cheapest Time to Fly</h3>
+                <p>The cheapest month to fly to New York City is January to March. These three months are the most popular and ideal time to fly for this city because this is the low-season time to travel in the busiest cities of the United States. You can also check and compare fares for these months. On the other hand, the most expensive months to fly are May, June, and July, and December is also the busiest time to fly because of the New Year.</p>
+                <br>
+                <h3>Cheapest Days of the Week</h3>
+                <p>For domestic flights, the cheapest days to fly for New York are Tuesday, Wednesday, and Saturday. On the other hand, for the international flights, weekdays are generally cheaper than weekends. Cheapest time to fly is often at night.</p>
+                <br>
+                <h2>Other Details and Tips</h2>
+                <ol style="list-style-type: decimal;margin-left: 20px;">
+                    <li>Choose the connecting flights because direct flights are more expensive, and when you choose flights with one or more stops, they can sometimes be cheaper. Check the faresdirect and connecting flights' fares to know the best deals.</li>
+                    <li>Set the fare alert – this is the easiest way to get attention to all those deals available for the limited time-period because once you set the price alert you can consider the best deals notification when the fare drops.</li>
+                    <li>Flexibility is another thing that you need to follow. Check the month's dates to get the best price on cheap New York flights. It helps you to know more about those dates on which prices are lowest.</li>
+                    <li>Make sure that you are booking New York cheap flights in advance. Booking in advance is so much important for the flyers to make sure that they are saving more for the reservations. It helps you to find the great deals.</li>
+                    <li>Try to pack less luggage because your bags may increase the baggage fee. Check the airline baggage fee and policy to avoid any last-minute baggage fees.</li>
+                </ol>
+            </div>
+        </div>
+    </div>
+
+    <div class="cta">
+        <div class="flex gap2">
+            <a href="tel:+18004369330">
+                <h3><i class="fa-solid fa-phone"></i></h3>
+                <div>
+                    <h4><a href="tel:+00000000000">+1 000-000-0000</a></h4>
+                </div>
+            </a>
+        </div>
+    </div>
+
+    <div class="container newfooter">
+        <div class="row">
+            <div class="grid">
+                <div class="column">
+                    <a href="/"><img src="./images/logo.png" alt=""></a>
+                    <br><br>
+                    <a target="_blank" href="https://www.facebook.com/A2zflightservicellc/"><i
+                            class="fa-brands fa-facebook"></i></a>
+                    <a target="_blank" href="https://x.com/A2zflightservicellc"><i class="fa-brands fa-twitter"></i></a>
+                    <a target="_blank" href="http://instagram.com/A2zflightservicellc"><i
+                            class="fa-brands fa-instagram"></i></a>
+                    <a target="_blank" href="https://www.linkedin.com/company/A2zflightservicellc"><i
+                            class="fa-brands fa-linkedin-in"></i></a>
+                    <a target="_blank" href="https://www.youtube.com/A2zflightservicellc"><i
+                            class="fa-brands fa-youtube"></i></a>
+                </div>
+                <div class="column">
+                    <h4>Reach Us</h4>
+                    <p><i class="fa-solid fa-location-dot"></i> New Delhi 110093</p>
+                    <a href="tel:+10000000000">
+                        <p><i class="fa-solid fa-phone-volume"></i> +1 000-000-0000</p>
+                    </a>
+                    <a href="mailto:support@A2zflightservicellc.com">
+                        <p><i class="fa-solid fa-at"></i> support@A2zflightservicellc.com</p>
+                    </a>
+                </div>
+                <div class="column">
+                    <h4>Legal</h4>
+                    <p><a href="/terms-condition">Terms & Conditions</a></p>
+                    <p><a href="/privacy-policy">Privacy Policy</a></p>
+                    <p><a href="/refund-policy">Refund Policy</a></p>
+                </div>
+                <div class="column">
+                    <h4>Other Links</h4>
+                    <p><a href="/">Home</a></p>
+                    <p><a href="/about">About Us</a></p>
+                    <p><a href="/contact">Contact Us</a></p>
+                </div>
+            </div>
+            <hr style="border-color: var(--primary-color);">
+            <p style="text-align: center;">© 2025 A2zflightservicellc. All rights Reserved. </p>
+        </div>
+    </div>
+</body>
+<script src="./css/file.js"></script>
+</html>

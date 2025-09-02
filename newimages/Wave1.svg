@@ -1,9 +1,0 @@
-<svg version="1.2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 2000 125" width="2000" height="125">
-	<title>Wave</title>
-	<style>
-		.s0 { fill: #ffffff } 
-	</style>
-	<g>
-		<path class="s0" d="m0 78c80-9.8 240-54.6 400-49 160 5.6 240 79.6 400 77 160-2.6 240-82.8 400-90 160-7.2 240 48 400 54 160 6 320-19.2 400-24v-46h-2000z"/>
-	</g>
-</svg>

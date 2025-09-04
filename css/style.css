@@ -174,11 +174,8 @@ ul#ui-id-1 {
 .newfooter {
     background-color: var(--third-color) !important;
 
-    .mainfooter {
-        width: 90%;
-        padding: 40px 20px 0 20px !important;
-        margin: auto !important;
-
+    .row {
+        padding-bottom: 0;
         h3,
         p {
             color: var(--fourth-color) !important;

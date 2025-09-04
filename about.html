@@ -5,7 +5,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/x-icon" href="./images/favicon.ico">
-    <title>About – A2zflightservicellc</title>
     <link href="./css/style.css" rel="stylesheet">
     <link href="./css/index.css" rel="stylesheet">
     <link href="./css/responsive.css" rel="stylesheet">
@@ -28,140 +27,457 @@
 </head>
 
 <body>
-    <div class="newheader" id="newheader">
-        <div class="newhead">
-            <div class="flex">
-                <div class="column left">
-                    <a href="/">
-                        <img src="./images/logo.png" alt="">
-                    </a>
-                </div>
-
-                <div class="column navigate" id="view">
-                    <div id="off">
-                        <i class="fa-solid fa-xmark" style="margin-bottom: 30px !important;"></i>
+    <div class="newheader" id="newhead">
+        <div class="container2">
+            <div class="head">
+                <div class="flex  gap1">
+                    <div class="column">
+                        <a href="/"><img src="https://www.faresmatch.com/fmimages/logo.png"></a>
                     </div>
-                    <nav>
+                    <div class="column nav1" id="view">
+                        <i class="fa-solid fa-xmark icon" id="off" style="margin-bottom: 20px !important;"></i>
                         <ul>
-                            <li><a href="/">Home</a></li>
-                            <li><a href="/about">About Us</a></li>
-                            <li><a href="/contact-us">Contact</a></li>
+                            <li><a href="https://www.faresmatch.com/flights.aspx"><i
+                                        class="fa-solid fa-plane-departure ico"></i> Flights</a></li>
+                            <li><a href="https://www.faresmatch.com/amtrak.aspx"><i class="fa-solid fa-train ico"></i>
+                                    Amtrak</a></li>
+                            <li><a href="https://www.faresmatch.com/cruise/"><i class="fa-solid fa-train ico"></i>
+                                    Cruise</a></li>
+                            <li><a href="https://www.faresmatch.com/deals.aspx"><i class="fa-solid fa-gift ico"></i>
+                                    Deals</a></li>
+                            <li><a href="https://www.faresmatch.com/blog.aspx"><i
+                                        class="fa-brands fa-blogger-b ico"></i> Blog</a></li>
+                            <li><a href="https://www.faresmatch.com/yacht/"><i class="fa-solid fa-train ico"></i>
+                                    Yacht</a></li>
+                            <li><a href="https://www.faresmatch.com/car-rental.aspx"><i
+                                        class="fa-solid fa-train ico"></i> Car Rental</a></li>
                         </ul>
-                    </nav>
-                </div>
-
-                <div class="right">
-                    <a href="tel:+10000000000"><button class="button">Call Us!</button></a>
-                </div>
-
-                <div class="column icon" id="on">
-                    <i class="fa-solid fa-bars"></i>
+                        <div class="newnav">
+                            <ul>
+                                <li>
+                                    <a href="https://www.faresmatch.com/privacy-policy.aspx">
+                                        <i class="fa-solid fa-shield-halved"></i>
+                                        Privacy Policy
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="https://www.faresmatch.com/terms.aspx">
+                                        <i class="fa-solid fa-clipboard-list"></i> Terms &
+                                        Conditions
+                                    </a>
+                                </li>
+                                <li><a href="https://www.faresmatch.com/sitemap.aspx"><i
+                                            class="fa-solid fa-sitemap"></i> Sitemap</a></li>
+                                <li><a href="https://www.faresmatch.com/faq.aspx"><i
+                                            class="fa-solid fa-circle-question"></i> FAQ's</a></li>
+                            </ul>
+                        </div>
+                        <div class="navlogo">
+                            <a href="tel:+18009183039" id="call-now-btn">
+                                <h4>
+                                    <i class="fa-solid fa-phone" style="color: white !important;"></i>
+                                    +1-800-918-3039
+                                </h4>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="column right">
+                        <a href="tel:+18009183039" id="call-now-btn"><i
+                                class="fa-solid fa-phone-volume fa-shake"></i></a>
+                        <div>
+                            <a href="tel:+18009183039" id="call-now-btn">
+                                <p>Call us 24/7</p>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="column" id="on">
+                        <i class="fa-solid fa-bars"></i>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
 
-    <div class="container herobg">
-        <div class="innervootbg">
-            <div class="row">
-                <div class="column">
-                    <h1>About US - A2zflightservicellc</h1>
-                </div>
+    <div class="container bg1">
+        <div class="row flex">
+            <div class="column">
+                <h1>About Us</h1>
+                <form action="/Home/_SearchEngineHome" method="post">
+                    <div class="column radio flex">
+                        <div>
+
+                            <input type="radio" name="flight_way" id="rdoRoundtrip"
+                                class="flight_way slct_btn rndtrp trpact" checked value="2">
+                            <label for="rdoRoundtrip"><span><span></span></span>Round Trip</label>
+                        </div>
+                        <div>
+                            <input type="radio" name="flight_way" id="rdoOneway" class="flight_way slct_btn onwtrp"
+                                value="1">
+
+                            <label for="rdoOneway"><span><span></span></span>One Way</label>
+                        </div>
+                    </div>
+                    <div class="col3 grid grid2">
+                        <div class="column d-flex">
+
+
+                            <input type="text" placeholder="Flying From" class="autocomplete_from autocomplete_from_new"
+                                id="flight_from" placeholder="Origin" name="flight_from">
+
+                            <div class="arrowicon" id="arrowicon">
+                                <i class="fa-solid fa-right-left"></i>
+                            </div>
+
+                            <input type="text" placeholder="Flying To" class="autocomplete_to autocomplete_from_to"
+                                placeholder="Destination" id="flight_to" name="flight_to">
+
+                        </div>
+                        <div class="column flex">
+
+                            <input type="text" id="flight_from_date" name="flight_from_date" placeholder="DD-MM-YYYY"
+                                required>
+
+                            <input type="text" id="flight_to_date" name="flight_to_date" placeholder="DD-MM-YYYY"
+                                required>
+
+                        </div>
+
+                        <div class="bottom-section grid grid1">
+                            <div class="pax-contents">
+
+                                <div class="ind_srch_subBox prp_popup">
+                                    <div class="prsn_popup" id="prsn_add">
+
+                                        <input type="text" readonly="" name="pass_info" id="pass_info"
+                                            placeholder="1 Pax, Economy" class="ind_inputBox">
+                                    </div>
+                                    <div class="person_dropdown" id="prsn_popup" style="display: none;">
+                                        <ul class="slect_pssngr">
+                                            <li class="flex">
+                                                <label style="line-height: 1.25; font-size: 14px !important;">Adult
+                                                    &nbsp;<span>(12+ Years)</span></label>
+                                                <div class="count_pssngr">
+                                                    <a href="javascript:void(0);"><em data-field="adult" data-opt="-"
+                                                            class="fa fa-minus inc_der"></em></a>
+                                                    <input type="text" readonly="" value="1" name="flight_adult"
+                                                        id="flight_adult" class="inpt_cout_pssngr">
+                                                    <a href="javascript:void(0);"><em data-field="adult" data-opt="+"
+                                                            class="fa fa-plus inc_der"></em></a>
+                                                </div>
+                                            </li>
+                                            <li class="flex">
+                                                <label style="line-height: 1.25; font-size: 14px !important;">Children
+                                                    &nbsp;<span>(2-11 Years)</span></label>
+                                                <div class="count_pssngr">
+                                                    <a href="javascript:void(0);"><em data-field="child" data-opt="-"
+                                                            class="fa fa-minus inc_der"></em></a>
+                                                    <input type="text" readonly="" value="0" name="flight_child"
+                                                        id="flight_child" class="inpt_cout_pssngr">
+                                                    <a href="javascript:void(0);"><em data-field="child" data-opt="+"
+                                                            class="fa fa-plus inc_der"></em></a>
+                                                </div>
+                                            </li>
+                                            <li class="flex">
+                                                <label style="line-height: 1.25; font-size: 14px !important;">Infant
+                                                    &nbsp;<span>(0-2 Years)</span></label>
+                                                <div class="count_pssngr">
+                                                    <a href="javascript:void(0);"><em data-field="infant" data-opt="-"
+                                                            class="fa fa-minus inc_der"></em></a>
+                                                    <input type="text" readonly="" value="0" name="flight_infant"
+                                                        id="flight_infant" class="inpt_cout_pssngr">
+                                                    <a href="javascript:void(0);"><em data-field="infant" data-opt="+"
+                                                            class="fa fa-plus inc_der"></em></a>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                        <div class="combin_class">
+                                            <ul class="in_list_cls">
+                                                <li class="flex"><input type="radio" name="flight_class"
+                                                        id="flight_class_4" value="4" checked=""> <label
+                                                        for="flight_class_4"
+                                                        style="color:#141414 !important;">Economy</label></li>
+                                                <li class="flex"><input type="radio" name="flight_class"
+                                                        id="flight_class_3" value="3"> <label for="flight_class_3"
+                                                        style="color:#141414 !important;">Premium Economy</label></li>
+                                                <li class="flex"><input type="radio" name="flight_class"
+                                                        id="flight_class_2" value="2"> <label for="flight_class_2"
+                                                        style="color:#141414 !important;">Business</label></li>
+                                                <li class="flex"><input type="radio" name="flight_class"
+                                                        id="flight_class_1" value="1"> <label for="flight_class_1"
+                                                        style="color:#141414 !important;">First</label></li>
+                                            </ul>
+                                        </div>
+                                        <div class="clss_done" id="ind_done" style="text-align:right;">
+
+                                            <a style="width: fit-content; padding-block: 0 !important;"
+                                                href="javascript:void(0);" id="prsn_done">Done</a>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+
+
+                            <ul class="more-options">
+                                <li>
+                                    <div class="airlnes">
+                                        <select id="ddlairline" class=" ">
+                                            <option value="all">All Airlines</option>
+                                            <option value="EI">Aer Lingus</option>
+                                            <option value="AR">Aerolineas Argentinas</option>
+                                            <option value="AB">Air Berlin</option>
+                                            <option value="AC">Air Canada</option>
+                                            <option value="CA">Air China</option>
+                                            <option value="UX">Air Europa Lineas Aereas</option>
+                                            <option value="AF">Air France</option>
+                                            <option value="AI">Air India</option>
+                                            <option value="JM">Air Jamaica</option>
+                                            <option value="KM">Air Malta</option>
+                                            <option value="MK">Air Mauritius</option>
+                                            <option value="SW">Air Namibia</option>
+                                            <option value="NZ">Air New Zealand</option>
+                                            <option value="HM">Air Seychelles</option>
+                                            <option value="AZ">Alitalia</option>
+                                            <option value="AA">American Airlines</option>
+                                            <option value="NH">ANA</option>
+                                            <option value="OZ">Asiana Airlines</option>
+                                            <option value="OS">Austrian Airlines</option>
+                                            <option value="BA">British Airways</option>
+                                            <option value="SN">Brussels Airlines</option>
+                                            <option value="BW">Caribbean Airlines</option>
+                                            <option value="CX">Cathay Pacific Airways</option>
+                                            <option value="CI">China Airlines</option>
+                                            <option value="MU">China Eastern Airlines</option>
+                                            <option value="CZ">China Southern</option>
+                                            <option value="CO">Continental Airlines</option>
+                                            <option value="CY">Cyprus Airways</option>
+                                            <option value="OK">Czech Airlines</option>
+                                            <option value="DL">Delta Airlines</option>
+                                            <option value="MS">Egypt Air</option>
+                                            <option value="EK">Emirates Airways</option>
+                                            <option value="OV">Estonian Air</option>
+                                            <option value="ET">Ethiopian Airlines</option>
+                                            <option value="EY">Etihad Airways</option>
+                                            <option value="BR">EVA Air</option>
+                                            <option value="AY">Finnair</option>
+                                            <option value="BE">FlyBe</option>
+                                            <option value="GA">Garuda Indonesia</option>
+                                            <option value="GF">Gulf Air</option>
+                                            <option value="IB">Iberia Airlines </option>
+                                            <option value="FI">IcelandAir</option>
+                                            <option value="JL">Japan Airlines</option>
+                                            <option value="9W">Jet Airways</option>
+                                            <option value="KL">KLM Royal Dutch Airlines</option>
+                                            <option value="KE">Korean Air</option>
+                                            <option value="KU">Kuwait Airways</option>
+                                            <option value="LA">LAN Airlines</option>
+                                            <option value="LO">LOT Polish Airlines</option>
+                                            <option value="LH">Lufthansa</option>
+                                            <option value="MH">Malaysia Airlines</option>
+                                            <option value="ZB">Monarch Airlines</option>
+                                            <option value="NW">Northwest Airlines</option>
+                                            <option value="OA">Olympic Airlines</option>
+                                            <option value="WY">Oman Air</option>
+                                            <option value="QF">Qantas Airways</option>
+                                            <option value="QR">Qatar Airways</option>
+                                            <option value="AT">Royal Air Maroc</option>
+                                            <option value="BI">Royal Brunei Airlines</option>
+                                            <option value="RJ">Royal Jordanian</option>
+                                            <option value="SK">SAS - Scandinavian Airlines</option>
+                                            <option value="SQ">Singapore Airlines</option>
+                                            <option value="SA">South African Airways</option>
+                                            <option value="UL">SriLankan Airlines</option>
+                                            <option value="LX">Swiss Airlines</option>
+                                            <option value="JJ">TAM Airlines</option>
+                                            <option value="TP">TAP Portugal</option>
+                                            <option value="TG">Thai Airways</option>
+                                            <option value="TK">Turkish Airlines</option>
+                                            <option value="PS">Ukraine Intl.</option>
+                                            <option value="UA">United Airlines</option>
+                                            <option value="US">US Airways</option>
+                                            <option value="HY">Uzbekistan Airways</option>
+                                            <option value="RG">Varig Brazilian</option>
+                                            <option value="VN">Vietnam Airlines</option>
+                                            <option value="VS">Virgin Atlantic</option>
+                                            <option value="VG">VLM Airlines</option>
+                                        </select>
+                                        <input type="hidden" name="FlightSearchEngine1$hfAirline"
+                                            id="FlightSearchEngine1_hfAirline" value="All Airlines">
+
+                                    </div>
+                                    <div class="dropdown-section" id="mopt_list" style="display:none;">
+                                        <div class="dflexibility">
+                                            <select name="FlightSearchEngine1$ddlFlexible"
+                                                id="FlightSearchEngine1_ddlFlexible" class="custom-select"
+                                                onchange="checkHidefilevalue();" style="display: none;">
+                                                <option value="My dates are fixed">My dates are fixed</option>
+                                            </select>
+                                            <input type="hidden" name="FlightSearchEngine1$hfFlexible"
+                                                id="FlightSearchEngine1_hfFlexible">
+                                        </div>
+                                        <button type="button" class="done_btn">Done</button>
+                                    </div>
+                                </li>
+
+                            </ul>
+                            <div></div>
+                            <div class="search_flights" style="text-align:right;"> <a
+                                    onclick="return validateSearchengine();" name="flight_submit" id="flight_submit"
+                                    class="search_btn"> <i class="fa fa-search"></i> <span>Search</span> </a> </div>
+
+
+                        </div>
+                    </div>
+                </form>
             </div>
         </div>
     </div>
-
+    
     <div class="container">
         <div class="row">
             <div class="column">
-                <p>Traveling is no longer an expensive aspect for people when they are on the right website, right portal, or right travel partner or assistance. Welcome to A2zflightservicellc, a travel booking portal. From flight booking to hotel reservation management, there are so many travel services that are on your bucket list for your upcoming travel, and you only need the right website or a travel partner to manage all these things. Is this right? We are the leading travel agency in the United States, and our services are highly rated because of our commitment and excellence. Our customer service support is available 24 hours a day, and that’s why it is pretty easy for you to manage your travel booking services anytime, anywhere.</p>
-                <p>At A2zflightservicellc, traveling is more than just moving from one place to another. It’s about creating experiences and memories that last a lifetime. Founded with a passion, discovery, and commitment to exceptional service, we specialize in crafting journeys that inspire, connect, and delight. From curated cultural tours to exotic gateways, or family vacations to business travel solutions, we ensure every detail is taken care of. Our team of dedicated travel experts combines inside knowledge, trusted global partnerships, and a personalized approach to design trips that perfectly match your needs, budget, and style.</p>
+                <p>Traveling in New Zealand or around the world is never easy for beginners, and they always need the help and guidance of the right travel partner. Welcome to the Faresmatch travel booking assistance for managing all your travel reservations in New Zealand. This is the right time to break all stereotypes about expensive trips. You can plan a cost-effective trip with our services. Welcome to Faresmatch, where cutting-edge technology meets the world of travel. We are a next-generation flight booking platform designed to simplify, speed up, and make your flight more transparent.</p>
                 <br>
                 <h2>Our Mission</h2>
-                <p>To make travel affordable and memorable, we bring the best solutions to the world and bring the world closer to the ideal solution.</p>
+                <p>Faresmatch mission is simple, and our agenda is to eliminate the hassle of travel needs. We were tired of confusing websites, endless tabs, and hidden fees. So we have come up with the solution we wanted to use - a powerful, intuitive platform that puts you in control.</p>
                 <br>
-                <h3>Why Choose Us?</h3>
-                <ul style="list-style-type: disc;margin-left: 20px;">
-                    <li>Get the personalized experiences and trips because these are designed around your preferences. You can customize your travel package according to your travel and budget needs.</li>
-                    <li>Our global network and strong partnerships with airlines, hotels, and local operators are the best to find affordable deals.</li>
-                    <li>We are offering the most trusted services, transparent pricing, and expert guidance at every step.</li>
-                    <li>You can get in touch with us anytime because we offer 24/7 assistance, and your peace of mind matters to us.</li>
-                </ul>
+                <h2>How We Do It</h2>
+                <p>Faresmatch proprietary search algorithm scans millions of flight combinations from hundreds of airlines in seconds. We crunch the data, sort the options, and present you with precise, easy-to-understand results. From flexible date searches to price-drop alerts, our innovative tools are designed to help you find the best deal with minimal effort.</p>
+                <br><br>
+                <h2>Why Choose Us?</h2>
                 <br>
-                <h2>What We Offer</h2>
-                <br>
-                <h3>Tailor-Made Holidays</h3>
-                <p>From family vacations to adventure trips or honeymoons, you can plan your tailor-made holidays with us for luxury or affordable travel planning.</p>
-                <br>
-                <h3>Corporate & Business Travel</h3>
-                <p>You can find the hassle-free solutions for meetings, events, and work trips. We have a wide range of services for business travel as well.</p>
-                <br>
-                <h3>Group Tours & Packages</h3>
-                <p>The affordable, well-organized trips that let you explore with ease are now available with A2zflightservicellc for travelers. Grab the best deals now.</p>
-                <br>
-                <h3>Flight & Hotel Bookings</h3>
-                <p>You can find the competitive rates with trusted global partners.</p>
-                <br>
-                <h3>Visa & Travel Assistance</h3>
-                <p>From paperwork to planning, we simplify the journey. A2zflightservicellc helps you manage your travel and journey process.</p>
+                <div class="grid grid3">
+                    <div>
+                        <h3><i class="fa-solid fa-magnifying-glass"></i> Lightning-Fast Search</h3>
+                        <p>Find what you're looking for in the blink of an eye.</p>
+                    </div>
+                    <div>
+                        <h3><i class="fa-solid fa-tags"></i> Transparent Pricing</h3>
+                        <p>The price you see is the price you get. No surprises, no hidden fees.</p>
+                    </div>
+                    <div>
+                        <h3><i class="fa-solid fa-pen-ruler"></i> Intuitive Design</h3>
+                        <p>A clean, clutter-free interface that works beautifully on any device.</p>
+                    </div>
+                    <div>
+                        <h3><i class="fa-solid fa-shield-halved"></i> Secure Booking</h3>
+                        <p>Your data and privacy are our top priority, with state-of-the-art security.</p>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
 
-    <div class="cta">
-        <div class="flex gap2">
-            <a href="tel:+18004369330">
-                <h3><i class="fa-solid fa-phone"></i></h3>
-                <div>
-                    <h4><a href="tel:+00000000000">+1 000-000-0000</a></h4>
-                </div>
-            </a>
+    <a href="tel:+1-800-918-3039">
+        <div class="mobilecta">
+            <div class="img">
+                <img src="https://www.faresmatch.com/fmimages/customer-support.jpg" alt="customer-support">
+            </div>
+            <div>
+                <p><b>Need Help Booking</b></p>
+                <p>Our agent is ready! Call us 24/7</p>
+            </div>
+            <div>
+                <i class="fa-solid fa-phone-volume fa-beat"></i>
+            </div>
         </div>
-    </div>
+    </a>
 
     <div class="container newfooter">
         <div class="row">
-            <div class="grid">
+            <div class="d-flex gap logo">
                 <div class="column">
-                    <a href="/"><img src="./images/logo.png" alt=""></a>
-                    <br><br>
-                    <a target="_blank" href="https://www.facebook.com/A2zflightservicellc/"><i
-                            class="fa-brands fa-facebook"></i></a>
-                    <a target="_blank" href="https://x.com/A2zflightservicellc"><i class="fa-brands fa-twitter"></i></a>
-                    <a target="_blank" href="http://instagram.com/A2zflightservicellc"><i
-                            class="fa-brands fa-instagram"></i></a>
-                    <a target="_blank" href="https://www.linkedin.com/company/A2zflightservicellc"><i
-                            class="fa-brands fa-linkedin-in"></i></a>
-                    <a target="_blank" href="https://www.youtube.com/A2zflightservicellc"><i
-                            class="fa-brands fa-youtube"></i></a>
-                </div>
-                <div class="column">
-                    <h4>Reach Us</h4>
-                    <p><i class="fa-solid fa-location-dot"></i> New Delhi 110093</p>
-                    <a href="tel:+10000000000">
-                        <p><i class="fa-solid fa-phone-volume"></i> +1 000-000-0000</p>
-                    </a>
-                    <a href="mailto:support@A2zflightservicellc.com">
-                        <p><i class="fa-solid fa-at"></i> support@A2zflightservicellc.com</p>
+                    <a href="/">
+                        <img src="https://www.faresmatch.com/fmimages/logo.png" alt="logo">
                     </a>
                 </div>
-                <div class="column">
-                    <h4>Legal</h4>
-                    <p><a href="/terms-condition">Terms & Conditions</a></p>
-                    <p><a href="/privacy-policy">Privacy Policy</a></p>
-                    <p><a href="/refund-policy">Refund Policy</a></p>
-                </div>
-                <div class="column">
-                    <h4>Other Links</h4>
-                    <p><a href="/">Home</a></p>
-                    <p><a href="/about">About Us</a></p>
-                    <p><a href="/contact">Contact Us</a></p>
+                <div class="column d-flex gap1 newsocial">
+                    <h3>Connect with Us</h3>
+                    <div class="flex">
+                        <a href="https://www.facebook.com/faresmatchtravelagency" target="_blank">
+                            <i class="fa-brands fa-facebook"></i>
+                        </a>
+                        <a href="https://x.com/Faresmatch_" target="_blank">
+                            <i class="fa-brands fa-x-twitter"></i>
+                        </a>
+                        <a href="https://www.instagram.com/faresmatch9/" target="_blank">
+                            <i class="fa-brands fa-instagram"></i>
+                        </a>
+                        <a href="https://www.linkedin.com/company/faresmatchagency/" target="_blank">
+                            <i class="fa fa-linkedin"></i>
+                        </a>
+                        <a href="https://www.pinterest.com/faresmatchagency/" target="_blank">
+                            <i class="fa fa-pinterest"></i>
+                        </a>
+                        <a target="_blank" href="https://www.youtube.com/channel/UCVF0LhsyO15yOulfg82K4MQ">
+                            <i class="fa-brands fa-youtube"></i>
+                        </a>
+                        <a target="_blank" href="https://faresmatchtravelagency.quora.com/">
+                            <i class="fa-brands fa-quora"></i>
+                        </a>
+                    </div>
                 </div>
             </div>
-            <hr style="border-color: var(--primary-color);">
-            <p style="text-align: center;">© 2025 A2zflightservicellc. All rights Reserved. </p>
+            <div class="links d-flex gap1">
+                <div class="column">
+                    <p><b>Quick Links</b></p>
+                    <p><a href="/refund-cancellation.aspx">Policies </a></p>
+                    <p><a href="/vacations.aspx">Vacations </a></p>
+                    <p><a href="/vacation-packages.aspx">Packages</a></p>
+                    <p><a href="/airline-destinations.aspx">Airlines Destinations</a></p>
+                    <p><a href="/jetblue-fare-finder.aspx">Jetblue Fare Finder</a></p>
+                    <p><a href="/low-fare-calendar.aspx">Low-Fare Calendar</a></p>
+                </div>
+
+                <div class="column">
+                    <p><b>Airlines</b></p>
+                    <p><a href="/delta-airlines-flights-reservations.aspx">Delta</a></p>
+                    <p><a href="/united-airlines-flights-reservations.aspx">United</a></p>
+                    <p><a href="/alaska-airlines-flights-reservations.aspx">Alaska </a></p>
+                    <p><a href="/allegiant-airlines-flights-reservations.aspx">Allegiant</a></p>
+                    <p><a href="/frontier-airlines-flights-reservations.aspx">Frontier</a></p>
+                </div>
+                <div class="column">
+                    <p><b>Destinations</b></p>
+                    <p><a href="/flights/cheap-flights-to-las-vegas.aspx">Las Vegas</a></p>
+                    <p><a href="/flights/cheap-flights-to-new-york.aspx">New York</a></p>
+                    <p><a href="/flights/cheap-flights-to-los-angeles.aspx">Los Angeles</a></p>
+                    <p><a href="/flights/cheap-flights-to-florida.aspx">Florida </a></p>
+                    <p><a href="/flights/cheap-flights-to-california.aspx">California</a></p>
+                </div>
+                <div class="column">
+                    <p><b>Top Routes</b></p>
+                    <p><a href="/flights/chicago-ord-to-honolulu-hnl-flights.aspx">Chicago to Honolulu</a></p>
+                    <p><a href="/flights/san-francisco-to-london-flights.aspx">San Francisco to London</a></p>
+                    <p>
+                        <a href="/flights/chicago-ord-to-los-angele-lax-flights.aspx">Chicago to Los Angeles</a>
+                    </p>
+                    <p><a href="/flights/toronto-to-lima-flights.aspx">Toronto to Lima</a></p>
+                    <p><a href="/flights/new-york-nyc-to-miami-mia-flights.aspx">New York to Miami</a></p>
+                </div>
+                <div class="column">
+                    <p><b>Information</b></p>
+                    <p><a href="https://www.faresmatch.com/about-us.aspx">About</a></p>
+                    <p><a href="https://www.faresmatch.com/contact-us.aspx">Contact</a></p>
+                    <p><a href="https://www.faresmatch.com/privacy-policy.aspx">Privacy Policy</a></p>
+                    <p><a href="https://www.faresmatch.com/terms.aspx">Terms & Conditions</a></p>
+                    <p><a href="https://www.faresmatch.com/sitemap.aspx">Sitemap</a></p>
+                    <p><a href="https://www.faresmatch.com/faq.aspx">FAQ's</a></p>
+                </div>
+            </div>
+        </div>
+        <div class="foot">
+            <div class="column">
+                <p>
+                    © Copyright 2025 <b>Faresmatch</b>. All Rights Reserved. | Address: 6355 Haystack CT Cumming
+                    , GA
+                    30040
+                </p>
+            </div>
         </div>
     </div>
 </body>
 <script src="./css/file.js"></script>
+<script src="./css/slide.js"></script>
+
 </html>

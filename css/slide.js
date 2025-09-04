@@ -98,3 +98,4 @@ function initializeSlider(sliderSelector, slideSelector, dotSelector, nextBtnSel
     updateSliderPosition();
 }
 initializeSlider('.slider1', '.slide1', '.dot1', '.next-btn1', '.prev-btn1', 3, 20);
+initializeSlider('.slider2', '.slide2', '.dot2', '.next-btn2', '.prev-btn2', 4, 20);

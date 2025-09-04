@@ -27,75 +27,101 @@
     }
 
     .newheader {
-        width: 100% !important;
-
-        .latesthide {
-            display: none;
-        }
-
-        .newhead {
+        .head {
             width: 100% !important;
-            padding: 10px 20px;
 
-            .icon {
-                margin: auto 0;
-                flex: 1;
-            }
+            .right {
+                text-align: center !important;
+                margin: 0 auto !important;
 
-            .left {
-                img {
-                    width: 100px;
+                p {
+                    font-size: 12px !important;
+                }
+
+                i {
+                    font-size: 15px !important;
                 }
             }
+
+            button {
+                margin: 0 !important;
+            }
+
+            img {
+                width: 113px !important;
+                height: auto !important;
+            }
+
+            .nav1 {
+                background-color: var(--fourth-color) !important;
+                display: none;
+                position: absolute;
+                box-shadow: 0px 2px 2px rgba(20, 20, 20, 0.5);
+                padding: 20px !important;
+                top: 0;
+                right: 0;
+                width: 60%;
+                height: 100vh;
+                background-color: var(--third-color);
+                overflow-y: auto;
+                z-index: 9;
+
+                #on i {
+                    color: var(--fourth-color) !important;
+                }
+
+                ul {
+                    text-align: left !important;
+                    flex-direction: column !important;
+                }
+
+                i,
+                li,
+                a {
+                    color: var(--third-color) !important;
+                }
+            }
+
+            .icon {
+                color: var(--fourth-color);
+            }
+
+            .ico {
+                display: inline-block !important;
+            }
         }
 
-        .right {
+        .newnav {
+            display: block !important;
+            margin-top: 20px !important;
+            padding-top: 20px !important;
+            border-top: 2px solid var(--primary-color);
+        }
+
+        #off,
+        #on {
+            display: block !important;
+            text-align: right !important;
+            font-size: 20px !important;
+            color: var(--fourth-color);
+        }
+
+        .navlogo {
+            display: block !important;
             text-align: center;
-            flex: 1;
-        }
-    }
+            margin-top: 30px !important;
+            background-color: var(--primary-color);
+            border-radius: 10px;
+            padding: 15px 5px !important;
 
-    .navigate {
-        z-index: 99;
-        display: none;
-        position: absolute;
-        background-color: var(--fourth-color);
-        box-shadow: 0px 2px 2px rgba(20, 20, 20, 0.5);
-        padding: 30px;
-        top: 0;
-        right: 0;
-        width: 70%;
-        height: 100vh;
-        border: none;
-
-        ul {
-            flex-direction: column;
-            gap: 5px !important;
-
-
-            li {
-                margin: 0;
-                padding: 5px;
-                cursor: pointer;
-            }
-
-            a {
-                color: var(--fifth-color) !important;
+            h4,
+            i {
+                color: var(--fourth-color) !important;
+                font-size: 17px !important;
+                margin: 0 !important;
+                padding: 0 !important;
             }
         }
-    }
-
-    #on,
-    #off {
-        display: block !important;
-        font-size: 22px;
-        text-align: right;
-        color: var(--fifth-color);
-    }
-
-    #on {
-        color: var(--fifth-color);
-        max-width: 30px;
     }
 
     .cta {
@@ -148,14 +174,6 @@
             max-width: 100%;
             margin-bottom: 20px;
         }
-    }
-
-    .newfooter {
-        .grid {
-            grid-template-columns: repeat(1, 1fr);
-        }
-
-        padding-bottom: 50px;
     }
 
     .newheader {
@@ -271,6 +289,58 @@
 
         .row {
             padding-block: 20px;
+        }
+    }
+
+    .newfooter {
+        .foot {
+            padding: 0 20px 20px 20px;
+            margin: 0 !important;
+
+            p {
+                font-size: 13px;
+            }
+        }
+    }
+
+    .nzbg {
+        .column {
+            padding: 15px;
+
+            div {
+                padding: 15px;
+            }
+        }
+    }
+
+    .slider-container1 {
+        .slide1 {
+            min-width: 95%;
+
+            .innercol {
+                padding: 20px;
+            }
+        }
+    }
+
+    .bg1 {
+        .arrowicon {
+            margin: -35px 0 -20px 0 !important;
+            padding-right: 17px !important;
+            width: fit-content;
+            margin-left: auto !important;
+        }
+
+        button {
+            width: 100% !important;
+        }
+    }
+
+    .nzroutes {
+        .slider-container2 {
+            .slide2 {
+                min-width: 100%;
+            }
         }
     }
 }

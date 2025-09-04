@@ -83,7 +83,7 @@
 }
 
 .bg1 {
-    background-image: linear-gradient(to right, rgba(20, 20, 20, 0.8), rgba(20, 20, 20, 0.8)), url(/images/bg.jpg);
+    background-image: linear-gradient(to right, rgba(20, 20, 20, 0.5), rgba(20, 20, 20, 0.5)), url(/images/bg.jpg);
     background-position: center !important;
     background-repeat: no-repeat !important;
     background-size: cover !important;
@@ -442,20 +442,23 @@ form {
         padding: 50px 20px !important;
     }
 
+    img {
+        width: 50px;
+    }
+
+    .col1 {
+        grid-column: span 2;
+        text-align: center;
+
+        div:not(:first-child) {
+            border-left: 1px solid var(--fifth-color);
+        }
+    }
+
     .column {
         padding: 20px !important;
         border: 1px solid #979797;
         border-radius: 10px;
-
-        .grid2 {
-            text-align: center;
-        }
-
-        .col {
-            .center {
-                border-inline: 1px solid #141414;
-            }
-        }
     }
 
     a {
@@ -556,6 +559,7 @@ form {
 
     img {
         width: 100%;
+        border-radius: 5px;
     }
 }
 
@@ -569,7 +573,7 @@ form {
 
 .nzbg {
     .column {
-        background-image: url(../images/bg.jpg);
+        background-image: url(../images/nzbg.jpg);
         background-position: center;
         background-repeat: no-repeat;
         background-size: cover;
@@ -580,10 +584,6 @@ form {
             background-color: var(--fourth-color);
             padding: 20px;
             border-radius: 10px;
-        }
-
-        p {
-            margin-bottom: 10px;
         }
     }
 }
@@ -615,25 +615,6 @@ form {
     }
 }
 
-.nzroutes {
-    background-color: #f7f7f7;
-
-    .colum {
-        padding: 20px;
-        border-radius: 10px;
-        height: 350px;
-        background-position: center;
-        background-repeat: no-repeat;
-        background-size: cover;
-        display: flex;
-        align-items: end;
-
-        h3 {
-            color: var(--fourth-color) !important;
-        }
-    }
-}
-
 .slider-container1 {
     position: relative;
     overflow: hidden;
@@ -651,7 +632,7 @@ form {
         background-color: #f7f7f7;
 
         .imgbg {
-            height: 175px;
+            height: 185px;
             background-position: center;
             background-repeat: no-repeat;
             background-size: cover;
@@ -659,7 +640,12 @@ form {
         }
 
         .innercol {
-            padding: 20px;
+            padding: 15px;
+        }
+
+        p {
+            font-size: 14px;
+            line-height: 1.5;
         }
     }
 
@@ -690,5 +676,65 @@ form {
         opacity: 0.5;
         pointer-events: none;
         cursor: not-allowed;
+    }
+}
+
+.nzroutes {
+    background-color: #f7f7f7;
+
+    .slider-container2 {
+        position: relative;
+        overflow: hidden;
+
+        .slider2 {
+            display: flex;
+            transition: transform 0.5s ease-in-out;
+            gap: 20px;
+        }
+
+        .slide2 {
+            min-width: 23.7%;
+            padding: 20px;
+            border-radius: 10px;
+            height: 350px;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            display: flex;
+            align-items: end;
+
+            h3 {
+                color: var(--fourth-color) !important;
+            }
+        }
+
+        .prev-btn2,
+        .next-btn2 {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background-color: var(--primary-color);
+            color: white;
+            border: none;
+            padding: 5px 12px;
+            border-radius: 50px;
+            cursor: pointer;
+            width: fit-content;
+            z-index: 99;
+        }
+
+        .prev-btn2 {
+            left: 10px;
+        }
+
+        .next-btn2 {
+            right: 10px;
+        }
+
+        .disabled {
+            opacity: 0.5;
+            pointer-events: none;
+            cursor: not-allowed;
+        }
     }
 }

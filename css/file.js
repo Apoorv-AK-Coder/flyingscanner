@@ -43,14 +43,3 @@ document.querySelectorAll('.faqhead').forEach(head => {
     }
   });
 });
-
-function openTab(index) {
-  const tabs = document.querySelectorAll('.tab-btn');
-  const panels = document.querySelectorAll('.tab-panel');
-  
-  tabs.forEach(tab => tab.classList.remove('active'));
-  panels.forEach(panel => panel.classList.remove('active'));
-
-  tabs[index].classList.add('active');
-  panels[index].classList.add('active');
-}

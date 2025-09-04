@@ -633,3 +633,62 @@ form {
         }
     }
 }
+
+.slider-container1 {
+    position: relative;
+    overflow: hidden;
+
+    .slider1 {
+        display: flex;
+        transition: transform 0.5s ease-in-out;
+    }
+
+    .slide1 {
+        min-width: 31.7%;
+        margin: 10px;
+        box-shadow: 0 0 3px 3px rgba(20, 20, 20, 0.2);
+        border-radius: 10px;
+        background-color: #f7f7f7;
+
+        .imgbg {
+            height: 175px;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            border-radius: 10px 10px 0 0;
+        }
+
+        .innercol {
+            padding: 20px;
+        }
+    }
+
+    .prev-btn1,
+    .next-btn1 {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        background-color: rgba(87, 87, 87, 0.6);
+        color: white;
+        border: none;
+        padding: 5px 12px;
+        border-radius: 50px;
+        cursor: pointer;
+        width: fit-content;
+        z-index: 99;
+    }
+
+    .prev-btn1 {
+        left: 10px;
+    }
+
+    .next-btn1 {
+        right: 10px;
+    }
+
+    .disabled {
+        opacity: 0.5;
+        pointer-events: none;
+        cursor: not-allowed;
+    }
+}

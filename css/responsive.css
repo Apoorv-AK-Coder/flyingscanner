@@ -178,6 +178,9 @@
 
     .newheader {
         .right {
+            padding-right: 10px;
+            gap: 10px;
+
             a {
                 font-size: 13px;
             }

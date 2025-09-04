@@ -35,8 +35,10 @@
         border: 1px solid var(--fourth-color);
         display: flex;
         border-radius: 50px;
-        width: 5%;
+        max-width: fit-content;
         margin: auto !important;
+        padding-right: 20px;
+        gap: 15px;
 
         p {
             margin: auto !important;
@@ -610,5 +612,24 @@ form {
 
     .grid {
         margin-bottom: auto;
+    }
+}
+
+.nzroutes {
+    background-color: #f7f7f7;
+
+    .colum {
+        padding: 20px;
+        border-radius: 10px;
+        height: 350px;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        display: flex;
+        align-items: end;
+
+        h3 {
+            color: var(--fourth-color) !important;
+        }
     }
 }

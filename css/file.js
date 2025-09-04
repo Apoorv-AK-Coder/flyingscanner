@@ -30,8 +30,8 @@ navLinks.forEach(link => {
 document.querySelectorAll('.faqhead').forEach(head => {
   head.addEventListener('click', () => {
     const detail = head.nextElementSibling;
-    const plusIcon = head.querySelector('.fa-angle-down');
-    const minusIcon = head.querySelector('.fa-angle-up');
+    const plusIcon = head.querySelector('.fa-plus');
+    const minusIcon = head.querySelector('.fa-xmark');
 
     detail.classList.toggle('show');
     if (detail.classList.contains('show')) {

@@ -1,6 +1,5 @@
 /* Global CSS Starts Here*/
-@import url('https://fonts.googleapis.com/css2?family=Poppins');
-@import url('https://fonts.googleapis.com/css2?family=Inter');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat');
 
 * {
     margin: 0;
@@ -13,14 +12,15 @@ body {
 }
 
 :root {
-    --primary-color: #E8F0FF;
-    --secondary-color: #FF7A00;
-    --third-color: #1A2B50;
-    --fourth-color: #ffffff;
-    --fifth-color: #141414;
+    --primary-color: #0068EF !important;
+    --secondary-color: #004499 !important;
+    --third-color: #001834 !important;
+    --fourth-color: #ffffff !important;
+    --fifth-color: #161616 !important;
+    --sixth-color: #FFB600 !important;
     /*fonts*/
-    --primary-font: Poppins;
-    --secondary-font: Inter;
+    --primary-font: 'Helvetica Neue' !important;
+    --secondary-font: Montserrat !important;
 }
 
 .row {
@@ -108,18 +108,22 @@ li {
     margin-left: 14px;
 }
 
-.button, #prsn_done, #flight_submit {
+.button,
+#prsn_done,
+#flight_submit {
     border: 1px solid var(--secondary-color);
     background: var(--primary-color);
-    padding: 2px 20px !important;
+    padding: 8px 12px !important;
     border-radius: 0;
-    color: var(--secondary-color) !important;
+    color: var(--fourth-color) !important;
     font-weight: 700;
     border-radius: 5px;
     text-shadow: none;
 }
 
-.button:hover, #prsn_done:hover, #flight_submit:hover {
+.button:hover,
+#prsn_done:hover,
+#flight_submit:hover {
     background-color: var(--secondary-color);
     color: var(--fourth-color) !important;
 }
@@ -168,49 +172,83 @@ ul#ui-id-1 {
 }
 
 .newfooter {
-    background-color: var(--primary-color);
+    background-color: var(--third-color) !important;
 
-    .row {
-        padding-bottom: 20px;
+    .mainfooter {
+        width: 90%;
+        padding: 40px 20px 0 20px !important;
+        margin: auto !important;
+
+        h3,
+        p {
+            color: var(--fourth-color) !important;
+        }
+
+        .newsocial {
+            justify-content: end;
+
+            i {
+                background-color: var(--fourth-color);
+                color: var(--secondary-color);
+                padding: 10px !important;
+                border-radius: 50px;
+            }
+
+            i:hover {
+                background-color: var(--primary-color);
+                color: var(--fourth-color);
+            }
+
+            div {
+                gap: 12px;
+            }
+        }
+
+        .links {
+            border-top: 1px solid var(--fourth-color);
+            border-bottom: 1px solid var(--fourth-color);
+            padding: 20px 0 !important;
+            margin-top: 20px !important;
+
+            a::before {
+                content: "\f105";
+                font-family: "Font Awesome 6 Free";
+                font-weight: 900;
+                margin-right: 8px;
+            }
+        }
+
+        .column {
+            flex: 1 !important;
+
+            b {
+                font-size: 18px;
+            }
+
+            a {
+                color: var(--fourth-color) !important;
+                text-decoration: none !important;
+            }
+
+            a:hover {
+                text-decoration: underline dashed !important;
+            }
+        }
+
+        img {
+            width: 200px !important;
+        }
     }
 
-    p,
-    a {
-        font-size: 15px !important;
-        color: var(--fifth-color) !important;
-    }
+    .foot {
+        width: 90%;
+        padding: 20px;
+        margin-right: auto !important;
+        margin-left: auto !important;
 
-    a:hover {
-        color: var(--fifth-color) !important;
-        text-decoration: underline !important;
-    }
-
-    h4 {
-        color: var(--fifth-color) !important;
-        border-bottom: 2px solid var(--primary-color);
-        padding-bottom: 5px;
-    }
-
-    hr {
-        border-color: var(--secondary-color);
-        margin-block: 15px;
-    }
-
-    img {
-        width: 135px;
-    }
-
-    .grid {
-        grid-template-columns: repeat(4, 1fr);
-    }
-
-    .fa-brands {
-        color: var(--primary-color) !important;
-        font-size: 1.3em;
-        background-color: var(--third-color);
-        padding: 7px;
-        border-radius: 5px;
-        margin-right: 5px;
+        p {
+            color: var(--fourth-color) !important;
+        }
     }
 }
 
